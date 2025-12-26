@@ -1,0 +1,12 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+
+# OS
+.DS_Store

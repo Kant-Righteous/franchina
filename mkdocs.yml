@@ -1,0 +1,67 @@
+site_name: 图卢兹中国留学生生活贴士
+site_url: http://chinese.tougether.dpdns.org/
+site_description: CAF、Ameli、住宿、银行、交通、签证等办理流程与常见问题
+
+repo_url: ""   # 有仓库再填
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到亮色
+
+copyright: ""
+
+nav:
+  - 首页: index.md
+  - 留学贴士:
+      - CAF: tips/caf.md
+      - Ameli: tips/ameli.md
+      - 住宿: tips/housing.md
+      - 银行: tips/banks.md
+      - 交通: tips/transport.md
+      - 签证: tips/visa.md
+      - FAQ: tips/faq.md
+  - 关于: about.md
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+
+extra:
+#关闭原版页脚
+  generator: false
+
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - footnotes
+
+# 生成 sitemap 与 canonical（Material 内置良好实践）
+extra_javascript: []
+extra_css: []
