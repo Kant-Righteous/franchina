@@ -35,5 +35,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "site/*"
+          source: "site/"
           target: "/var/www/franchina"
+          strip_components: 1
