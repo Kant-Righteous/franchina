@@ -1,8 +1,7 @@
-site_name: 图卢兹中国留学生生活贴士
+site_name: FranChina 留法指南
 site_url: http://chinese.tougether.dpdns.org/
-site_description: CAF、Ameli、住宿、银行、交通、签证等办理流程与常见问题
-
-repo_url: ""   # 有仓库再填
+site_description: 你的法国留学生活百宝箱
+repo_url: ""
 
 theme:
   name: material
@@ -30,15 +29,26 @@ copyright: ""
 
 nav:
   - 首页: index.md
-  - 留学贴士:
-      - CAF: tips/caf.md
-      - Ameli: tips/ameli.md
-      - 住宿: tips/housing.md
-      - 银行: tips/banks.md
-      - 交通: tips/transport.md
-      - 签证: tips/visa.md
-      - FAQ: tips/faq.md
-  - 关于: about.md
+  - 行前与落地:
+      - 行前清单: preparation/checklist.md
+      - 落地第一周: arrival/first-week.md
+  - 行政手续 (通用):
+      - CAF (房补): admin/caf.md
+      - Ameli (医保): admin/ameli.md
+      - 签证与居留: admin/visa.md
+      - 银行开户: admin/bank.md
+  - 生活指南 (通用):
+      - 住房: life/housing.md
+      - 交通出行: life/transport.md
+      - 医疗健康: life/health.md
+  - 城市指南:
+      - 图卢兹 (Toulouse):
+          - 城市概况: cities/toulouse/index.md
+          - 本地交通: cities/toulouse/transport.md
+          - 生活圈: cities/toulouse/life.md
+  - 关于:
+      - FAQ: about/faq.md
+      - 关于我们: about.md
 
 plugins:
   - search
@@ -49,9 +59,7 @@ plugins:
       fallback_to_build_date: true
 
 extra:
-#关闭原版页脚
   generator: false
-
 
 markdown_extensions:
   - admonition
@@ -61,7 +69,3 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
-
-# 生成 sitemap 与 canonical（Material 内置良好实践）
-extra_javascript: []
-extra_css: []
