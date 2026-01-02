@@ -1,0 +1,68 @@
+/* ========================================
+   导航栏和标签栏样式 (header.css)
+   
+   作用: 控制网站顶部导航区域的外观
+   包含内容:
+   - 顶部导航栏 (.md-header) - 深蓝色背景
+   - 标签栏 (.md-tabs) - 与导航栏同色
+   - 网站标题样式
+   - 导航链接及悬停效果 (下划线动画)
+   - 搜索框样式 (半透明背景、悬停效果)
+   
+   设计特点: 统一的深蓝色主题,粉红色下划线强调
+   ======================================== */
+
+/* 顶部导航栏 - 渐变起点 */
+.md-header {
+    background: linear-gradient(to bottom, #1E3A8A 0%, #1e50ba 100%);
+    border-bottom: none;
+}
+
+/* 标签栏 - 继续渐变效果 */
+.md-tabs {
+    background: linear-gradient(to bottom, #1e50ba 0%, #2563EB 100%);
+    border-bottom: none;
+}
+
+/* 网站标题 */
+.md-header__title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: -0.01em;
+}
+
+/* 导航链接基础样式 */
+.md-tabs__link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* 导航链接悬停效果 */
+.md-tabs__link:hover {
+    color: white;
+}
+
+/* 搜索框基础样式 */
+.md-search__input {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 搜索框悬停和聚焦效果 */
+.md-search__input:hover,
+.md-search__input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 搜索框占位符文字 */
+.md-search__input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}

@@ -13,17 +13,17 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-    - toc.integrate
+    - navigation.indexes
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: 切换到亮色
+    scheme: default
+    primary: blue
+    accent: red
+  font:
+    text: Noto Sans SC
+    code: Roboto Mono
+
+extra_css:
+  - stylesheets/extra.css
 
 copyright: ""
 

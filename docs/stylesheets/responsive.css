@@ -1,0 +1,60 @@
+/* ========================================
+   响应式设计 (responsive.css)
+   
+   作用: 适配不同屏幕尺寸的设备
+   包含内容:
+   - 平板设备适配 (≤76.1875em / 约1219px)
+   - 手机设备适配 (≤60em / 约960px)
+   - 打印样式优化
+   
+   调整内容:
+   - 内容区域的内边距和外边距
+   - 标题字号缩小
+   - 打印时隐藏导航栏、侧边栏、页脚
+   
+   设计原则: 移动优先,确保小屏幕上的可读性
+   ======================================== */
+
+/* 平板设备 (宽度 ≤ 1219px) */
+@media screen and (max-width: 76.1875em) {
+    .md-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+/* 手机设备 (宽度 ≤ 960px) */
+@media screen and (max-width: 60em) {
+
+    /* 缩小标题字号 */
+    .md-content h1 {
+        font-size: 2rem;
+    }
+
+    .md-content h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 减少内容区域内边距 */
+    .md-content {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+
+    /* 打印时隐藏导航元素 */
+    .md-header,
+    .md-sidebar,
+    .md-footer {
+        display: none;
+    }
+
+    /* 打印时移除内容区域阴影和边距 */
+    .md-content {
+        box-shadow: none;
+        margin: 0;
+    }
+}

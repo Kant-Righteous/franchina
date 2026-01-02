@@ -1,0 +1,44 @@
+/* ========================================
+   FranChina 优雅学术风格主题 - 主入口文件
+   配色: 皇家蓝 + 酒红色 + 象牙白
+   
+   作用: 导入所有模块化的CSS文件
+   
+   文件结构说明:
+   1. variables.css   - CSS变量定义 (颜色、阴影、圆角等)
+   2. base.css        - 全局基础样式 (body、标题、字体)
+   3. header.css      - 导航栏和标签栏样式
+   4. sidebar.css     - 侧边栏导航样式
+   5. content.css     - 主内容区域样式
+   6. components.css  - 组件样式 (列表、表格、代码块等)
+   7. responsive.css  - 响应式设计和媒体查询
+   8. animations.css  - 动画和过渡效果
+   
+   使用方式:
+   在 mkdocs.yml 中引用此文件即可加载所有样式
+   例如: extra_css: [stylesheets/extra.css]
+   
+   修改建议:
+   - 修改颜色: 编辑 variables.css
+   - 修改导航栏: 编辑 header.css
+   - 修改文章样式: 编辑 content.css
+   - 修改组件: 编辑 components.css
+   ======================================== */
+
+/* 按顺序导入所有模块 */
+@import 'variables.css';
+/* 必须最先导入,其他文件依赖这些变量 */
+@import 'base.css';
+/* 全局基础样式 */
+@import 'header.css';
+/* 顶部导航区域 */
+@import 'sidebar.css';
+/* 左侧导航菜单 */
+@import 'content.css';
+/* 文章主体内容 */
+@import 'components.css';
+/* UI组件 */
+@import 'responsive.css';
+/* 响应式适配 */
+@import 'animations.css';
+/* 动画效果 */

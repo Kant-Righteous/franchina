@@ -1,0 +1,222 @@
+/* ========================================
+   组件样式 (components.css)
+   
+   作用: 定义各种UI组件的样式
+   包含内容:
+   1. 列表样式 (ul/ol) - 蓝色标记
+   2. 提示框 (Admonitions) - 信息框、警告框
+   3. 表格样式 - 渐变表头、斑马纹、悬停效果
+   4. 代码块 - 行内代码、代码块、复制按钮
+   5. 按钮样式 - 基础按钮、主要按钮
+   6. 目录 (TOC) - 右侧目录导航
+   7. 页脚 - 隐藏页脚
+   
+   设计特点: 统一的圆角、阴影和过渡效果
+   ======================================== */
+
+/* ========================================
+   列表样式
+   ======================================== */
+.md-content ul,
+.md-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.md-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+}
+
+/* 无序列表标记颜色 */
+.md-content ul li::marker {
+    color: #2563EB;
+}
+
+/* 有序列表标记颜色 */
+.md-content ol li::marker {
+    color: #2563EB;
+    font-weight: 600;
+}
+
+/* ========================================
+   提示框样式 (Admonitions)
+   ======================================== */
+.md-typeset .admonition {
+    border-radius: 8px;
+    border-left: 3px solid;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* 信息提示框 (蓝色) */
+.md-typeset .admonition.note,
+.md-typeset .admonition.info {
+    background-color: #E3F2FD;
+    border-left-color: #2196F3;
+}
+
+.md-typeset .admonition.note .admonition-title,
+.md-typeset .admonition.info .admonition-title {
+    color: #2196F3;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* 警告提示框 (粉红色) */
+.md-typeset .admonition.warning,
+.md-typeset .admonition.caution {
+    background-color: #FCE4EC;
+    border-left-color: #E91E63;
+}
+
+.md-typeset .admonition.warning .admonition-title,
+.md-typeset .admonition.caution .admonition-title {
+    color: #E91E63;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* 提示框标题通用样式 */
+.md-typeset .admonition-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.625rem;
+}
+
+/* ========================================
+   表格样式
+   ======================================== */
+.md-typeset table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin: 1.5rem 0;
+}
+
+/* 表头 - 蓝色渐变背景 */
+.md-typeset table thead {
+    background: linear-gradient(to right, #1E3A8A, #2563EB);
+}
+
+.md-typeset table thead th {
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.875rem 1rem;
+    border: none;
+}
+
+/* 表格行过渡效果 */
+.md-typeset table tbody tr {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 斑马纹 - 偶数行背景色 */
+.md-typeset table tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+/* 表格行悬停效果 */
+.md-typeset table tbody tr:hover {
+    background-color: #E3F2FD;
+}
+
+/* 表格单元格样式 */
+.md-typeset table tbody td {
+    padding: 0.75rem 1rem;
+    border-color: #ECEFF1;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   代码块样式
+   ======================================== */
+/* 行内代码 */
+.md-typeset code {
+    background-color: #F5F5F5;
+    color: #DC143C;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* 代码块容器 */
+.md-typeset pre {
+    background-color: #1F2937;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin: 1.5rem 0;
+}
+
+/* 代码块内的代码 */
+.md-typeset pre code {
+    background-color: transparent;
+    color: #E5E7EB;
+    padding: 0;
+}
+
+/* 代码复制按钮 */
+.md-clipboard {
+    color: white;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-clipboard:hover {
+    color: #FFD700;
+}
+
+/* ========================================
+   按钮样式
+   ======================================== */
+.md-button {
+    background-color: #2563EB;
+    color: white;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.md-button:hover {
+    background-color: #1E40AF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.md-button--primary {
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+}
+
+/* ========================================
+   目录 (TOC) 样式
+   ======================================== */
+.md-nav--secondary .md-nav__title {
+    color: #2563EB;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+}
+
+.md-nav--secondary .md-nav__link {
+    color: #9a9c9d;
+    font-size: 0.9rem;
+}
+
+.md-nav--secondary .md-nav__link--active {
+    color: #DC143C;
+    font-weight: 600;
+    border-left-color: #DC143C;
+}
+
+/* ========================================
+   页脚隐藏
+   ======================================== */
+.md-footer {
+    display: none;
+}

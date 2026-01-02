@@ -1,0 +1,33 @@
+/* ========================================
+   CSS 变量定义 (variables.css)
+   
+   作用: 定义整个网站的设计令牌(Design Tokens)
+   包含内容:
+   - 主色调系统 (深蓝色渐变、强调色)
+   - 中性色系 (背景色、边框色)
+   - 文字颜色 (主要、次要、浅色)
+   - 阴影效果 (小、中、大)
+   - 圆角尺寸 (小、中、大)
+   - 过渡动画时间曲线
+   
+   使用方式: 在其他CSS文件中通过 var(--变量名) 引用
+   例如: color: var(--deep-blue);
+   ======================================== */
+
+/* 引入 Google Fonts - 中法双语支持 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
+:root {
+    /* 阴影 */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    /* 圆角 */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* 过渡 */
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

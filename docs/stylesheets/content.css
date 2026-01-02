@@ -1,0 +1,85 @@
+/* ========================================
+   主内容区域样式 (content.css)
+   
+   作用: 控制文章主体内容的排版和样式
+   包含内容:
+   - 内容容器样式 (内边距、最大宽度)
+   - 文章标题 h1/h2/h3 (字号、间距、字重)
+   - 段落样式 (行高、间距)
+   - 链接样式 (颜色、下划线悬停效果)
+   
+   设计理念: 优雅的阅读体验,适当的留白和行高
+   ======================================== */
+
+/* 内容区域容器 */
+.md-content {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 2rem 3rem;
+    border-left: none;
+}
+
+/* 内容区域内部容器 - 限制最大宽度 */
+.md-content__inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 一级标题 */
+.md-content h1 {
+    color: #263238;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    letter-spacing: -0.03em;
+}
+
+/* 二级标题 */
+.md-content h2 {
+    color: #263238;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+    border-left: none;
+    letter-spacing: -0.02em;
+}
+
+/* 三级标题 */
+.md-content h3 {
+    color: #263238;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+/* 段落样式 */
+.md-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: #263238;
+    font-size: 15px;
+}
+
+/* 链接基础样式 */
+.md-content a {
+    color: #2563EB;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+}
+
+/* 链接悬停效果 */
+.md-content a:hover {
+    color: #1E3A8A;
+    border-bottom-color: #2563EB;
+}

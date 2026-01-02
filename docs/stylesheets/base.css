@@ -1,0 +1,40 @@
+/* ========================================
+   全局基础样式 (base.css)
+   
+   作用: 定义网站的基础排版和全局样式
+   包含内容:
+   - body 基础样式 (字体、背景色、行高等)
+   - 标题样式 (h1-h6 的字体、颜色、字重)
+   - 平滑滚动效果
+   
+   影响范围: 整个网站的基础外观
+   ======================================== */
+
+/* 全局 body 样式 */
+body {
+    font-family: 'Noto Sans SC', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFFFFF;
+    color: #263238;
+    line-height: 1.6;
+    letter-spacing: 0;
+    font-size: 15px;
+}
+
+/* 标题字体统一设置 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #263238;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}

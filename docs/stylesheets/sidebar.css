@@ -1,0 +1,52 @@
+/* ========================================
+   侧边栏导航样式 (sidebar.css)
+   
+   作用: 控制左侧导航菜单的外观和交互
+   包含内容:
+   - 侧边栏背景色
+   - 导航标题样式 (大写字母、间距)
+   - 导航链接样式 (颜色、内边距、圆角)
+   - 悬停效果 (背景色变化)
+   - 激活状态 (蓝色背景、左侧边框强调)
+   
+   交互特点: 悬停时背景变灰,激活项有蓝色背景和左边框
+   ======================================== */
+
+/* 侧边栏容器 */
+.md-sidebar {
+    background-color: rgb(255, 255, 255);
+}
+
+/* 导航区域标题 */
+.md-nav__title {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #263238;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 导航链接基础样式 */
+.md-nav__link {
+    color: #546E7A;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* 导航链接悬停效果 - 提高优先级 */
+.md-sidebar .md-nav__link:hover {
+    background-color: #dee8f1 !important;
+    color: #1F52C0 !important;
+    font-weight: 600 !important;
+}
+
+/* 当前激活的导航项 - 提高优先级 */
+.md-sidebar .md-nav__link--active {
+    background-color: #dee8f1 !important;
+    color: #eb2525 !important;
+    font-weight: 600 !important;
+    border-left: 3px solid #eb2525 !important;
+}
