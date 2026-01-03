@@ -1,7 +1,26 @@
-# FranChina 你的留法小贴士
+---
+hide:
+  - navigation
+  - toc
+  - date
+---
 
-这里收集 CAF、Ameli、住宿、银行、交通、签证等办理流程与常见问题。
+<div class="tx-hero">
+  <div class="tx-hero__content">
+    <h1>FranChina<br><span style="font-size: 0.6em; color: var(--brand-accent);">From China to France</span></h1>
+    <p>陪你走过留法生活的百宝箱</p>
+  </div>
+  <div class="tx-hero__image">
+    <img src="assets/hero_landing.png" alt="FranChina Hero Image" draggable="false">
+  </div>
+</div>
 
-新生从 **CAF 补贴** 与 **Ameli 注册** 开始看起。
+<div class="grid-cards">
+<!-- We can add feature cards here later if needed, keeping it clean for now as requested -->
+</div>
 
-Qinkepeng 加入了！！！！！
+<style>
+  .md-source-file, .git-revision-date-localized-plugin {
+    display: none !important;
+  }
+</style>

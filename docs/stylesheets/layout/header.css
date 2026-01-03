@@ -12,15 +12,21 @@
    设计特点: 统一的深蓝色主题,粉红色下划线强调
    ======================================== */
 
-/* 顶部导航栏 - 渐变起点 */
+/* 顶部导航栏 - 扁平化风格 */
 .md-header {
-    background: linear-gradient(to bottom, #1E3A8A 0%, #1e50ba 100%);
+    background-color: var(--brand-primary);
+    background-image: none;
+    /* Remove gradient */
     border-bottom: none;
+    box-shadow: var(--shadow-sm);
+    /* Subtle shadow definition */
 }
 
-/* 标签栏 - 继续渐变效果 */
+/* 标签栏 - 扁平化风格 */
 .md-tabs {
-    background: linear-gradient(to bottom, #1e50ba 0%, #2563EB 100%);
+    background-color: var(--brand-primary);
+    background-image: none;
+    /* Remove gradient */
     border-bottom: none;
 }
 

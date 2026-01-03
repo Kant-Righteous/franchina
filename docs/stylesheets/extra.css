@@ -26,19 +26,27 @@
    ======================================== */
 
 /* 按顺序导入所有模块 */
-@import 'variables.css';
+
+/* === Core: 核心基础 === */
+@import 'core/variables.css';
 /* 必须最先导入,其他文件依赖这些变量 */
-@import 'base.css';
+@import 'core/base.css';
 /* 全局基础样式 */
-@import 'header.css';
-/* 顶部导航区域 */
-@import 'sidebar.css';
-/* 左侧导航菜单 */
-@import 'content.css';
-/* 文章主体内容 */
-@import 'components.css';
-/* UI组件 */
-@import 'responsive.css';
-/* 响应式适配 */
-@import 'animations.css';
+@import 'core/animations.css';
 /* 动画效果 */
+
+/* === Layout: 布局相关 === */
+@import 'layout/header.css';
+/* 顶部导航区域 */
+@import 'layout/sidebar.css';
+/* 左侧导航菜单 */
+@import 'layout/responsive.css';
+/* 响应式适配 */
+
+/* === Pages: 页面与组件 === */
+@import 'pages/content.css';
+/* 文章主体内容 */
+@import 'pages/components.css';
+/* UI组件 */
+@import 'pages/home.css';
+/* 首页样式 */

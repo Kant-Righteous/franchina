@@ -16,10 +16,10 @@ theme:
     - navigation.indexes
   palette:
     scheme: default
-    primary: blue
-    accent: red
+    primary: indigo # Ignored due to CSS override, but keeping valid
+    accent: pink    # Ignored due to CSS override, but keeping valid
   font:
-    text: Noto Sans SC
+    text: Noto Sans SC # Loads webfont as fallback
     code: Roboto Mono
 
 extra_css:
@@ -32,12 +32,12 @@ nav:
   - 行前与落地:
       - 行前清单: preparation/checklist.md
       - 落地第一周: arrival/first-week.md
-  - 行政手续 (通用):
+  - 行政手续:
       - CAF (房补): admin/caf.md
       - Ameli (医保): admin/ameli.md
       - 签证与居留: admin/visa.md
       - 银行开户: admin/bank.md
-  - 生活指南 (通用):
+  - 生活指南:
       - 住房: life/housing.md
       - 交通出行: life/transport.md
       - 医疗健康: life/health.md
@@ -47,8 +47,8 @@ nav:
           - 本地交通: cities/toulouse/transport.md
           - 生活圈: cities/toulouse/life.md
   - 关于:
-      - FAQ: about/faq.md
       - 关于我们: about.md
+      - FAQ: about/faq.md
 
 plugins:
   - search
