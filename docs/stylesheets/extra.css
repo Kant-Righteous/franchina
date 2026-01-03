@@ -48,5 +48,5 @@
 /* 文章主体内容 */
 @import 'pages/components.css';
 /* UI组件 */
-@import 'pages/home.css';
+/* @import 'pages/home.css'; Removed: Loaded directly in mkdocs.yml */
 /* 首页样式 */

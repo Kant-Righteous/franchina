@@ -23,7 +23,9 @@ theme:
     code: Roboto Mono
 
 extra_css:
+  - stylesheets/core/variables.css
   - stylesheets/extra.css
+  - stylesheets/pages/home.css
 
 copyright: ""
 
