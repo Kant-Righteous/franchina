@@ -14,6 +14,8 @@ theme:
     # - search.suggest # Disabled to prevent ghost text
     - content.code.copy
     - navigation.indexes
+  logo: assets/home/logo.png
+  favicon: assets/home/favicon.png
   palette:
     scheme: default
     primary: indigo # Ignored due to CSS override, but keeping valid
@@ -30,27 +32,27 @@ extra_css:
 copyright: ""
 
 nav:
-  - 首页: index.md
+  - 首页: pages/index.md
   - 行前与落地:
-      - 行前清单: preparation/checklist.md
-      - 落地第一周: arrival/first-week.md
+      - 行前清单: pages/preparation/checklist.md
+      - 落地第一周: pages/arrival/first-week.md
   - 行政手续:
-      - CAF (房补): admin/caf.md
-      - Ameli (医保): admin/ameli.md
-      - 签证与居留: admin/visa.md
-      - 银行开户: admin/bank.md
+      - CAF (房补): pages/admin/caf.md
+      - Ameli (医保): pages/admin/ameli.md
+      - 签证与居留: pages/admin/visa.md
+      - 银行开户: pages/admin/bank.md
   - 生活指南:
-      - 住房: life/housing.md
-      - 交通出行: life/transport.md
-      - 医疗健康: life/health.md
+      - 住房: pages/life/housing.md
+      - 交通出行: pages/life/transport.md
+      - 医疗健康: pages/life/health.md
   - 城市指南:
       - 图卢兹 (Toulouse):
-          - 城市概况: cities/toulouse/index.md
-          - 本地交通: cities/toulouse/transport.md
-          - 生活圈: cities/toulouse/life.md
+          - 城市概况: pages/cities/toulouse/index.md
+          - 本地交通: pages/cities/toulouse/transport.md
+          - 生活圈: pages/cities/toulouse/life.md
   - 关于:
-      - 关于我们: about.md
-      - FAQ: about/faq.md
+      - 关于我们: pages/about.md
+      - FAQ: pages/about/faq.md
 
 plugins:
   - search

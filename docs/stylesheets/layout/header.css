@@ -74,3 +74,17 @@
     color: #D5D8DE;
     /* Dark placeholder */
 }
+
+/* Custom Logo Adjustments based on User Request */
+.md-header .md-logo img {
+    height: 42px;
+    /* Increased from ~28px */
+    width: auto;
+}
+
+.md-header .md-logo {
+    margin-left: 18px;
+    /* Shift right */
+    padding: 0;
+    /* Reset padding if necessary to maximize size */
+}
