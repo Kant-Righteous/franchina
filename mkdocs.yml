@@ -25,8 +25,17 @@ theme:
     code: Roboto Mono
 
 extra_css:
+  # Core 核心基础
   - stylesheets/core/variables.css
-  - stylesheets/extra.css
+  - stylesheets/core/base.css
+  - stylesheets/core/animations.css
+  # Layout 布局
+  - stylesheets/layout/header.css
+  - stylesheets/layout/sidebar.css
+  - stylesheets/layout/responsive.css
+  # Pages 页面与组件
+  - stylesheets/pages/content.css
+  - stylesheets/pages/components.css
   - stylesheets/pages/home.css
 
 copyright: ""
