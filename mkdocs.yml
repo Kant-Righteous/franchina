@@ -11,7 +11,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - search.highlight
-    - search.suggest
+    # - search.suggest # Disabled to prevent ghost text
     - content.code.copy
     - navigation.indexes
   palette:
