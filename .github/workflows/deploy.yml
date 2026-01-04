@@ -35,6 +35,12 @@ jobs:
           script: |
             rm -rf /var/www/franchina/*
 
+      - name: Purge Cloudflare Cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: Deploy to OCI
         uses: appleboy/scp-action@v0.1.7
         with:
