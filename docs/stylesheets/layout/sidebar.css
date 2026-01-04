@@ -51,8 +51,8 @@
     border-left: 3px solid #eb2525 !important;
 }
 
-/* 修复侧边栏折叠按钮样式 */
-.md-sidebar--primary .md-nav__link+.md-nav__link {
+/* 修复侧边栏折叠按钮样式 - 仅针对 label 标签 (折叠箭头) */
+.md-sidebar--primary .md-nav__link+label.md-nav__link {
     background-color: transparent !important;
     border: none !important;
 }
