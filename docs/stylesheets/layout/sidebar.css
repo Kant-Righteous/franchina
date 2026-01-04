@@ -36,17 +36,23 @@
     font-size: 0.875rem;
 }
 
-/* 导航链接悬停效果 - 提高优先级 */
-.md-sidebar .md-nav__link:hover {
+/* 导航链接悬停效果 - 仅限左侧主导航 */
+.md-sidebar--primary .md-nav__link:hover {
     background-color: #dee8f1 !important;
     color: #1F52C0 !important;
     font-weight: 600 !important;
 }
 
-/* 当前激活的导航项 - 提高优先级 */
-.md-sidebar .md-nav__link--active {
+/* 当前激活的导航项 - 仅限左侧主导航 */
+.md-sidebar--primary .md-nav__link--active {
     background-color: #dee8f1 !important;
     color: #eb2525 !important;
     font-weight: 600 !important;
     border-left: 3px solid #eb2525 !important;
+}
+
+/* 修复侧边栏折叠按钮样式 */
+.md-sidebar--primary .md-nav__link+.md-nav__link {
+    background-color: transparent !important;
+    border: none !important;
 }

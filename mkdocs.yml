@@ -7,13 +7,16 @@ theme:
   name: material
   language: zh
   features:
-    - navigation.sections
+    # - navigation.sections  # 禁用以启用折叠功能
     - navigation.tabs
     - navigation.top
-    - search.highlight
-    # - search.suggest # Disabled to prevent ghost text
-    - content.code.copy
+    - navigation.instant
+    # - navigation.expand # 禁用以使得左侧导航栏默认是折叠的
     - navigation.indexes
+    - search.highlight
+    # - search.suggest # 禁用使得搜索框不会有残影
+    - content.code.copy
+
   logo: assets/home/logo.png
   favicon: assets/home/favicon.png
   palette:
@@ -55,10 +58,14 @@ nav:
       - 交通出行: pages/life/transport.md
       - 医疗健康: pages/life/health.md
   - 城市指南:
-      - 图卢兹 (Toulouse):
-          - 城市概况: pages/cities/toulouse/index.md
+      - 图卢兹:
+          - 城市简介: pages/cities/toulouse/index.md
           - 本地交通: pages/cities/toulouse/transport.md
           - 生活圈: pages/cities/toulouse/life.md
+      - 巴黎:
+          - 城市简介: pages/cities/paris/index.md
+          - 本地交通: pages/cities/paris/transport.md
+          - 生活圈: pages/cities/paris/life.md
   - 关于:
       - 关于我们: pages/about.md
       - FAQ: pages/about/faq.md
