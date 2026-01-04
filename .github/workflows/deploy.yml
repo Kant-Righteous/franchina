@@ -26,6 +26,15 @@ jobs:
       - name: Build site
         run: mkdocs build --clean
 
+      - name: Clean remote directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            rm -rf /var/www/franchina/*
+
       - name: Deploy to OCI
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -35,3 +44,4 @@ jobs:
           source: "site/"
           target: "/var/www/franchina"
           strip_components: 1
+

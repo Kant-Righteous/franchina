@@ -12,15 +12,21 @@
    设计特点: 统一的深蓝色主题,粉红色下划线强调
    ======================================== */
 
-/* 顶部导航栏 - 渐变起点 */
+/* 顶部导航栏 - 扁平化风格 */
 .md-header {
-    background: linear-gradient(to bottom, #1E3A8A 0%, #1e50ba 100%);
+    background-color: var(--brand-primary);
+    background-image: none;
+    /* Remove gradient */
     border-bottom: none;
+    box-shadow: var(--shadow-sm);
+    /* Subtle shadow definition */
 }
 
-/* 标签栏 - 继续渐变效果 */
+/* 标签栏 - 扁平化风格 */
 .md-tabs {
-    background: linear-gradient(to bottom, #1e50ba 0%, #2563EB 100%);
+    background-color: var(--brand-primary);
+    background-image: none;
+    /* Remove gradient */
     border-bottom: none;
 }
 
@@ -51,7 +57,8 @@
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    color: white;
+    color: #333;
+    /* Dark text for visibility */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -64,5 +71,20 @@
 
 /* 搜索框占位符文字 */
 .md-search__input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #D5D8DE;
+    /* Dark placeholder */
+}
+
+/* Custom Logo Adjustments based on User Request */
+.md-header .md-logo img {
+    height: 42px;
+    /* Increased from ~28px */
+    width: auto;
+}
+
+.md-header .md-logo {
+    margin-left: 18px;
+    /* Shift right */
+    padding: 0;
+    /* Reset padding if necessary to maximize size */
 }

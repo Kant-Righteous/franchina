@@ -1,0 +1,170 @@
+/* Main Hero Section */
+.tx-hero {
+  /* Full width breakout */
+  margin: 0rem -100rem;
+  padding: 4rem 100rem;
+  background-color: var(--md-default-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  /* Increased gap for better breathing room */
+  min-height: 70vh;
+  /* Taller section */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content Container */
+.tx-hero__content {
+  max-width: 650px;
+  z-index: 2;
+  flex: 1;
+  /* Allow text to take available space */
+}
+
+.tx-hero__content h1 {
+  font-size: 3.5rem;
+  /* Larger title */
+  font-weight: 700;
+  color: var(--brand-primary);
+  /* Use brand color */
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Sub-slogan styling */
+/* Sub-slogan styling */
+.tx-hero__content h1 span {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  /* Prevent wrapping for the English slogan */
+}
+
+.tx-hero__content p {
+  font-size: 1.5rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  /* Increased from 500px to avoid Chinese text wrapping */
+  white-space: nowrap;
+  /* Prevent wrapping for the Chinese slogan */
+}
+
+/* Image Container */
+.tx-hero__image {
+  flex: 0 0 650px;
+  /* Increased base width for desktop */
+  max-width: 55%;
+  /* Limit max width percentage */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tx-hero__image img {
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  /* Allow taller image */
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Footer Hide (if needed) */
+/* .md-footer { display: none; } */
+
+/* === Responsive Design === */
+
+/* Tablet / Laptop (Max width 1200px) */
+@media screen and (max-width: 1200px) {
+  .tx-hero {
+    gap: 4rem;
+    padding: 3rem 100rem;
+  }
+
+  .tx-hero__image {
+    flex: 0 0 500px;
+  }
+
+  .tx-hero__content h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet (Portrait) / Large Mobile (Max width 960px) */
+@media screen and (max-width: 960px) {
+  .tx-hero {
+    margin: 0 -2rem;
+    /* Reduce breakout margin */
+    padding: 4rem 2rem;
+    flex-direction: column-reverse;
+    /* Stack: Text bottom, Image top (or reverse if desired) */
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .tx-hero__content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tx-hero__image {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .tx-hero__content h1 {
+    font-size: 2.5rem;
+  }
+
+  .tx-hero__content p {
+    font-size: 1.25rem;
+    max-width: 100%;
+  }
+}
+
+/* Mobile (Max width 600px) */
+@media screen and (max-width: 600px) {
+  .tx-hero {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .tx-hero__image {
+    width: 90%;
+  }
+
+  .tx-hero__content h1 {
+    font-size: 2rem;
+  }
+
+  /* Reset "From China to France" font size relative to H1 on mobile */
+  .tx-hero__content h1 span {
+    font-size: 0.6em;
+    /* Keep relative scaling */
+  }
+}
