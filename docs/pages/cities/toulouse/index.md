@@ -3,7 +3,7 @@
 ## 概述
 图卢兹（Toulouse）是法国西南部的一座重要城市，位于加龙河（Garonne）河畔，地处地中海与大西洋之间的交通要冲。
 
-![图卢兹城市风光](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Montage_Toulouse_3.jpg/330px-Montage_Toulouse_3.jpg){: align=right width=300 }
+![图卢兹城市风光](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Montage_Toulouse_3.jpg/330px-Montage_Toulouse_3.jpg){: align=right width=400 }
 
 作为奥克西塔尼大区（Occitanie）和上加龙省（Haute-Garonne）的首府，图卢兹是法国第四大城市，2023年常住人口为514,819人，都会区人口达1,093,783人，吸引力区域人口达1,529,112人，位居全国第五。城市因其传统建筑使用的红砖而被称为“玫瑰之城”（Ville Rose），也因19世纪 violette de Toulouse（图卢兹紫罗兰）的种植而获得“紫罗兰之都”的美誉。
 
