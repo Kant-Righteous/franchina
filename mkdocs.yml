@@ -41,7 +41,7 @@ extra_css:
 copyright: ""
 
 nav:
-  - 首页: pages/index.md
+  - 首页: index.md
   - 行前与落地:
       - 行前清单: pages/preparation/checklist.md
       - 落地第一周: pages/arrival/first-week.md

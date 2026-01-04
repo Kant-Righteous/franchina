@@ -11,7 +11,7 @@ hide:
     <p>陪你走过留法生活的百宝箱</p>
   </div>
   <div class="tx-hero__image">
-    <img src="../assets/home/hero_landing.png" alt="FranChina Hero Image" draggable="false">
+    <img src="assets/home/hero_landing.png" alt="FranChina Hero Image" draggable="false">
   </div>
 </div>
 
