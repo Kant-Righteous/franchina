@@ -26,16 +26,18 @@ jobs:
         run: |
           python scripts/update_currency.py
 
-      - name: Commit and push if changed
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          git add docs/assets/littleTools/CurrencyCalculator/rates.json
-          # Check if there are changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: update currency rates"
-            git pull --rebase # Ensure we have the latest changes
-            git push
-          fi
+      - name: Deploy rates.json to Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "docs/assets/littleTools/CurrencyCalculator/rates.json"
+          target: "/var/www/franchina/assets/littleTools/CurrencyCalculator/"
+          strip_components: 4
+
+      - name: Purge Cloudflare Cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

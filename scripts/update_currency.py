@@ -33,17 +33,7 @@ def save_rates(data):
     print(f"Rates saved to {OUTPUT_FILE}")
 
 def main():
-    # Check freshness
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
-                current_data = json.load(f)
-                next_update = current_data.get('time_next_update_unix', 0)
-                if time.time() < next_update:
-                    print("Data is fresh. Skipping update.")
-                    return
-        except Exception as e:
-            print(f"Error checking freshness: {e}")
+
 
     data = fetch_rates()
     if data and data.get('result') == 'success':
