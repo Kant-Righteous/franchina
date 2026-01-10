@@ -224,7 +224,14 @@ hide:
 
     async function fetchRates() {
         try {
-            const response = await fetch('https://open.er-api.com/v6/latest/EUR');
+            // Use absolute path for assets and add timestamp to prevent caching
+            // /assets/... ensures we look at the site root, regardless of current page depth
+            const response = await fetch('/assets/littleTools/CurrencyCalculator/rates.json?v=' + new Date().getTime());
+            
+            if (!response.ok) {
+                 throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
             const data = await response.json();
             
             if (data.result === 'success') {
@@ -232,13 +239,19 @@ hide:
                 updateCalculation();
                 
                 const date = new Date(data.time_last_update_utc);
-                lastUpdateDiv.textContent = '更新时间: ' + date.toLocaleString('zh-CN');
+                lastUpdateDiv.textContent = '更新时间: ' + date.toLocaleString('zh-CN', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
             } else {
                 rateInfoDiv.textContent = '获取汇率失败';
             }
         } catch (error) {
             console.error('Error fetching rates:', error);
-            rateInfoDiv.textContent = '网络错误，请稍后重试';
+            rateInfoDiv.textContent = '无法加载汇率数据';
         }
     }
 

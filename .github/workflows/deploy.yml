@@ -23,6 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run currency update script
+        run: |
+          python scripts/update_currency.py
+
       - name: Build site
         run: mkdocs build --clean
 
