@@ -21,17 +21,17 @@ Tisséo运营149条公交线路（含Linéo快速公交），其中Linéo是具�
 
 #### 📍 主要地铁、有轨电车和快速公交线路图
 
-<iframe src="../../../../assets/cites/toulouse/transport/plan-lignes-principales.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
+<iframe src="/assets/cites/toulouse/transport/plan-lignes-principales.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
 
-*如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](../../../../assets/cites/toulouse/transport/plan-lignes-principales.pdf)*
+*如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](/assets/cites/toulouse/transport/plan-lignes-principales.pdf)*
 
 ---
 
 #### ⏱️ 行程时间估算图（从市中心出发）
 
-<iframe src="../../../../assets/cites/toulouse/transport/Roue-des-temps.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
+<iframe src="/assets/cites/toulouse/transport/Roue-des-temps.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
 
-*如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](../../../../assets/cites/toulouse/transport/Roue-des-temps.pdf)*
+*如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](/assets/cites/toulouse/transport/Roue-des-temps.pdf)*
 
 ---
 

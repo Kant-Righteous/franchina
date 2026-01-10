@@ -66,6 +66,8 @@ nav:
           - 城市简介: pages/cities/paris/index.md
           - 本地交通: pages/cities/paris/transport.md
           - 生活圈: pages/cities/paris/life.md
+  - 小工具:
+      - 汇率计算器: pages/littleTools/CurrencyCalculator.md
   - 关于:
       - 关于我们: pages/about.md
       - FAQ: pages/about/faq.md
