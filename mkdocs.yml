@@ -46,7 +46,7 @@ copyright: "Copyright &copy; 2024-2025 FranChina 留法指南 - All rights reser
 nav:
   - 首页: index.md
   - 行前与落地:
-      - 行前清单: pages/preparation/checklist.md
+      - 行前清单: pages/arrival/checklist.md
       - 落地第一周: pages/arrival/first-week.md
   - 行政手续:
       - CAF (房补): pages/admin/caf.md
@@ -91,4 +91,11 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
