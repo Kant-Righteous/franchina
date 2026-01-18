@@ -294,12 +294,16 @@ hide:
         align-items: baseline;
         justify-content: center;
         gap: 0.5rem;
-        word-break: break-all; /* Prevent overflow of long numbers */
-        flex-wrap: wrap; /* Allow wrapping if needed */
+        word-break: break-all; /* Force break for continuous numbers */
+        overflow-wrap: anywhere; /* Ensure breaks happen anywhere if needed */
+        flex-wrap: wrap; /* Allow wrapping */
     }
 
     .result-number {
-        font-size: 3.5rem; /* Slightly reduced */
+        max-width: 100%; /* Limit width to container */
+        white-space: normal; /* Ensure wrapping */
+        text-align: center; /* Center text when wrapped */
+        font-size: clamp(2rem, 12vw, 3.5rem); /* Responsive font size */
         font-weight: 800;
         background: linear-gradient(135deg, var(--c-primary) 0%, #1E40AF 100%);
         -webkit-background-clip: text;
@@ -332,11 +336,19 @@ hide:
     /* Responsive */
     @media (max-width: 768px) {
         .currency-wrapper {
-            padding: 0 0.5rem;
+            padding: 0 0.25rem; /* Minimize side padding */
         }
         
         .calc-card {
-            padding: 1.5rem;
+            padding: 1.5rem 0.5rem; /* Minimal side padding */
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        
+        input[type="number"], select {
+            height: 56px; /* Taller touch targets */
+            font-size: 1.1rem; /* Larger text */
         }
 
         .input-row {
@@ -350,6 +362,13 @@ hide:
             flex: none; /* Disable flex growing logic on mobile */
         }
         
+        .result-display {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0;
+            border-radius: 0;
+        }
+
         .swap-action {
             margin: 1rem auto; /* Proper spacing, centered */
             transform: rotate(90deg);
@@ -361,9 +380,7 @@ hide:
             transform: rotate(270deg) scale(1.1);
         }
 
-        .result-number {
-            font-size: 2.5rem;
-        }
+        /* font-size handled by clamp() in base style */
         
         .currency-symbol {
             font-size: 1.5rem;
