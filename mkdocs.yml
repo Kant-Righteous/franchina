@@ -40,11 +40,6 @@ extra_css:
   - stylesheets/pages/content.css
   - stylesheets/pages/components.css
   - stylesheets/pages/home.css
-  - stylesheets/other/checklist-fix.css
-
-
-extra_javascript:
-  - javascripts/checklist-persistence.js
 
 copyright: "Copyright &copy; 2024-2025 FranChina 留法指南 - All rights reserved"
 
@@ -96,6 +91,4 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
-  - pymdownx.tasklist:
-      custom_checkbox: false
 
