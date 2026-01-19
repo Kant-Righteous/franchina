@@ -17,6 +17,13 @@
     background-color: rgb(255, 255, 255);
 }
 
+/* 移动端/小屏侧边栏顶部背景 */
+.md-nav--primary .md-nav__title {
+    background: linear-gradient(to bottom, #172a4e, #122e62);
+    color: white;
+    /* Ensure text remains white on dark background */
+}
+
 /* 导航区域标题 */
 .md-nav__title {
     font-family: 'Noto Sans SC', sans-serif;

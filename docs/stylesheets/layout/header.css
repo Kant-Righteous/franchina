@@ -3,8 +3,8 @@
    
    作用: 控制网站顶部导航区域的外观
    包含内容:
-   - 顶部导航栏 (.md-header) - 深蓝色背景
-   - 标签栏 (.md-tabs) - 与导航栏同色
+   - 顶部导航栏 (.md-header) - 深蓝色渐变
+   - 标签栏 (.md-tabs) - 继承导航栏渐变
    - 网站标题样式
    - 导航链接及悬停效果 (下划线动画)
    - 搜索框样式 (半透明背景、悬停效果)
@@ -14,9 +14,7 @@
 
 /* 顶部导航栏 - 扁平化风格 */
 .md-header {
-    background-color: var(--brand-primary);
-    background-image: none;
-    /* Remove gradient */
+    background: linear-gradient(to bottom, #172a4e, #122e62);
     border-bottom: none;
     box-shadow: var(--shadow-sm);
     /* Subtle shadow definition */
@@ -24,9 +22,7 @@
 
 /* 标签栏 - 扁平化风格 */
 .md-tabs {
-    background-color: var(--brand-primary);
-    background-image: none;
-    /* Remove gradient */
+    background: linear-gradient(to bottom, #122e62, #142a52);
     border-bottom: none;
 }
 
