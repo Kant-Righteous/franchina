@@ -73,7 +73,8 @@ nav:
       - FAQ: pages/about/faq.md
 
 plugins:
-  - search
+  - search:
+      lang: zh
   - minify:
       minify_html: true
   - git-revision-date-localized:
