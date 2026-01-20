@@ -70,6 +70,29 @@ hide:
         </div>
     </div>
 
+    <!-- Historical Chart Section -->
+    <div class="chart-section">
+        <div class="chart-card">
+            <div class="chart-header">
+                <div class="chart-title">历史走势</div>
+                <div class="chart-controls">
+                    <div class="pair-selector">
+                        <button class="pair-btn active" data-pair="EUR_CNY">EUR/CNY</button>
+                        <button class="pair-btn" data-pair="EUR_USD">EUR/USD</button>
+                        <button class="pair-btn" data-pair="USD_CNY">USD/CNY</button>
+                    </div>
+                    <div class="range-selector">
+                        <button class="range-btn" data-range="30">1M</button>
+                        <button class="range-btn" data-range="180">6M</button>
+                        <button class="range-btn active" data-range="1095">3Y</button>
+                    </div>
+                </div>
+            </div>
+            <div id="chart-container"></div>
+            <div class="chart-tooltip" id="chart-tooltip"></div>
+        </div>
+    </div>
+
     <div class="legal-footer">
         <p>数据来源：ExchangeRate-API | 仅供参考</p>
         <p style="margin-top: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5;">免责声明：本工具提供的汇率数据仅供参考，不作为交易依据。本网站不对因使用本数据而产生的任何直接或间接损失承担法律责任。</p>
@@ -386,6 +409,115 @@ hide:
             font-size: 1.5rem;
         }
     }
+
+    /* Chart Section Styles */
+    .chart-section {
+        margin-top: 2rem;
+    }
+
+    .chart-card {
+        background: var(--c-bg-card);
+        border-radius: 24px;
+        padding: 1.5rem;
+        box-shadow: var(--c-shadow);
+        border: 1px solid var(--c-border);
+    }
+
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .chart-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--c-text);
+    }
+
+    .chart-controls {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .pair-selector, .range-selector {
+        display: flex;
+        gap: 0.25rem;
+        background: var(--c-primary-light);
+        border-radius: 8px;
+        padding: 0.25rem;
+    }
+
+    .pair-btn, .range-btn {
+        padding: 0.4rem 0.8rem;
+        border: none;
+        background: transparent;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--c-text-light);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .pair-btn:hover, .range-btn:hover {
+        color: var(--c-primary);
+    }
+
+    .pair-btn.active, .range-btn.active {
+        background: var(--c-primary);
+        color: #fff;
+    }
+
+    #chart-container {
+        height: 320px;
+        width: 100%;
+        position: relative;
+    }
+
+    .chart-tooltip {
+        display: none;
+        position: absolute;
+        background: var(--c-bg-card);
+        border: 1px solid var(--c-border);
+        border-radius: 8px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        box-shadow: var(--c-shadow);
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+        .chart-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .chart-controls {
+            width: 100%;
+        }
+
+        .range-selector {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        #chart-container {
+            height: 250px;
+        }
+
+        .chart-card {
+            padding: 1rem 0.5rem;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+    }
 </style>
 
 <script>
@@ -499,5 +631,183 @@ hide:
 
         // Run
         init();
+    })();
+
+    // ========== Historical Chart Module ==========
+    (function() {
+        let chart = null;
+        let lineSeries = null;
+        let historyData = null;
+        let currentPair = 'EUR_CNY';
+        let currentRange = 1095; // 3Y default
+
+        const container = document.getElementById('chart-container');
+        const pairBtns = document.querySelectorAll('.pair-btn');
+        const rangeBtns = document.querySelectorAll('.range-btn');
+
+        function buildUsdCny(data) {
+            if (!data || !Array.isArray(data.EUR_CNY) || !Array.isArray(data.EUR_USD)) return;
+
+            const usdMap = new Map(data.EUR_USD.map(item => [item.date, item.rate]));
+            const usdCny = [];
+
+            data.EUR_CNY.forEach(item => {
+                const usdRate = usdMap.get(item.date);
+                if (!usdRate) return;
+                const rate = item.rate / usdRate;
+                if (Number.isFinite(rate)) {
+                    usdCny.push({ date: item.date, rate: rate });
+                }
+            });
+
+            if (usdCny.length > 0) {
+                data.USD_CNY = usdCny;
+            }
+        }
+
+        async function loadHistoryData() {
+            try {
+                const resp = await fetch('/assets/littleTools/CurrencyCalculator/history.json?v=' + Date.now());
+                if (!resp.ok) throw new Error('Failed to load history');
+                historyData = await resp.json();
+                buildUsdCny(historyData);
+                initChart();
+                renderChart();
+            } catch(e) {
+                console.error('Chart error:', e);
+                container.innerHTML = '<div style="padding:2rem;text-align:center;color:#888;">无法加载历史数据</div>';
+            }
+        }
+
+        function initChart() {
+            if (!container || typeof LightweightCharts === 'undefined') {
+                // LightweightCharts not loaded, use fallback
+                loadLightweightCharts();
+                return;
+            }
+            createChart();
+        }
+
+        function loadLightweightCharts() {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js';
+            script.onload = createChart;
+            document.head.appendChild(script);
+        }
+
+        function createChart() {
+            if (!container || chart) return;
+
+            // Get colors from CSS variables
+            const isDark = document.documentElement.getAttribute('data-md-color-scheme') === 'slate';
+            const bgColor = isDark ? '#1E293B' : '#FFFFFF';
+            const textColor = isDark ? '#94A3B8' : '#64748B';
+            const lineColor = isDark ? '#60A5FA' : '#2563EB';
+            const gridColor = isDark ? '#334155' : '#E2E8F0';
+
+            chart = LightweightCharts.createChart(container, {
+                width: container.clientWidth,
+                height: container.clientHeight || 320,
+                layout: {
+                    background: { type: 'solid', color: bgColor },
+                    textColor: textColor,
+                },
+                grid: {
+                    vertLines: { color: gridColor },
+                    horzLines: { color: gridColor },
+                },
+                crosshair: {
+                    mode: LightweightCharts.CrosshairMode.Normal,
+                },
+                rightPriceScale: {
+                    borderColor: gridColor,
+                    borderVisible: true,
+                },
+                timeScale: {
+                    borderColor: gridColor,
+                    borderVisible: true,
+                    timeVisible: true,
+                },
+                handleScroll: { mouseWheel: true, pressedMouseMove: true },
+                handleScale: { mouseWheel: true, pinch: true },
+            });
+
+            lineSeries = chart.addAreaSeries({
+                lineColor: lineColor,
+                topColor: isDark ? 'rgba(96, 165, 250, 0.3)' : 'rgba(37, 99, 235, 0.2)',
+                bottomColor: isDark ? 'rgba(96, 165, 250, 0.0)' : 'rgba(37, 99, 235, 0.0)',
+                lineWidth: 2,
+                priceFormat: { type: 'price', precision: 4, minMove: 0.0001 },
+            });
+
+            // Responsive resize
+            const resizeObserver = new ResizeObserver(() => {
+                if (chart && container) {
+                    chart.applyOptions({ width: container.clientWidth });
+                }
+            });
+            resizeObserver.observe(container);
+
+            // Theme change observer
+            const themeObserver = new MutationObserver(() => {
+                if (chart) {
+                    chart.remove();
+                    chart = null;
+                    lineSeries = null;
+                    createChart();
+                    renderChart();
+                }
+            });
+            themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-md-color-scheme'] });
+
+            renderChart();
+        }
+
+        function renderChart() {
+            if (!historyData || !lineSeries) return;
+
+            const pairData = historyData[currentPair] || [];
+            if (pairData.length === 0) return;
+
+            // Filter by date range
+            const now = new Date();
+            const cutoffDate = new Date(now);
+            cutoffDate.setDate(cutoffDate.getDate() - currentRange);
+            const cutoffStr = cutoffDate.toISOString().split('T')[0];
+
+            const filteredData = pairData
+                .filter(d => d.date >= cutoffStr)
+                .map(d => ({
+                    time: d.date,
+                    value: d.rate
+                }));
+
+            if (filteredData.length > 0) {
+                lineSeries.setData(filteredData);
+                chart.timeScale().fitContent();
+            }
+        }
+
+        // Event listeners
+        pairBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                pairBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPair = btn.dataset.pair;
+                renderChart();
+            });
+        });
+
+        rangeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                rangeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentRange = parseInt(btn.dataset.range, 10);
+                renderChart();
+            });
+        });
+
+        // Initialize
+        loadHistoryData();
     })();
 </script>
