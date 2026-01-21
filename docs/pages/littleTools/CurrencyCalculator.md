@@ -508,9 +508,9 @@ hide:
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: -0.5rem;
         height: 12px;
-        padding: 0 0.55rem 0.2rem;
+        padding: 0 0.55rem 0;
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
