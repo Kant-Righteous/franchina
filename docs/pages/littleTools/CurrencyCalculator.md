@@ -101,9 +101,9 @@ hide:
     </div>
 
     <div class="legal-footer">
-        <p>数据来源：ExchangeRate-API </p>
-        <p>汇率仅供参考</p>
-        <p>免责声明：本工具提供的汇率数据仅供参考，不作为交易依据。请注意，银行和交易所通常会在交易汇率的基础上收取一定的点差（上浮汇率）。使用本数据前请谨慎评估风险。</p>
+        <p style="margin-bottom: 0.5rem;">数据来源：ExchangeRate-API </p>
+        <p style="margin-bottom: 0.5rem;">汇率仅供参考</p>
+        <p style="margin-bottom: 0.5rem;">免责声明：本工具提供的汇率数据仅供参考，不作为交易依据。请注意，银行和交易所通常会在交易汇率的基础上收取一定的点差（上浮汇率）。使用本数据前请谨慎评估风险。</p>
         <p>本网站不对因使用本数据而产生的任何直接或间接损失承担法律责任。</p>
     </div>
 </div>
