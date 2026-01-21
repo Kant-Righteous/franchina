@@ -47,7 +47,7 @@ hide:
                     </div>
                 </div>
 
-                <button id="swapBtn" class="swap-action" title="交换">
+                <button id="swapBtn" class="swap-action" title="交换" type="button">
                     <span class="swap-icon">⇄</span>
                 </button>
 
@@ -77,15 +77,15 @@ hide:
                 <div class="chart-title">历史走势</div>
                 <div class="chart-controls">
                     <div class="pair-selector">
-                        <button class="pair-btn active" data-pair="EUR_CNY">EUR/CNY</button>
-                        <button class="pair-btn" data-pair="EUR_USD">EUR/USD</button>
-                        <button class="pair-btn" data-pair="USD_CNY">USD/CNY</button>
+                        <button class="pair-btn active" data-pair="EUR_CNY" type="button">EUR/CNY</button>
+                        <button class="pair-btn" data-pair="EUR_USD" type="button">EUR/USD</button>
+                        <button class="pair-btn" data-pair="USD_CNY" type="button">USD/CNY</button>
                     </div>
                     <div class="range-selector">
-                        <button class="range-btn" data-range="30">1M</button>
-                        <button class="range-btn" data-range="180">6M</button>
-                        <button class="range-btn active" data-range="1095">3Y</button>
-                        <button class="range-btn" data-range="0">ALL</button>
+                        <button class="range-btn" data-range="30" type="button">1M</button>
+                        <button class="range-btn" data-range="180" type="button">6M</button>
+                        <button class="range-btn active" data-range="1095" type="button">3Y</button>
+                        <button class="range-btn" data-range="0" type="button">ALL</button>
                     </div>
                 </div>
             </div>
@@ -977,13 +977,7 @@ hide:
             });
 
             // 面积曲线序列
-            lineSeries = chart.addAreaSeries({
-                lineColor: lineColor,
-                topColor: isDark ? 'rgba(96, 165, 250, 0.3)' : 'rgba(37, 99, 235, 0.2)',
-                bottomColor: isDark ? 'rgba(96, 165, 250, 0.0)' : 'rgba(37, 99, 235, 0.0)',
-                lineWidth: 2,
-                priceFormat: { type: 'price', precision: 4, minMove: 0.0001 },
-            });
+            // 移至 renderChart 中动态创建，以实现强制刷新
 
             // 鼠标移动：展示时间戳提示
             chart.subscribeCrosshairMove(param => {
@@ -1020,7 +1014,7 @@ hide:
                 if (chart) {
                     chart.remove();
                     chart = null;
-                    lineSeries = null;
+                    lineSeries = null; // 重置 series 引用
                     createChart();
                     renderChart();
                 }
@@ -1032,7 +1026,7 @@ hide:
 
         // 根据币对与时间区间渲染图表
         function renderChart() {
-            if (!historyData || !lineSeries) return;
+            if (!historyData || !chart) return; // 确保 chart 已存在
 
             const pairData = historyData[currentPair] || [];
             if (pairData.length === 0) return;
@@ -1057,8 +1051,31 @@ hide:
 
             if (filteredData.length > 0) {
                 currentFilteredData = filteredData;
+
+                // --- 强制刷新逻辑：重建 Series ---
+                // 1. 如果旧 Series 存在，先移除
+                if (lineSeries) {
+                    chart.removeSeries(lineSeries);
+                    lineSeries = null;
+                }
+
+                // 2. 获取当前颜色主题
+                const isDark = document.documentElement.getAttribute('data-md-color-scheme') === 'slate';
+                const lineColor = isDark ? '#60A5FA' : '#2563EB';
+
+                // 3. 创建新 Series
+                lineSeries = chart.addAreaSeries({
+                    lineColor: lineColor,
+                    topColor: isDark ? 'rgba(96, 165, 250, 0.3)' : 'rgba(37, 99, 235, 0.2)',
+                    bottomColor: isDark ? 'rgba(96, 165, 250, 0.0)' : 'rgba(37, 99, 235, 0.0)',
+                    lineWidth: 2,
+                    priceFormat: { type: 'price', precision: 4, minMove: 0.0001 },
+                });
+
+                // 4. 设置数据并适配内容
                 lineSeries.setData(filteredData);
                 chart.timeScale().fitContent();
+                
                 tooltipLocked = false;
                 if (tooltip) tooltip.style.display = 'none';
                 updateXAxisByRange();
@@ -1067,7 +1084,8 @@ hide:
 
         // 币对切换事件
         pairBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
                 pairBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentPair = btn.dataset.pair;
@@ -1077,7 +1095,8 @@ hide:
 
         // 时间区间切换事件
         rangeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
                 rangeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentRange = parseInt(btn.dataset.range, 10);
