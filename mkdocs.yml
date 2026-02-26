@@ -52,9 +52,9 @@ nav:
       - CAF (房补): pages/admin/caf.md
       - Ameli (医保): pages/admin/ameli.md
       - 签证与居留: pages/admin/visa.md
-      - 银行开户: pages/admin/bank.md
+      # - 银行开户: pages/admin/bank.md
   - 生活指南:
-      - 住房: pages/life/housing.md
+      # - 住房: pages/life/housing.md
       - 交通出行: pages/life/transport.md
       - 医疗健康: pages/life/health.md
   - 城市指南:
@@ -62,10 +62,10 @@ nav:
           - 城市简介: pages/cities/toulouse/index.md
           - 本地交通: pages/cities/toulouse/transport.md
           - 生活圈: pages/cities/toulouse/life.md
-      - 巴黎:
-          - 城市简介: pages/cities/paris/index.md
-          - 本地交通: pages/cities/paris/transport.md
-          - 生活圈: pages/cities/paris/life.md
+      #- 巴黎:
+          #- 城市简介: pages/cities/paris/index.md
+          #- 本地交通: pages/cities/paris/transport.md
+          #- 生活圈: pages/cities/paris/life.md
   - 小工具:
       - 汇率计算器: pages/littleTools/CurrencyCalculator.md
   - 关于:

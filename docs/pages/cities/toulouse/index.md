@@ -40,7 +40,7 @@
 |---|---|
 | **别称** | 玫瑰之城（Ville Rose）、紫罗兰之都、航空航天之都 |
 | **人口** | 市区约 51.5 万，都会区约 110 万（2023） |
-| **标志美食** | 卡苏莱（Cassoulet）、图卢兹香肠、紫罗兰糖果、鸭胸（Magret de Canard） |
+| **标志美食** | 卡酥锅（Cassoulet）、图卢兹香肠、紫罗兰糖果、鸭胸（Magret de Canard） |
 | **代表运动** | 橄榄球 🏉 — **Stade Toulousain** 24 次法国冠军 + 6 次欧洲冠军 |
 | **地标** | 市政厅广场（Capitole）、圣塞尔南大教堂、米迪运河、太空城 |
 
@@ -62,7 +62,6 @@
 
 | 资源 | 链接 |
 |---|---|
-| 图卢兹市政府 | [toulouse.fr](https://www.toulouse.fr/) |
+| 图卢兹市政府 | [metropole.toulouse.fr](https://metropole.toulouse.fr/) |
 | 图卢兹旅游局 | [toulouse-tourisme.com](https://www.toulouse-tourisme.com/) |
 | Lonely Planet 图卢兹指南 | [lonelyplanet.com](https://www.lonelyplanet.com/france/toulouse) |
-| 图卢兹大都会 | [toulouse-metropole.fr](https://www.toulouse-metropole.fr/) |

@@ -70,7 +70,7 @@
 | 美食 | 说明 |
 |---|---|
 | **油封鸭（Confit de Canard）** | 鸭腿慢煮至酥烂，南法经典菜肴 |
-| **卡苏莱（Cassoulet）** | 图卢兹灵魂菜肴！白豆 + 鸭腿肉 + 图卢兹香肠慢炖，冬天来一锅超满足 |
+| **卡酥锅（Cassoulet）** | 图卢兹灵魂菜肴！白豆 + 鸭腿肉 + 图卢兹香肠慢炖，冬天来一锅超满足 |
 | **图卢兹香肠（Saucisse de Toulouse）** | 粗长的猪肉香肠，烤或煎，超市和市场都能买到 |
 | **鸭胸（Magret de Canard）** | 法国西南部特色，外焦里嫩 |
 | **紫罗兰糖果（Violette de Toulouse）** | 紫罗兰花瓣做的糖果，图卢兹特产伴手礼 |
@@ -159,7 +159,7 @@ CROUS 大学食堂提供**极其实惠**的餐食：
 | 图卢兹旅游局 | [toulouse-tourisme.com](https://www.toulouse-tourisme.com/) |
 | Doctolib（预约医生） | [doctolib.fr](https://www.doctolib.fr/) |
 | CAF Toulouse（房补） | [caf.fr](https://www.caf.fr/) |
-| 图卢兹市政府 | [toulouse.fr](https://www.toulouse.fr/) |
+| 图卢兹市政府 | [metropole.toulouse.fr](https://metropole.toulouse.fr/) |
 
 ---
 
