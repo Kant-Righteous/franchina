@@ -90,11 +90,35 @@
 /* ========================================
    表格样式
    ======================================== */
-.md-typeset table {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* 表格外部容器，用于处理横向滚动 */
+.md-typeset .md-typeset__scrollwrap {
     margin: 1.5rem 0;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* 隐藏滚动条但在触控板上仍可滚动 */
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 transparent;
+}
+
+/* 兼容由于 MkDocs 默认可能直接平铺 table 导致的情况，强制为 table 设置块级表现或者保持原生行为，但通常我们需要的是一个滚动层 */
+.md-typeset table {
+    width: 100%;
+    /* 使用 auto 配合 white-space: nowrap 可防止挤压，这里设为 100% 允许在超宽屏撑满 */
+    border-collapse: collapse;
+    margin: 0;
+    /* 移除掉原先直接放在 table 的边界属性，移至包裹层或保持 */
+    background-color: transparent;
+}
+
+/* 若原生没有 wrap 层，对 table 本身进行样式兜底以防万一 */
+.md-typeset table:not(.md-typeset__scrollwrap > table) {
+    display: block;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    /* 关键：防止表格内容被强行挤压换行，导致高度错乱 */
 }
 
 /* 表头 - 蓝色渐变背景 */
@@ -109,6 +133,9 @@
     font-size: 0.875rem;
     padding: 0.875rem 1rem;
     border: none;
+    text-align: left;
+    white-space: nowrap;
+    /* 表头不换行 */
 }
 
 /* 表格行过渡效果 */
@@ -130,7 +157,26 @@
 .md-typeset table tbody td {
     padding: 0.75rem 1rem;
     border-color: #ECEFF1;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #ECEFF1;
+}
+
+/* ========================================
+   表格响应式调整 (手机 / 窄屏)
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .md-typeset table thead th {
+        font-size: 0.7rem;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .md-typeset table tbody td {
+        font-size: 0.6rem;
+        padding: 0.6rem 0.75rem;
+    }
+
+    /* 在手机端，允许包含极长文本的单元格稍微换行，或者保持不换行依赖滚动 */
+    /* .md-typeset table { white-space: normal; } 如果需要换行可以开启 */
 }
 
 /* ========================================
