@@ -20,6 +20,27 @@ body {
     font-size: 15px;
 }
 
+/* ========================================
+   滚动条样式优化
+   作用: 隐藏视觉上的滚动条，但完全保留滚动交互功能
+   ======================================== */
+
+/* 全局隐藏滚动条 (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    display: none; /* 隐藏滚动条 */
+    width: 0;      /* 宽度设为0 */
+    height: 0;     /* 高度设为0 */
+}
+
+/* 全局隐藏滚动条 (Firefox, IE, Edge) */
+html, 
+body, 
+.md-sidebar__scrollwrap, 
+.md-typeset pre {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE and Edge */
+}
+
 /* 标题字体统一设置 */
 h1,
 h2,
