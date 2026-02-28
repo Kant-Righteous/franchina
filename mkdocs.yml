@@ -70,7 +70,7 @@ nav:
       - 汇率计算器: pages/littleTools/CurrencyCalculator.md
   - 关于:
       - 关于我们: pages/about.md
-      - FAQ: pages/about/faq.md
+      # - FAQ: pages/about/faq.md
 
 plugins:
   - search:
