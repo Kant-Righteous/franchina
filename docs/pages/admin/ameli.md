@@ -1,5 +1,6 @@
 ---
-title: 中国大陆新留法学生｜Ameli（法国医保）申请教学（2026版）
+title: 法国社保 Ameli 申请及 Vitale 医保卡办理指南
+description: 手把手教留学生零基础申请法国医保 Ameli 账号，快速获取临时社保号与正式 Vitale 卡。
 audience: 中国大陆首次来法留学的学生（非欧盟/非瑞士）
 sources:
   - WillStudy 教程（含截图与实操经验）

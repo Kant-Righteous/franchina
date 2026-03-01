@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://franchina.qzz.io/sitemap.xml
