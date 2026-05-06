@@ -1,0 +1,124 @@
+/* ========================================
+   快速导航页样式 (quick-links.css)
+   
+   作用: 为“常用网站导航”页面提供专属的卡片网格布局
+   ======================================== */
+
+/* 导航大类标题 */
+h2.quick-links-category {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--brand-primary);
+    font-weight: 700;
+    font-family: 'Noto Sans SC', sans-serif;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* 网格容器 */
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* 导航卡片 */
+.link-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.875rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-md, 8px);
+    text-decoration: none !important; /* 强制移除链接默认下划线 */
+    color: inherit !important;
+    transition: var(--transition, all 0.25s cubic-bezier(0.4, 0, 0.2, 1));
+    box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.05));
+    position: relative;
+    overflow: hidden;
+}
+
+/* 卡片悬停效果 */
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md, 0 4px 8px rgba(0,0,0,0.08));
+    border-color: var(--brand-primary);
+}
+
+/* 卡片图标区域 */
+.link-card .card-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8fafc;
+    border-radius: 50%;
+}
+
+/* 卡片内容区域 */
+.link-card .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 卡片标题 */
+.link-card .card-content h3 {
+    margin: 0 0 0.2rem 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    line-height: 1.3;
+}
+
+/* 卡片副标题/描述 */
+.link-card .card-content p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* 右上角外链小图标提示 (可选) */
+.link-card::after {
+    content: "↗";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    color: #cbd5e1;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.link-card:hover::after {
+    opacity: 1;
+    color: var(--brand-accent);
+}
+
+/* ========================================
+   响应式调整 (手机 / 窄屏)
+   ======================================== */
+@media screen and (max-width: 600px) {
+    .link-grid {
+        grid-template-columns: 1fr; /* 手机端单列显示 */
+        gap: 1rem;
+    }
+    
+    .link-card {
+        padding: 1rem;
+    }
+    
+    .link-card .card-icon {
+        font-size: 1.75rem;
+        width: 40px;
+        height: 40px;
+        margin-right: 0.75rem;
+    }
+}

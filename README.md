@@ -147,8 +147,16 @@ git push origin feature/your-topic
 
 欢迎通过 **Pull Request** 参与 FranChina 🙌
 
+> **📝 贡献者声明**  
+> 当您向本项目提交 Pull Request 时，即代表您同意将您的贡献内容授权给 FranChina，并同意该内容遵循本项目的 CC BY-NC-SA 4.0 许可协议对外共享。对于您独立撰写的内容，您将保留专属的署名权（在对应页面标注作者）。
+
 ---
 
 ## 📜 License
 
-非商业用途整理，转载请注明来源 **FranChina**。
+本项目文档及内容采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) 许可协议进行保护。
+
+这意味着您可以自由地阅读、分享和演绎本项目的内容，但必须严格遵守以下条件：
+- **署名 (BY)**：必须明确标明来源于 [FranChina](https://franchina.qzz.io)（提供本站的超链接）。
+- **非商业性使用 (NC)**：严禁将本站内容用于任何商业目的（包括但不限于留学中介引流、付费咨询素材、商业公众号等）。
+- **相同方式共享 (SA)**：如果您基于本网站的内容进行了二次创作或修改，必须采用相同的许可协议对外发布。
