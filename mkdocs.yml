@@ -1,4 +1,4 @@
-site_name: FranChina 留法指南
+site_name: FranChina 法国留学
 site_url: https://franchina.qzz.io
 site_description: 你的法国留学生活百宝箱
 repo_url: ""
@@ -41,12 +41,12 @@ extra_css:
   - stylesheets/pages/components.css
   - stylesheets/pages/home.css
 
-copyright: "Copyright &copy; 2024-2025 FranChina 留法指南 - All rights reserved"
+copyright: "Copyright &copy; 2024-2025 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
 
 nav:
   - 首页: index.md
-  - 行前与落地:
-      - 行前清单: pages/arrival/checklist.md
+  - 初到法国:
+      - 行前准备: pages/arrival/checklist.md
       - 落地第一周: pages/arrival/first-week.md
   - 行政手续:
       - 赴法之前:
