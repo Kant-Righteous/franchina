@@ -40,14 +40,13 @@ extra_css:
   - stylesheets/pages/content.css
   - stylesheets/pages/components.css
   - stylesheets/pages/home.css
+  - stylesheets/pages/quick-links.css
 
 copyright: "Copyright &copy; 2024-2025 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
 
 nav:
   - 首页: index.md
-  - 初到法国:
-      - 行前准备: pages/arrival/checklist.md
-      - 落地第一周: pages/arrival/first-week.md
+  - 初到法国: pages/arrival/first-week.md
   - 行政手续:
       - 赴法之前:
           - 办理护照: pages/admin/before/passport.md
@@ -62,17 +61,18 @@ nav:
           - 办理银行卡: pages/life/finance/bank.md
           - 汇率计算器: pages/littleTools/CurrencyCalculator.md
       - 交通出行:
-          - 交通概览(原文件): pages/life/transport.md
           - 自行车: pages/life/transport/bike.md
           - 公交: pages/life/transport/bus.md
           - 出租车: pages/life/transport/taxi.md
           - 大巴: pages/life/transport/coach.md
           - 地铁: pages/life/transport/subway.md
-          - 高铁飞机: pages/life/transport/train-plane.md
+          - 高铁列车: pages/life/transport/train.md
+          - 飞机: pages/life/transport/plane.md
       - 信息通讯:
           - 办理手机卡: pages/life/communication/sim-card.md
       - 住房管理: pages/life/housing/index.md
       - 医疗健康: pages/life/health.md
+  - 常用网站导航: pages/quick-links.md
   - 寻求帮助:
       - 全法学联: pages/help/cssa.md
       - 驻法使领馆: pages/help/embassy.md
