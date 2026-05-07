@@ -18,7 +18,7 @@ theme:
     - content.code.copy
 
   logo: assets/home/logo.png
-  favicon: assets/home/favicon.png
+  favicon: favicon.ico
   palette:
     scheme: default
     primary: indigo # Ignored due to CSS override, but keeping valid
