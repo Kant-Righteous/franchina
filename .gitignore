@@ -1,6 +1,10 @@
 # MkDocs build output
 site/
 
+# Currency data (generated)
+docs/assets/littleTools/CurrencyCalculator/history.json
+docs/assets/littleTools/CurrencyCalculator/rates.json
+
 # Python
 __pycache__/
 *.pyc
