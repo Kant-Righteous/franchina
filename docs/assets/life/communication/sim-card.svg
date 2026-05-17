@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">法国手机卡选择</title>
+  <desc id="desc">预付卡、无合约套餐和携号转网的选择</desc>
+  <rect width="960" height="300" fill="#fbfbff"/>
+  <text x="48" y="54" font-size="28" font-family="Noto Sans SC, Arial, sans-serif" font-weight="700" fill="#111827">办手机卡：先能用，再省钱</text>
+  <g font-family="Noto Sans SC, Arial, sans-serif">
+    <rect x="80" y="122" width="220" height="106" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="190" y="160" text-anchor="middle" font-size="19" font-weight="700" fill="#1e3a8a">刚到法国</text>
+    <text x="190" y="192" text-anchor="middle" font-size="14" fill="#1e40af">预付卡 / 自助机 / eSIM</text>
+    <rect x="370" y="122" width="220" height="106" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+    <text x="480" y="160" text-anchor="middle" font-size="19" font-weight="700" fill="#14532d">稳定生活</text>
+    <text x="480" y="192" text-anchor="middle" font-size="14" fill="#166534">无合约 forfait + RIB</text>
+    <rect x="660" y="122" width="220" height="106" rx="16" fill="#fef3c7" stroke="#fbbf24"/>
+    <text x="770" y="160" text-anchor="middle" font-size="19" font-weight="700" fill="#78350f">换运营商</text>
+    <text x="770" y="192" text-anchor="middle" font-size="14" fill="#92400e">3179 获取 RIO</text>
+  </g>
+</svg>

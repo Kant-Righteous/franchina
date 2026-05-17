@@ -24,7 +24,7 @@ jobs:
 
       - name: Backfill history
         run: |
-          python docs/assets/littleTools/CurrencyCalculator/fetch_history.py --update
+          python docs/assets/littleTools/CurrencyCalculator/fetch_history.py
 
       - name: Run update script
         run: |

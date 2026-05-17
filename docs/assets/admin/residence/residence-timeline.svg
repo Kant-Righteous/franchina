@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">学生居留时间线</title>
+  <desc id="desc">抵法后验证 VLS-TS 与续居留的时间线</desc>
+  <rect width="960" height="300" fill="#f8fbff"/>
+  <text x="48" y="54" font-size="28" font-family="Noto Sans SC, Arial, sans-serif" font-weight="700" fill="#111827">学生居留时间线</text>
+  <line x1="98" y1="166" x2="862" y2="166" stroke="#93c5fd" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Noto Sans SC, Arial, sans-serif" fill="#1f2937">
+    <circle cx="130" cy="166" r="18" fill="#2563eb"/>
+    <text x="130" y="218" text-anchor="middle" font-size="16" font-weight="700">抵达法国</text>
+    <text x="130" y="244" text-anchor="middle" font-size="13" fill="#6b7280">保存入境日期</text>
+    <circle cx="360" cy="166" r="18" fill="#10b981"/>
+    <text x="360" y="118" text-anchor="middle" font-size="16" font-weight="700">3个月内</text>
+    <text x="360" y="92" text-anchor="middle" font-size="13" fill="#6b7280">验证 VLS-TS</text>
+    <circle cx="610" cy="166" r="18" fill="#f59e0b"/>
+    <text x="610" y="218" text-anchor="middle" font-size="16" font-weight="700">到期前准备</text>
+    <text x="610" y="244" text-anchor="middle" font-size="13" fill="#6b7280">材料扫描 + e-photo</text>
+    <circle cx="830" cy="166" r="18" fill="#8b5cf6"/>
+    <text x="830" y="118" text-anchor="middle" font-size="16" font-weight="700">ANEF 续居留</text>
+    <text x="830" y="92" text-anchor="middle" font-size="13" fill="#6b7280">跟踪补件与证明</text>
+  </g>
+</svg>

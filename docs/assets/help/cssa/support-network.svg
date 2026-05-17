@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">学联支持网络</title>
+  <desc id="desc">学生通过校级学联、城市学联和官方渠道获得支持</desc>
+  <rect width="960" height="300" fill="#fffaf7"/>
+  <text x="48" y="54" font-size="28" font-family="Noto Sans SC, Arial, sans-serif" font-weight="700" fill="#111827">CSSA / 学联能帮什么</text>
+  <g font-family="Noto Sans SC, Arial, sans-serif">
+    <circle cx="480" cy="166" r="54" fill="#f97316" opacity="0.9"/>
+    <text x="480" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">新生</text>
+    <text x="480" y="188" text-anchor="middle" font-size="14" fill="#fff">信息与互助</text>
+    <circle cx="225" cy="166" r="44" fill="#60a5fa"/>
+    <text x="225" y="172" text-anchor="middle" font-size="16" fill="#fff">校级学联</text>
+    <circle cx="735" cy="166" r="44" fill="#34d399"/>
+    <text x="735" y="172" text-anchor="middle" font-size="16" fill="#064e3b">城市学联</text>
+    <circle cx="480" cy="74" r="38" fill="#a78bfa"/>
+    <text x="480" y="80" text-anchor="middle" font-size="15" fill="#fff">使领馆渠道</text>
+    <circle cx="480" cy="258" r="38" fill="#facc15"/>
+    <text x="480" y="264" text-anchor="middle" font-size="15" fill="#713f12">同学社区</text>
+    <line x1="269" y1="166" x2="426" y2="166" stroke="#cbd5e1" stroke-width="5"/>
+    <line x1="534" y1="166" x2="691" y2="166" stroke="#cbd5e1" stroke-width="5"/>
+    <line x1="480" y1="112" x2="480" y2="112" stroke="#cbd5e1" stroke-width="5"/>
+    <line x1="480" y1="220" x2="480" y2="220" stroke="#cbd5e1" stroke-width="5"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">驻法使领馆求助路径</title>
+  <desc id="desc">普通证件咨询和紧急领事保护的分流</desc>
+  <rect width="960" height="300" fill="#f8fafc"/>
+  <text x="48" y="54" font-size="28" font-family="Noto Sans SC, Arial, sans-serif" font-weight="700" fill="#111827">遇事先分清：证件咨询还是紧急领保</text>
+  <g font-family="Noto Sans SC, Arial, sans-serif">
+    <rect x="80" y="122" width="240" height="116" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="200" y="162" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">护照 / 公证 / 认证</text>
+    <text x="200" y="194" text-anchor="middle" font-size="14" fill="#1e40af">看所属馆区和办公时间</text>
+    <rect x="360" y="122" width="240" height="116" rx="16" fill="#fee2e2" stroke="#f87171"/>
+    <text x="480" y="162" text-anchor="middle" font-size="20" font-weight="700" fill="#7f1d1d">人身安全 / 失联</text>
+    <text x="480" y="194" text-anchor="middle" font-size="14" fill="#991b1b">先报警 17 / 急救 112</text>
+    <rect x="640" y="122" width="240" height="116" rx="16" fill="#dcfce7" stroke="#4ade80"/>
+    <text x="760" y="162" text-anchor="middle" font-size="20" font-weight="700" fill="#14532d">领保热线</text>
+    <text x="760" y="194" text-anchor="middle" font-size="14" fill="#166534">+33-1-53758840 / 12308</text>
+  </g>
+</svg>
