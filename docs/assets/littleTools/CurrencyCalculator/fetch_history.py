@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
 """
 从欧洲中央银行(ECB)获取历史汇率数据
-用于初始化或更新 history.json
+用于初始化 history.json，每次获取2015至今的完整数据
 
 Usage:
-    python fetch_history.py              # 获取全部历史数据 (2015至今)
-    python fetch_history.py --update     # 只获取最近30天的数据用于更新
+    python fetch_history.py
 """
 
 import urllib.request
 import json
 import os
-import sys
 import math
-from datetime import datetime, timedelta
+from datetime import datetime
 
 # ECB API 配置
 ECB_API_BASE = "https://data-api.ecb.europa.eu/service/data/EXR"
@@ -113,20 +111,10 @@ def build_usd_cny(history: dict):
 
 
 def main():
-    update_mode = '--update' in sys.argv
-    
     today = datetime.now().strftime('%Y-%m-%d')
-    
-    if update_mode:
-        # 更新模式：获取最近30天数据
-        start_date = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%d')
-        print("=== Update Mode: Fetching last 30 days ===")
-        history = load_existing_history()
-    else:
-        # 完整模式：获取2015年至今所有数据
-        start_date = "2015-01-01"
-        print("=== Full Mode: Fetching all history since 2015 ===")
-        history = {"lastUpdate": "", "EUR_CNY": [], "EUR_USD": [], "USD_CNY": []}
+    start_date = "2015-01-01"
+    print("=== Fetching all history since 2015 ===")
+    history = {"lastUpdate": "", "EUR_CNY": [], "EUR_USD": [], "USD_CNY": {}}
     
     # 获取每个货币对的数据
     for pair_name, pair_code in PAIRS.items():

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">法国银行开户流程</title>
+  <desc id="desc">学生在法国开户、拿 RIB、绑定生活服务的流程</desc>
+  <rect width="960" height="300" fill="#f9fafb"/>
+  <text x="48" y="54" font-size="28" font-family="Noto Sans SC, Arial, sans-serif" font-weight="700" fill="#111827">银行开户后，RIB 才是核心</text>
+  <g font-family="Noto Sans SC, Arial, sans-serif">
+    <rect x="70" y="120" width="190" height="104" rx="14" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="165" y="158" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">预约开户</text>
+    <text x="165" y="188" text-anchor="middle" font-size="13" fill="#1e40af">证件 + 地址 + 学校证明</text>
+    <rect x="300" y="120" width="190" height="104" rx="14" fill="#dcfce7" stroke="#4ade80"/>
+    <text x="395" y="158" text-anchor="middle" font-size="18" font-weight="700" fill="#14532d">获得 IBAN/RIB</text>
+    <text x="395" y="188" text-anchor="middle" font-size="13" fill="#166534">CAF / Ameli / 房租扣款</text>
+    <rect x="530" y="120" width="190" height="104" rx="14" fill="#fef3c7" stroke="#fbbf24"/>
+    <text x="625" y="158" text-anchor="middle" font-size="18" font-weight="700" fill="#78350f">激活银行卡</text>
+    <text x="625" y="188" text-anchor="middle" font-size="13" fill="#92400e">App + PIN + 支付限额</text>
+    <rect x="760" y="120" width="130" height="104" rx="14" fill="#fee2e2" stroke="#f87171"/>
+    <text x="825" y="158" text-anchor="middle" font-size="18" font-weight="700" fill="#7f1d1d">被拒?</text>
+    <text x="825" y="188" text-anchor="middle" font-size="13" fill="#991b1b">找 Banque de France</text>
+  </g>
+</svg>
