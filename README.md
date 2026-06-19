@@ -1,6 +1,6 @@
 # [🇫🇷 FranChina｜留法生活小贴士网站](https://franchina.qzz.io/)
 
-**FranChina** 是一个面向中国留法学生的公益型信息站点，  
+[**FranChina**](https://franchina.qzz.io/) 是一个面向中国留法学生的公益型信息站点，  
 聚焦 **行前准备、行政手续、生活指南、城市经验** 等高频、刚需主题。
 
 目标只有一句话：
