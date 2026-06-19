@@ -22,7 +22,7 @@ theme:
   palette:
     scheme: default
     primary: indigo # Ignored due to CSS override, but keeping valid
-    accent: pink    # Ignored due to CSS override, but keeping valid
+    accent: pink # Ignored due to CSS override, but keeping valid
   font:
     text: Noto Sans SC # Loads webfont as fallback
     code: Roboto Mono
@@ -42,7 +42,7 @@ extra_css:
   - stylesheets/pages/home.css
   - stylesheets/pages/quick-links.css
 
-copyright: "Copyright &copy; 2024-2025 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
+copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
 
 nav:
   - 首页: index.md
@@ -70,7 +70,7 @@ nav:
           - 飞机: pages/life/transport/plane.md
       - 信息通讯:
           - 办理手机卡: pages/life/communication/sim-card.md
-      - 住房管理: pages/life/housing/index.md
+      - 住房管理: pages/life/housing.md
       - 医疗健康: pages/life/health.md
   - 常用网站导航: pages/quick-links.md
   - 寻求帮助:
@@ -119,6 +119,5 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
