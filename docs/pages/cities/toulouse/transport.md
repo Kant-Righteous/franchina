@@ -84,17 +84,17 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 #### 📍 主要地铁、有轨电车和快速公交线路图
 
-<embed src="/assets/cites/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<embed src="/assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
 
-*如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](/assets/cites/toulouse/transport/plan-lignes-principales.pdf)*
+*如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](../../../assets/cities/toulouse/transport/plan-lignes-principales.pdf)*
 
 ---
 
 #### ⏱️ 行程时间估算图（从市中心出发）
 
-<embed src="/assets/cites/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<embed src="/assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
 
-*如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](/assets/cites/toulouse/transport/Roue-des-temps.pdf)*
+*如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](../../../assets/cities/toulouse/transport/Roue-des-temps.pdf)*
 
 ---
 
@@ -138,9 +138,6 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 !!! tip "薅羊毛：奥克西塔尼大区 1 欧火车 🚄"
     图卢兹所在的**奥克西塔尼大区（Occitanie）**有一项超级福利：**每个月的第一个周末**（7 月和 8 月除外），大区内的 liO TER 区域列车票价**只需 1 欧元**！车票通常在提前 10 天开售，非常适合周末去周边城市（如卡尔卡松、纳博讷、蒙彼利埃等）短途游。记得提前（最好提前3-5天，因为当天必然没票）在 SNCF Connect App 或 官网抢票！
-
-!!! tip "城际出行详见通用交通指南"
-    火车购票技巧、青年卡、大巴/拼车等**城际出行**的详细攻略，请参见 [交通出行（通用篇）](/pages/life/transport/)。
 
 ---
 

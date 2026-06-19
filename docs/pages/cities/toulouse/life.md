@@ -35,7 +35,7 @@
 !!! warning "租房建议"
     - **CROUS 大学宿舍**：最便宜的选择（约 150–350€/月含 APL），但名额有限，需提前在 [trouverunlogement.lescrous.fr](https://trouverunlogement.lescrous.fr/) 申请
     - **私人租房平台**：[LeBonCoin](https://www.leboncoin.fr/)、[SeLoger](https://www.seloger.com/)、[PAP](https://www.pap.fr/)
-    - 别忘了申请 **APL 房补**（详见 [CAF 房补指南](/pages/admin/caf/)）
+    - 如果有资格，可以申请 **APL 房补**
 
 ---
 
