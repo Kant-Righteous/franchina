@@ -84,7 +84,7 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 #### 📍 主要地铁、有轨电车和快速公交线路图
 
-<embed src="../../../assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<embed src="/assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
 
 *如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](../../../assets/cities/toulouse/transport/plan-lignes-principales.pdf)*
 
@@ -92,7 +92,7 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 #### ⏱️ 行程时间估算图（从市中心出发）
 
-<embed src="../../../assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<embed src="/assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
 
 *如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](../../../assets/cities/toulouse/transport/Roue-des-temps.pdf)*
 
