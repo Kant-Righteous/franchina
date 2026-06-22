@@ -12,18 +12,17 @@
    设计特点: 统一的深蓝色主题,粉红色下划线强调
    ======================================== */
 
-/* 顶部导航栏 - 扁平化风格 */
+/* 顶部导航栏 - 轻微纵向渐变，与标签栏连续衔接 */
 .md-header {
-    background: linear-gradient(to bottom, #172a4e, #122e62);
-    border-bottom: none;
-    box-shadow: var(--shadow-sm);
-    /* Subtle shadow definition */
+    background: linear-gradient(to bottom, #00006f 0%, var(--brand-primary) 100%);
+    border-bottom: 0;
+    box-shadow: none;
 }
 
-/* 标签栏 - 扁平化风格 */
+/* 标签栏延续同一渐变，避免两层导航之间出现分隔线 */
 .md-tabs {
-    background: linear-gradient(to bottom, #122e62, #142a52);
-    border-bottom: none;
+    background: linear-gradient(to bottom, var(--brand-primary) 0%, #1010a8 100%);
+    border-bottom: 0;
 }
 
 /* 网站标题 */
@@ -39,7 +38,7 @@
     color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
     font-size: 0.875rem;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration-fast) var(--ease-standard);
     position: relative;
 }
 
@@ -52,10 +51,9 @@
 .md-search__input {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    color: #333;
-    /* Dark text for visibility */
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius-md);
+    color: #ffffff;
+    transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
 }
 
 /* 搜索框悬停和聚焦效果 */
@@ -67,20 +65,25 @@
 
 /* 搜索框占位符文字 */
 .md-search__input::placeholder {
-    color: #D5D8DE;
-    /* Dark placeholder */
+    color: rgba(255, 255, 255, 0.85);
 }
 
-/* Custom Logo Adjustments based on User Request */
+/* Logo 与主要控件保持在 48px Header 内，并提供足够热区 */
 .md-header .md-logo img {
-    height: 42px;
-    /* Increased from ~28px */
+    height: 40px;
     width: auto;
 }
 
 .md-header .md-logo {
-    margin-left: 18px;
-    /* Shift right */
-    padding: 0;
-    /* Reset padding if necessary to maximize size */
+    min-width: 44px;
+    min-height: 44px;
+    margin-left: var(--space-2);
+    padding: 2px;
+}
+
+.md-header__button:focus-visible,
+.md-tabs__link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 1px;
+    box-shadow: 0 0 0 4px var(--color-focus-ring);
 }

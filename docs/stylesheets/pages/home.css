@@ -1,169 +1,275 @@
-/* Main Hero Section */
+/* 首页 Hero：受控宽度，避免使用极大负边距制造 breakout。 */
 .tx-hero {
-  /* Full width breakout */
-  margin: 0rem -100rem;
-  padding: 4rem 100rem;
-  background-color: var(--md-default-bg-color);
-  display: flex;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   align-items: center;
-  justify-content: center;
-  gap: 6rem;
-  /* Increased gap for better breathing room */
-  min-height: 70vh;
-  /* Taller section */
-  position: relative;
-  overflow: hidden;
+  gap: clamp(var(--space-8), 6vw, 72px);
+  width: 100%;
+  max-width: 1180px;
+  min-height: clamp(480px, 62vh, 620px);
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 80px) 0;
+  background: var(--color-page-bg);
 }
 
-/* Content Container */
 .tx-hero__content {
-  max-width: 650px;
-  z-index: 2;
-  flex: 1;
-  /* Allow text to take available space */
+  max-width: 560px;
+  min-width: 0;
 }
 
 .tx-hero__content h1 {
-  font-size: 3.5rem;
-  /* Larger title */
-  font-weight: 700;
+  margin: 0;
   color: var(--brand-primary);
-  /* Use brand color */
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  font-size: clamp(48px, 5.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
-/* Sub-slogan styling */
-/* Sub-slogan styling */
-.tx-hero__content h1 span {
+.tx-hero__en {
   display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.05em;
+  margin-top: var(--space-4);
+  color: var(--brand-accent);
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.25;
+  letter-spacing: 0.035em;
   white-space: nowrap;
-  /* Prevent wrapping for the English slogan */
 }
 
-.tx-hero__content p {
-  font-size: 1.5rem;
-  color: var(--md-default-fg-color--light);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  max-width: 800px;
-  /* Increased from 500px to avoid Chinese text wrapping */
-  /*white-space: nowrap;*/
+.md-typeset .tx-hero__tagline {
+  margin: var(--space-8) 0 0;
+  color: var(--color-text-muted);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.5;
 }
 
-/* Image Container */
+.tx-hero__nowrap {
+  white-space: nowrap;
+}
+
 .tx-hero__image {
-  flex: 0 0 650px;
-  /* Increased base width for desktop */
-  max-width: 55%;
-  /* Limit max width percentage */
-  z-index: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
 
 .tx-hero__image img {
-  width: 100%;
+  display: block;
+  width: min(100%, 520px);
   height: auto;
-  max-height: 650px;
-  /* Allow taller image */
   object-fit: contain;
-  animation: float 6s ease-in-out infinite;
+  animation: home-float 5.5s var(--ease-standard) infinite;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
+@keyframes home-float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-8px);
   }
 }
 
-/* Footer Hide (if needed) */
-/* .md-footer { display: none; } */
-
-/* === Responsive Design === */
-
-/* Tablet / Laptop (Max width 1200px) */
-@media screen and (max-width: 1200px) {
-  .tx-hero {
-    gap: 4rem;
-    padding: 3rem 100rem;
-  }
-
-  .tx-hero__image {
-    flex: 0 0 500px;
-  }
-
-  .tx-hero__content h1 {
-    font-size: 3rem;
-  }
+/* 首页核心入口：文字优先、整块可点击，不使用营销型大卡片。 */
+.home-entry {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 0 clamp(48px, 7vw, 80px);
 }
 
-/* Tablet (Portrait) / Large Mobile (Max width 960px) */
+.home-entry__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.home-entry__kicker {
+  margin: 0 0 var(--space-2);
+  color: var(--brand-accent-strong);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.home-entry__heading h2 {
+  margin: 0;
+  color: var(--color-heading);
+  font-size: clamp(26px, 2.4vw, 32px);
+  line-height: 1.3;
+}
+
+.home-entry__heading > p {
+  max-width: 360px;
+  margin: 0 0 3px;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.home-entry__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.md-typeset .home-entry__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 148px;
+  padding: var(--space-5);
+  color: var(--color-text);
+  text-decoration: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+}
+
+.md-typeset .home-entry__card:hover {
+  color: var(--color-text);
+  border-color: var(--color-link);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.md-typeset .home-entry__card:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.home-entry__number {
+  margin-bottom: auto;
+  color: var(--brand-accent-strong);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.md-typeset .home-entry__card h3 {
+  margin: var(--space-4) 0 var(--space-1);
+  color: var(--color-heading);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.md-typeset .home-entry__card p {
+  margin: 0;
+  padding-right: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.home-entry__arrow {
+  position: absolute;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  color: var(--color-link);
+  font-size: 18px;
+  line-height: 1;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.home-entry__card:hover .home-entry__arrow {
+  transform: translateX(3px);
+}
+
 @media screen and (max-width: 960px) {
   .tx-hero {
-    margin: 0 -2rem;
-    /* Reduce breakout margin */
-    padding: 4rem 2rem;
-    flex-direction: column-reverse;
-    /* Stack: Text bottom, Image top (or reverse if desired) */
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    min-height: auto;
+    padding-block: 40px 48px;
     text-align: center;
-    gap: 3rem;
   }
 
   .tx-hero__content {
     max-width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .tx-hero__image {
-    flex: 0 0 auto;
-    width: 80%;
-    max-width: 500px;
+    grid-row: 1;
   }
 
-  .tx-hero__content h1 {
-    font-size: 2.5rem;
+  .tx-hero__image img {
+    width: min(72vw, 420px);
   }
 
-  .tx-hero__content p {
-    font-size: 1.25rem;
-    max-width: 100%;
+  .home-entry__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Mobile (Max width 600px) */
 @media screen and (max-width: 600px) {
   .tx-hero {
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .tx-hero__image {
-    width: 90%;
+    gap: var(--space-5);
+    padding-block: 28px 40px;
   }
 
   .tx-hero__content h1 {
-    font-size: 2rem;
+    font-size: clamp(32px, 10vw, 40px);
+    letter-spacing: -0.025em;
   }
 
-  /* Reset "From China to France" font size relative to H1 on mobile */
-  .tx-hero__content h1 span {
-    font-size: 0.6em;
-    /* Keep relative scaling */
+  .tx-hero__en {
+    margin-top: var(--space-2);
+    font-size: clamp(18px, 5.5vw, 22px);
+  }
+
+  .tx-hero__tagline {
+    margin-top: var(--space-6);
+    font-size: clamp(20px, 5.6vw, 22px);
+  }
+
+  .tx-hero__image img {
+    width: min(88vw, 330px);
+  }
+
+  .home-entry {
+    padding-bottom: 48px;
+  }
+
+  .home-entry__heading {
+    display: block;
+    margin-bottom: var(--space-5);
+  }
+
+  .home-entry__heading > p {
+    margin-top: var(--space-2);
+    text-align: left;
+  }
+
+  .home-entry__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .md-typeset .home-entry__card {
+    min-height: 124px;
+    padding: var(--space-4);
+  }
+
+  .home-entry__number {
+    margin-bottom: 0;
+  }
+
+  .md-typeset .home-entry__card h3 {
+    margin-top: var(--space-2);
+  }
+
+  .home-entry__arrow {
+    right: var(--space-4);
+    bottom: var(--space-4);
   }
 }

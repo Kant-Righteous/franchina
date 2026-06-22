@@ -18,27 +18,91 @@
 /* 平板设备 (宽度 ≤ 1219px) */
 @media screen and (max-width: 76.1875em) {
     .md-content {
-        margin: 1rem;
-        padding: 1.5rem;
+        margin: 0;
+        padding: var(--space-6) var(--gutter-tablet);
     }
 }
 
 /* 手机设备 (宽度 ≤ 960px) */
 @media screen and (max-width: 60em) {
 
-    /* 缩小标题字号 */
+    .md-header label.md-header__button[for="__drawer"],
+    .md-header label.md-header__button[for="__search"] {
+        width: 44px;
+        height: 44px;
+        margin: 2px 4px;
+        padding: 10px;
+    }
+
+    .md-search__input {
+        background-color: var(--color-surface);
+        border-color: transparent;
+        color: var(--color-text);
+    }
+
+    .md-search__input:hover,
+    .md-search__input:focus {
+        background-color: var(--color-surface);
+        border-color: transparent;
+    }
+
+    .md-search__input::placeholder {
+        color: var(--color-text-muted);
+    }
+
+    /* 稳定中文标题层级 */
     .md-content h1 {
-        font-size: 2rem;
+        font-size: clamp(28px, 7.5vw, 32px);
     }
 
     .md-content h2 {
-        font-size: 1.5rem;
+        font-size: clamp(22px, 5.5vw, 24px);
     }
 
-    /* 减少内容区域内边距 */
+    .md-content h3 {
+        font-size: clamp(18px, 4.5vw, 20px);
+    }
+
     .md-content {
-        margin: 0.5rem;
-        padding: 1rem;
+        margin: 0;
+        padding: var(--space-6) var(--gutter-tablet);
+    }
+
+    /* 与内容 gutter 精确匹配，避免首页 breakout 产生横向滚动 */
+    .tx-hero {
+        margin-inline: calc(var(--gutter-tablet) * -1);
+    }
+
+    .md-typeset pre,
+    .md-typeset .highlight,
+    .md-typeset .md-typeset__table {
+        max-width: 100%;
+    }
+}
+
+/* 手机设备 (宽度 ≤ 600px) */
+@media screen and (max-width: 600px) {
+    .md-content {
+        padding: var(--space-4) var(--gutter-mobile);
+    }
+
+    .tx-hero {
+        margin-inline: calc(var(--gutter-mobile) * -1);
+        padding-inline: var(--gutter-mobile);
+    }
+
+    .tx-hero__content p {
+        max-width: 100%;
+        font-size: clamp(22px, 6.25vw, 25px);
+        line-height: 1.5;
+        white-space: nowrap;
+    }
+}
+
+/* 极窄手机为长中文站点标题保留完整显示空间 */
+@media screen and (max-width: 360px) {
+    .md-header__title {
+        font-size: 18px;
     }
 }
 
@@ -56,5 +120,26 @@
     .md-content {
         box-shadow: none;
         margin: 0;
+    }
+}
+
+/* 尊重系统的减少动态效果设置，仅关闭自定义装饰动效 */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .md-content__inner > *,
+    .tx-hero__image img {
+        animation: none;
+        transform: none;
+    }
+
+    .md-content a,
+    .md-nav__link,
+    .md-tabs__link,
+    .md-search__input,
+    .md-button {
+        transition-duration: 0.01ms;
     }
 }
