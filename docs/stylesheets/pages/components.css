@@ -19,23 +19,23 @@
    ======================================== */
 .md-content ul,
 .md-content ol {
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-8);
 }
 
 .md-content li {
-    margin-bottom: 0.5rem;
-    line-height: 1.75;
+    margin-bottom: var(--space-2);
+    line-height: 1.72;
 }
 
 /* 无序列表标记颜色 */
 .md-content ul li::marker {
-    color: #2563EB;
+    color: var(--color-link);
 }
 
 /* 有序列表标记颜色 */
 .md-content ol li::marker {
-    color: #2563EB;
+    color: var(--color-link);
     font-weight: 600;
 }
 
@@ -43,48 +43,76 @@
    提示框样式 (Admonitions)
    ======================================== */
 .md-typeset .admonition {
-    border-radius: 8px;
-    border-left: 3px solid;
-    padding: 1rem 1.25rem;
-    margin: 1.25rem 0;
+    border: 1px solid var(--color-border);
+    border-left-width: 4px;
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5, 20px);
+    margin: var(--space-6) 0;
     box-shadow: none;
-    background-color: transparent;
+    background-color: var(--color-surface-subtle);
 }
 
 /* 信息提示框 (蓝色) */
 .md-typeset .admonition.note,
 .md-typeset .admonition.info {
-    background-color: #E3F2FD;
-    border-left-color: #2196F3;
+    background-color: var(--color-info-bg);
+    border-color: var(--color-info-border);
 }
 
 .md-typeset .admonition.note .admonition-title,
 .md-typeset .admonition.info .admonition-title {
-    color: #2196F3;
+    color: var(--color-info-text);
     font-family: 'Noto Sans SC', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
 }
 
-/* 警告提示框 (粉红色) */
+/* 警告提示框 (暖橙色，避免与品牌珊瑚红混淆) */
 .md-typeset .admonition.warning,
 .md-typeset .admonition.caution {
-    background-color: #FCE4EC;
-    border-left-color: #E91E63;
+    background-color: var(--color-warning-bg);
+    border-color: var(--color-warning-border);
 }
 
 .md-typeset .admonition.warning .admonition-title,
 .md-typeset .admonition.caution .admonition-title {
-    color: #E91E63;
+    color: var(--color-warning-text);
     font-family: 'Noto Sans SC', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
+}
+
+/* 建议与成功状态 */
+.md-typeset .admonition.tip,
+.md-typeset .admonition.success {
+    background-color: var(--color-success-bg);
+    border-color: var(--color-success-border);
+}
+
+.md-typeset .admonition.tip .admonition-title,
+.md-typeset .admonition.success .admonition-title {
+    color: var(--color-success-text);
+}
+
+/* 危险与错误状态仅在真实风险信息中使用官方语义红 */
+.md-typeset .admonition.danger,
+.md-typeset .admonition.error,
+.md-typeset .admonition.failure {
+    background-color: var(--color-danger-bg);
+    border-color: var(--color-danger-border);
+}
+
+.md-typeset .admonition.danger .admonition-title,
+.md-typeset .admonition.error .admonition-title,
+.md-typeset .admonition.failure .admonition-title {
+    color: var(--color-danger-text);
 }
 
 /* 提示框标题通用样式 */
 .md-typeset .admonition-title {
     font-size: 0.95rem;
     margin-bottom: 0.625rem;
+    background-color: transparent;
 }
 
 /* ========================================
@@ -94,11 +122,41 @@
 .md-typeset .md-typeset__scrollwrap {
     margin: 1.5rem 0;
     overflow-x: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* 隐藏滚动条但在触控板上仍可滚动 */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: none;
     scrollbar-width: thin;
-    scrollbar-color: #CBD5E1 transparent;
+    scrollbar-color: #929292 transparent;
+}
+
+.md-typeset .md-typeset__scrollwrap::-webkit-scrollbar {
+    height: 8px;
+}
+
+.md-typeset .md-typeset__scrollwrap::-webkit-scrollbar-thumb {
+    background: #929292;
+    border: 2px solid var(--color-surface);
+    border-radius: 999px;
+}
+
+/* Material 默认会给内层表格增加边框和 16px 内缩；由外层统一承担边框与滚动。 */
+.md-typeset .md-typeset__scrollwrap .md-typeset__table {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.md-typeset .md-typeset__scrollwrap table {
+    display: table;
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
 }
 
 /* 兼容由于 MkDocs 默认可能直接平铺 table 导致的情况，强制为 table 设置块级表现或者保持原生行为，但通常我们需要的是一个滚动层 */
@@ -111,26 +169,27 @@
     background-color: transparent;
 }
 
-/* 若原生没有 wrap 层，对 table 本身进行样式兜底以防万一 */
-.md-typeset table:not(.md-typeset__scrollwrap > table) {
+/* 仅为没有 Material 滚动容器的直属表格提供兜底，避免内外重复边框 */
+.md-typeset > table {
     display: block;
     overflow-x: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: none;
     white-space: nowrap;
     /* 关键：防止表格内容被强行挤压换行，导致高度错乱 */
 }
 
-/* 表头 - 蓝色渐变背景 */
+/* 表头 - 法国蓝平面背景 */
 .md-typeset table thead {
-    background: linear-gradient(to right, #1E3A8A, #2563EB);
+    background: var(--color-table-header);
 }
 
 .md-typeset table thead th {
     color: white;
     font-family: 'Noto Sans SC', sans-serif;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 14px;
     padding: 0.875rem 1rem;
     border: none;
     text-align: left;
@@ -138,27 +197,22 @@
     /* 表头不换行 */
 }
 
-/* 表格行过渡效果 */
-.md-typeset table tbody tr {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* 斑马纹 - 偶数行背景色 */
 .md-typeset table tbody tr:nth-child(even) {
-    background-color: #FAFAFA;
+    background-color: var(--color-surface-subtle);
 }
 
 /* 表格行悬停效果 */
-.md-typeset table tbody tr:hover {
-    background-color: #E3F2FD;
+.md-typeset .md-typeset__scrollwrap table tbody tr:hover {
+    background-color: var(--color-table-hover);
 }
 
 /* 表格单元格样式 */
 .md-typeset table tbody td {
     padding: 0.75rem 1rem;
-    border-color: #ECEFF1;
-    font-size: 0.8rem;
-    border-bottom: 1px solid #ECEFF1;
+    border-color: var(--color-border);
+    font-size: 14px;
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* ========================================
@@ -166,17 +220,88 @@
    ======================================== */
 @media screen and (max-width: 768px) {
     .md-typeset table thead th {
-        font-size: 0.7rem;
-        padding: 0.6rem 0.75rem;
+        font-size: 14px;
+        padding: 0.75rem;
     }
 
     .md-typeset table tbody td {
-        font-size: 0.6rem;
-        padding: 0.6rem 0.75rem;
+        font-size: 14px;
+        padding: 0.75rem;
     }
 
     /* 在手机端，允许包含极长文本的单元格稍微换行，或者保持不换行依赖滚动 */
     /* .md-typeset table { white-space: normal; } 如果需要换行可以开启 */
+}
+
+@media screen and (max-width: 600px) {
+    .md-typeset .md-typeset__scrollwrap::before {
+        content: "左右滑动查看完整表格";
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        display: block;
+        box-sizing: border-box;
+        width: fit-content;
+        min-width: 100%;
+        padding: var(--space-2) var(--space-4);
+        color: var(--color-text-muted);
+        font-size: 12px;
+        line-height: 1.4;
+        background: var(--color-surface-subtle);
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+/* PDF 预览与稳定下载入口 */
+.md-typeset .pdf-preview {
+    margin: var(--space-4) 0 0;
+    overflow: hidden;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.md-typeset .pdf-preview__frame {
+    display: block;
+    width: 100%;
+    height: clamp(460px, 62vh, 640px);
+    border: 0;
+}
+
+.md-typeset .pdf-download {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-4);
+    margin: var(--space-2) 0 var(--space-6);
+    padding: var(--space-2) var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    background: var(--color-surface-subtle);
+    border-radius: var(--radius-sm);
+}
+
+.md-typeset .pdf-download a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .md-typeset .pdf-preview__frame {
+        height: clamp(280px, 52vh, 380px);
+    }
+
+    .md-typeset .pdf-download {
+        display: block;
+    }
+
+    .md-typeset .pdf-download a {
+        margin-top: var(--space-1);
+    }
 }
 
 /* ========================================
@@ -184,8 +309,8 @@
    ======================================== */
 /* 行内代码 */
 .md-typeset code {
-    background-color: #F5F5F5;
-    color: #DC143C;
+    background-color: var(--color-surface-subtle);
+    color: var(--color-danger-text);
     padding: 0.2em 0.4em;
     border-radius: 4px;
     font-size: 0.9em;
@@ -194,10 +319,12 @@
 
 /* 代码块容器 */
 .md-typeset pre {
-    background-color: #1F2937;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    background-color: var(--color-code-bg);
+    border-radius: var(--radius-md);
+    box-shadow: none;
     margin: 1.5rem 0;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 /* 代码块内的代码 */
@@ -205,39 +332,51 @@
     background-color: transparent;
     color: #E5E7EB;
     padding: 0;
+    overflow-wrap: normal;
 }
 
 /* 代码复制按钮 */
 .md-clipboard {
     color: white;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration-fast) var(--ease-standard);
 }
 
 .md-clipboard:hover {
-    color: #FFD700;
+    color: #ffffff;
 }
 
 /* ========================================
    按钮样式
    ======================================== */
 .md-button {
-    background-color: #2563EB;
-    color: white;
-    border-radius: 8px;
+    min-height: 44px;
+    background-color: var(--color-surface);
+    color: var(--color-link);
+    border: 1px solid var(--color-link);
+    border-radius: var(--radius-md);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+    box-shadow: none;
 }
 
 .md-button:hover {
-    background-color: #1E40AF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+    background-color: var(--color-surface-subtle);
+    color: var(--color-link-hover);
+    border-color: var(--color-link-hover);
+    box-shadow: none;
 }
 
 .md-button--primary {
-    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+    background: var(--brand-primary);
+    color: #ffffff;
+    border-color: var(--brand-primary);
+}
+
+.md-button--primary:hover {
+    background: var(--color-link-hover);
+    color: #ffffff;
+    border-color: var(--color-link-hover);
 }
 
 /* ========================================
@@ -245,7 +384,7 @@
    ======================================== */
 /* 目录标题 */
 .md-nav--secondary .md-nav__title {
-    color: #1e293b;
+    color: var(--color-heading);
     /* 深色灰蓝，比黑色更柔和 */
     font-family: 'Noto Sans SC', sans-serif;
     font-weight: 700;
@@ -264,7 +403,7 @@
 
 /* 目录链接基础样式 */
 .md-nav--secondary .md-nav__link {
-    color: #64748b;
+    color: var(--color-text-muted);
     /* 中性灰，低调优雅 */
     font-size: 0.8125rem;
     /* 13px */
@@ -275,26 +414,26 @@
     border-radius: 4px;
     border-left: 2px solid transparent;
     /* 预留左侧边框位置 */
-    transition: all 0.2s ease;
+    transition: color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
     display: block;
 }
 
 /* 悬停效果 */
 .md-nav--secondary .md-nav__link:hover {
-    color: #2563eb;
+    color: var(--color-link);
     /* 悬停变蓝 */
-    background-color: #f1f5f9;
+    background-color: var(--color-surface-subtle);
     /* 极淡的灰色背景 */
 }
 
 /* 激活状态 */
 .md-nav--secondary .md-nav__link--active {
-    color: #2563eb;
+    color: var(--color-link);
     /* 激活蓝色 */
     font-weight: 600;
-    background-color: #eff6ff;
+    background-color: var(--color-info-bg);
     /* 淡蓝色背景 */
-    border-left-color: #2563eb;
+    border-left-color: var(--color-link);
     /* 左侧蓝色指示条 */
 }
 
@@ -302,7 +441,7 @@
 .md-nav--secondary .md-nav__item .md-nav__list {
     margin-left: 0.75rem;
     padding-left: 0.75rem;
-    border-left: 1px solid #e2e8f0;
+    border-left: 1px solid var(--color-border);
     /* 给子菜单加一条淡淡的辅助线 */
 }
 
@@ -314,14 +453,7 @@
 
 .md-nav--secondary .md-nav__item .md-nav__list .md-nav__link--active {
     border-left: none;
-    color: #2563eb;
+    color: var(--color-link);
     background-color: transparent;
     /* 子菜单激活不加背景，只变色，避免视觉杂乱 */
-}
-
-/* ========================================
-   页脚隐藏
-   ======================================== */
-.md-footer {
-    display: none;
 }

@@ -11,7 +11,7 @@ h2.quick-links-category {
     color: var(--brand-primary);
     font-weight: 700;
     font-family: 'Noto Sans SC', sans-serif;
-    border-bottom: 2px solid #f1f5f9;
+    border-bottom: 2px solid var(--color-surface-subtle);
     padding-bottom: 0.5rem;
     font-size: 1.25rem;
 }
@@ -29,22 +29,27 @@ h2.quick-links-category {
     display: flex;
     align-items: flex-start;
     padding: 0.875rem;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--radius-md, 8px);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     text-decoration: none !important; /* 强制移除链接默认下划线 */
     color: inherit !important;
-    transition: var(--transition, all 0.25s cubic-bezier(0.4, 0, 0.2, 1));
-    box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.05));
+    transition: transform var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+    box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
 }
 
 /* 卡片悬停效果 */
 .link-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md, 0 4px 8px rgba(0,0,0,0.08));
-    border-color: var(--brand-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-link);
+}
+
+.link-card:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: var(--space-1);
 }
 
 /* 卡片图标区域 */
@@ -57,8 +62,8 @@ h2.quick-links-category {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #f8fafc;
-    border-radius: 50%;
+    background-color: var(--color-surface-subtle);
+    border-radius: var(--radius-md);
 }
 
 /* 卡片内容区域 */
@@ -80,9 +85,9 @@ h2.quick-links-category {
 /* 卡片副标题/描述 */
 .link-card .card-content p {
     margin: 0;
-    font-size: 0.75rem;
-    color: #64748b;
-    line-height: 1.4;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
 }
 
 /* 右上角外链小图标提示 (可选) */
@@ -92,9 +97,9 @@ h2.quick-links-category {
     top: 0.5rem;
     right: 0.5rem;
     font-size: 1rem;
-    color: #cbd5e1;
-    opacity: 0;
-    transition: all 0.2s ease;
+    color: var(--color-text-muted);
+    opacity: 0.65;
+    transition: color var(--duration-fast) var(--ease-standard), opacity var(--duration-fast) var(--ease-standard);
 }
 
 .link-card:hover::after {

@@ -13,24 +13,27 @@
 
 /* 内容区域容器 */
 .md-content {
-    background-color: #FFFFFF;
+    background-color: var(--color-surface);
     border-radius: 0;
     box-shadow: none;
     margin: 0;
-    padding: 2rem 3rem;
+    padding: var(--space-8) var(--gutter-desktop);
     border-left: none;
+    min-width: 0;
 }
 
 /* 内容区域内部容器 - 限制最大宽度 */
 .md-content__inner {
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    min-width: 0;
 }
 
 /* 一级标题 */
 .md-content h1 {
-    color: #263238;
-    font-size: 2rem;
+    color: var(--color-heading);
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 1.5rem;
     margin-top: 0;
@@ -41,8 +44,8 @@
 
 /* 二级标题 */
 .md-content h2 {
-    color: #263238;
-    font-size: 1.5rem;
+    color: var(--color-heading);
+    font-size: 30px;
     font-weight: 600;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -53,8 +56,8 @@
 
 /* 三级标题 */
 .md-content h3 {
-    color: #263238;
-    font-size: 1.25rem;
+    color: var(--color-heading);
+    font-size: 24px;
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
@@ -63,23 +66,38 @@
 
 /* 段落样式 */
 .md-content p {
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
-    color: #263238;
-    font-size: 15px;
+    margin-bottom: var(--space-6);
+    line-height: 1.72;
+    color: var(--color-text);
+    font-size: 16px;
 }
 
 /* 链接基础样式 */
 .md-content a {
-    color: #2563EB;
+    color: var(--color-link);
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
     font-weight: 500;
+}
+
+.md-content p a,
+.md-content li a,
+.md-content .admonition a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
 }
 
 /* 链接悬停效果 */
 .md-content a:hover {
-    color: #1E3A8A;
-    border-bottom-color: #2563EB;
+    color: var(--color-link-hover);
+    border-bottom-color: currentColor;
+}
+
+.md-content a:focus-visible,
+.md-button:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: var(--space-1);
+    border-radius: var(--radius-sm);
 }
