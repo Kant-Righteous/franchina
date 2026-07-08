@@ -1,5 +1,6 @@
 # MkDocs build output
 site/
+.mkdocs_cache/
 
 # Currency data (generated)
 docs/assets/littleTools/CurrencyCalculator/history.json
@@ -8,12 +9,32 @@ docs/assets/littleTools/CurrencyCalculator/rates.json
 # Python
 __pycache__/
 *.pyc
+.pytest_cache/
+.ruff_cache/
 
 # Virtual environments
 .venv/
 
+# Local agent/planning artifacts
+docs/superpowers/
+.superpowers/
+superpowers/
+design/
+designs/
+*.design.md
+*-design.md
+
+# Editor and local environment
+.vscode/
+.idea/
+*.log
+.env
+.env.*
+!.env.example
+
 # OS
 .DS_Store
+Thumbs.db
 
 # design files
 design/
