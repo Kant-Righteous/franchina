@@ -42,14 +42,14 @@ description: 2026 最新版法国 CAF 房屋补贴申请说明，涵盖非欧盟
 ## 4. 准备材料清单
 在申请过程中，你通常需要上传 PDF 扫描件：
 
-*   [x] **护照** (Passeport)
-*   [x] **签证页 + 入境章**、**VLS-TS 验证确认** 或 **居留卡** (Titre de séjour)
-*   [x] **符合新政例外条件的证明**：例如 CROUS 奖学金通知、工作合同、工资单、auto-entrepreneur 活动证明、学徒或职业化合同等（按 CAF 要求上传）
-*   [x] **出生公证双认证** (Acte de naissance traduit par un traducteur assermenté)
+*   **护照** (Passeport)
+*   **签证页 + 入境章**、**VLS-TS 验证确认** 或 **居留卡** (Titre de séjour)
+*   **符合新政例外条件的证明**：例如 CROUS 奖学金通知、工作合同、工资单、auto-entrepreneur 活动证明、学徒或职业化合同等（按 CAF 要求上传）
+*   **出生公证双认证** (Acte de naissance traduit par un traducteur assermenté)
     *   *这是最大的坑：国内办公证+外事认证带过来，最好再找法国宣誓翻译做一遍翻译。CAF 对此要求很严格。*
-*   [x] **银行 RIB** (Relevé d'Identité Bancaire) - 必须是法国银行账户
-*   [x] **住房合同** (Bail de location)
-*   [x] **房东填写的证明** (Attestation de loyer) - 学生公寓通常会直接给你这张纸，私人房东需让他填。
+*   **银行 RIB** (Relevé d'Identité Bancaire) - 必须是法国银行账户
+*   **住房合同** (Bail de location)
+*   **房东填写的证明** (Attestation de loyer) - 学生公寓通常会直接给你这张纸，私人房东需让他填。
 
 ## 5. 申请流程概览
 目前全法申请流程统一在 [caf.fr](https://www.caf.fr) 进行（全法语）。
@@ -74,6 +74,7 @@ A: 如果你只是来法国读书，持学生 VLS-TS / 学生居留，没有 CRO
 
 ### Q: 房补是发给我还是发给公寓？
 A: 可以选择。
+
 *   **发给自己**: 钱打入你的银行卡，你全额交房租。
 *   **发给房东 (Tiers payant)**: 钱直接给公寓，你只交（房租 - 房补）的差额。CROUS 和有些私立公寓强制这样做。
 
@@ -82,11 +83,13 @@ A: 要分情况。CAF 可能允许你先提交申请并后续补材料，但非�
 
 ### Q: 合租 (Colocation) 怎么填？
 A: 必须如实填写 "Colocation"。
+
 *   CAF 会按“房租除以人数”或者“每人承担的份额”来重新计算房补。
 *   通常比单人申请略低一点点，但如果隐瞒被查到会罚款。
 
 ### Q: 几个月了还没收到钱？
 A: 正常... 法国行政效率懂的都懂。
+
 *   先检查账户里是否有 "Demande de pièces complémentaires" (缺材料)。
 *   如果材料齐了显示 "En cours de traitement"，只能等。
 *   可以通过 APP 里的 "Contacter ma CAF" 写邮件催，比打电话好用。

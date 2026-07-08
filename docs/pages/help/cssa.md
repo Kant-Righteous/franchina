@@ -34,27 +34,6 @@ CSSA 通常指 Chinese Students and Scholars Association，即中国学生学者
 !!! warning "二维码也要核验"
     新生季会出现假群、广告群和诈骗群。进群后先看管理员身份、历史活动、是否与学校社团信息一致。不要因为“群里很多人”就直接相信收费服务。
 
-## 加群后先做什么
-
-- 改备注：学校、专业、年份，方便同学识别。
-- 搜索群公告和历史消息，很多问题已经有人回答。
-- 收藏城市常用信息：警局、医院、夜间药房、交通卡、学校国际处。
-- 只在必要时私聊陌生人，不公开护照、居留、银行卡和住址。
-- 二手交易尽量线下面交，贵重物品不要先全款转账。
-
-## 学联信息怎么用
-
-学联经验帖适合解决“我该从哪里开始”的问题，但具体执行前要二次确认：
-
-| 信息类型 | 应该再核对哪里 |
-|---|---|
-| 居留材料 | ANEF、Service-Public、学校国际处 |
-| CAF / Ameli | CAF、Ameli 官方网站 |
-| 使领馆证件 | 中国驻法使领馆官网、中国领事 APP |
-| 租房合同 | Service-Public、ADIL、学校 housing office |
-| 法律纠纷 | 律师、法律援助、学校 juridique 服务 |
-| 医疗问题 | 医生、药房、SSE/SSU、急救电话 |
-
 ## 常见风险
 
 - **中介冒充学长学姐**：收费代办居留、CAF、租房，结果材料错误或失联。
@@ -70,9 +49,3 @@ CSSA 通常指 Chinese Students and Scholars Association，即中国学生学者
 3. 通知可信同学或学联负责人协助沟通。
 4. 中国公民需要领保时，联系驻法使领馆或 `12308`。
 5. 保留证据：聊天记录、转账凭证、警局回执、医疗证明。
-
-## 官方和参考入口
-
-- [全法中国学者学生联合会旧版介绍](https://jiaoyuchu.online.fr/Subpages/UCECF.html)
-- [中国驻法国大使馆：联系我们](https://fr.china-embassy.gov.cn/chn/zgzfg/zgsg/lsqwc/lxwm/202507/t20250716_11671927.htm)
-- [Service-Public](https://www.service-public.fr/)
