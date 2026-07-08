@@ -35,12 +35,13 @@ extra_css:
   # Layout 布局
   - stylesheets/layout/header.css
   - stylesheets/layout/sidebar.css
-  - stylesheets/layout/responsive.css
   # Pages 页面与组件
   - stylesheets/pages/content.css
   - stylesheets/pages/components.css
   - stylesheets/pages/home.css
   - stylesheets/pages/quick-links.css
+  # Responsive 响应式覆盖（必须在页面样式之后加载）
+  - stylesheets/layout/responsive.css
 
 copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
 

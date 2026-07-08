@@ -21,18 +21,44 @@
     /* ========================================
        Brand Identity Colors
        ======================================== */
-    --brand-primary: #2b3a55;
-    /* Deep Navy - Hero Match */
-    --brand-accent: #ff6b6b;
-    /* Soft Red - Hero Match */
+    --brand-primary: #000091;
+    /* France blue - primary structure color */
+    --brand-accent: #d85b64;
+    /* FranChina coral - reserved for small brand accents */
+    --brand-accent-strong: #b9414d;
+
+    /* Semantic Colors */
+    --color-page-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-subtle: #f6f6f6;
+    --color-border: #dddddd;
+    --color-heading: #161616;
+    --color-text: #3a3a3a;
+    --color-text-muted: #666666;
+    --color-link: #000091;
+    --color-link-hover: #1212ff;
+    --color-focus-ring: #0a76f6;
+    --color-info-bg: #e8edff;
+    --color-info-border: #0063cb;
+    --color-info-text: #000091;
+    --color-success-bg: #eaf6ef;
+    --color-success-border: #18753c;
+    --color-success-text: #18753c;
+    --color-warning-bg: #fff4e8;
+    --color-warning-border: #b34000;
+    --color-warning-text: #8b4e16;
+    --color-danger-bg: #ffe9e9;
+    --color-danger-border: #e1000f;
+    --color-danger-text: #ce0500;
+    --color-table-header: #000091;
+    --color-table-hover: #fff1f0;
+    --color-code-bg: #161616;
 
     /* Override MkDocs Material Variables */
     --md-primary-fg-color: var(--brand-primary);
-    --md-primary-fg-color--light: #3e4f6e;
-    /* Lighter shade of navy */
-    --md-primary-fg-color--dark: #1a2436;
-    /* Darker shade of navy */
-    --md-accent-fg-color: var(--brand-accent);
+    --md-primary-fg-color--light: #6a6af4;
+    --md-primary-fg-color--dark: #00006d;
+    --md-accent-fg-color: var(--color-link);
 
     /* Typography - Prioritize System Fonts */
     --md-text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans SC";
@@ -47,6 +73,20 @@
     --radius-md: 8px;
     --radius-lg: 12px;
 
-    /* 过渡 */
-    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Spacing - 4px / 8px Rhythm */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --gutter-mobile: 16px;
+    --gutter-tablet: 24px;
+    --gutter-desktop: 48px;
+
+    /* Motion */
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all var(--duration-normal) var(--ease-standard);
 }

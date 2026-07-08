@@ -14,7 +14,7 @@
 
 /* 侧边栏容器 */
 .md-sidebar {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-surface);
 }
 
 /* 移动端/小屏侧边栏顶部背景 */
@@ -27,7 +27,7 @@
 /* 导航区域标题 */
 .md-nav__title {
     font-family: 'Noto Sans SC', sans-serif;
-    color: #263238;
+    color: var(--color-text);
     font-weight: 600;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -36,30 +36,35 @@
 
 /* 导航链接基础样式 */
 .md-nav__link {
-    color: #546E7A;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px;
+    color: var(--color-text-muted);
+    transition: color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard);
+    border-radius: var(--radius-sm);
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
 }
 
 /* 导航链接悬停效果 - 仅限左侧主导航 */
 .md-sidebar--primary .md-nav__link:hover {
-    background-color: #dee8f1 !important;
-    color: #1F52C0 !important;
-    font-weight: 600 !important;
+    background-color: #eef3f8;
+    color: var(--color-link-hover);
+    font-weight: 600;
 }
 
 /* 当前激活的导航项 - 仅限左侧主导航 */
 .md-sidebar--primary .md-nav__link--active {
-    background-color: #dee8f1 !important;
-    color: #eb2525 !important;
-    font-weight: 600 !important;
-    border-left: 3px solid #eb2525 !important;
+    background-color: #eef3f8;
+    color: var(--brand-primary);
+    font-weight: 600;
+    border-left: 3px solid var(--brand-accent-strong);
 }
 
 /* 修复侧边栏折叠按钮样式 - 仅针对 label 标签 (折叠箭头) */
 .md-sidebar--primary .md-nav__link+label.md-nav__link {
-    background-color: transparent !important;
-    border: none !important;
+    background-color: transparent;
+    border: none;
+}
+
+.md-nav__link:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: var(--space-1);
 }

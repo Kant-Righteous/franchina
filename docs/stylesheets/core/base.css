@@ -13,32 +13,11 @@
 /* 全局 body 样式 */
 body {
     font-family: 'Noto Sans SC', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #FFFFFF;
-    color: #263238;
-    line-height: 1.6;
+    background-color: var(--color-page-bg);
+    color: var(--color-text);
+    line-height: 1.7;
     letter-spacing: 0;
-    font-size: 15px;
-}
-
-/* ========================================
-   滚动条样式优化
-   作用: 隐藏视觉上的滚动条，但完全保留滚动交互功能
-   ======================================== */
-
-/* 全局隐藏滚动条 (Chrome, Safari, Opera) */
-::-webkit-scrollbar {
-    display: none; /* 隐藏滚动条 */
-    width: 0;      /* 宽度设为0 */
-    height: 0;     /* 高度设为0 */
-}
-
-/* 全局隐藏滚动条 (Firefox, IE, Edge) */
-html, 
-body, 
-.md-sidebar__scrollwrap, 
-.md-typeset pre {
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE and Edge */
+    font-size: 16px;
 }
 
 /* 标题字体统一设置 */
@@ -49,10 +28,33 @@ h4,
 h5,
 h6 {
     font-family: 'Noto Sans SC', sans-serif;
-    color: #263238;
+    color: var(--color-heading);
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     line-height: 1.25;
+}
+
+/* 通用内容防溢出 */
+.md-content,
+.md-content__inner,
+.md-typeset {
+    min-width: 0;
+}
+
+.md-content img,
+.md-content video {
+    max-width: 100%;
+    height: auto;
+}
+
+.md-typeset,
+.md-typeset a {
+    overflow-wrap: break-word;
+}
+
+.md-typeset a[href^="http"],
+.md-typeset a[href^="mailto:"] {
+    overflow-wrap: anywhere;
 }
 
 /* 平滑滚动 */

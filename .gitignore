@@ -35,3 +35,8 @@ designs/
 # OS
 .DS_Store
 Thumbs.db
+
+# design files
+design/
+design-previews/
+superpowers/

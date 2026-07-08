@@ -48,26 +48,31 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 ### Tisséo 票种一览
 
-<p style="font-size: 0.85em; color: #666; text-align: right; margin-bottom: 0.5rem;"> <i>以下为 2025–2026 年度参考价格，以 Tisséo 官网为准</i></p>
+<p style="font-size: 0.85em; color: #666; text-align: right; margin-bottom: 0.5rem;"><i>当前公开价格，最后核验：2026-06-22；机场穿梭巴士除外</i></p>
 
 | 票种 | 价格 | 说明 |
 |---|---|---|
-| **单次票（Ticket unitaire）** | ~1.90€ | 1 小时内可换乘地铁/电车/公交 |
-| **10 次票（Carnet 10 voyages）** | ~15.50€ | 平均每次 1.55€，更划算 |
-| **日票（Ticket Journée）** | ~6.40€ | 当日无限次乘坐所有 Tisséo 交通工具 |
-| **月票（Abonnement Mensuel）** | ~50€/月 | 月度无限乘坐 |
-| **年票（Abonnement Annuel）** | ~480€/年 | 年度无限乘坐，比月票再省一些 |
+| **单次票（1 déplacement）** | 1.80€ | 1 小时内可换乘地铁/电车/公交 |
+| **10 次票（10 déplacements）** | 15.70€ | 10 次按次使用的行程 |
+| **日票（Journée）** | 7.00€ | 首次验证后至当天末班车前不限次数乘坐 |
+| **31 日票（31 jours）** | 58.00€ | 首次验证起连续 31 天不限次数乘坐 |
+| **年票（Annuel）** | 606.10€/年 | 连续 12 个月；月付方案为 52.10€/月 |
 
-!!! warning "学生专属｜Pastel Étudiant 🎓"
-    **26 岁以下在图卢兹注册的学生**可办理 **Pastel Étudiant** 学生交通卡，享受**大幅优惠**：
+官方来源：[单次票](https://eboutique.tisseo.fr/fr/produits/1-deplacement-pour-tous-occ)、[10 次票](https://eboutique.tisseo.fr/fr/produits/10-deplacements-pour-tous-occ)、[日票](https://eboutique.tisseo.fr/fr/produits/journee-pour-tous-occ)、[31 日票](https://eboutique.tisseo.fr/fr/produits/31-jours-pour-tous-reg)、[年票](https://eboutique.tisseo.fr/fr/produits/annuel-pour-tous-reg)。
 
-    - **学生月票**：约 **10.40€/月**（对比普通月票 ~50€，打了约 **2 折**！）
-    - **学生 10 次卡**：约 **5.90€**（对比普通 10 次票 ~15.50€，打了约 **3.8 折**！适合乘车次数较少的同学）
-    - **涵盖范围**：Tisséo 全网（地铁 + 有轨电车 + 公交）
-    - **办理方式**：在 [Tisséo 官网](https://www.tisseo.fr/) 或线下 Tisséo 营业厅办理，需携带学生证、身份证件和照片
-    - **Pastel 卡工本费**：约 10€（一次性）
+!!! warning "青年与学生优惠"
+    Tisséo 优惠按**年龄和学生身份**区分，并非所有 26 岁以下学生都适用同一个价格。当前常见价格包括：
 
-    不常坐车？10 次卡就够用！经常通勤？月票更划算！**强烈建议开学后第一时间办理 Pastel 卡**。
+    - **20–25 岁学生 10 次票**：**5.90€**；同年龄非学生青年票为 **7.00€**。
+    - **20–25 岁学生 31 日票**：**15.50€**；同年龄青年票为 **18.20€**。
+    - **20–25 岁学生年票**：**162.00€**；同年龄青年票为 **190.20€**。
+    - **26–34 岁学生 10 次票**：**11.50€**。
+    - **适用范围**：Tisséo 地铁、有轨电车、公交和 Téléo，通常不含机场穿梭巴士（Navette aéroport）。
+    - **Pastel 卡工本费**：**9€**；申请时通常需要身份证件和照片，学生优惠还需提供有效学生证明。
+
+    官方来源：[20–25 岁学生票](https://eboutique.tisseo.fr/fr/produits/10-deplacements-etudiants-20-25ans)、[20–25 岁学生 31 日票](https://eboutique.tisseo.fr/fr/produits/31-jours-niveau-3-etudiants-20-25ans)、[26–34 岁学生票](https://eboutique.tisseo.fr/fr/produits/10-deplacements-etudiants-26-34ans)。实际可购买票种及手机支持情况以 [Tisséo 票价助手](https://eboutique.tisseo.fr/fr/assistant-tarifaire/index) 根据个人资料给出的结果为准。
+
+    不常乘车可优先比较 10 次票；经常通勤则比较 31 日票或年票。购买前应重新确认年龄、学生身份和所需证明。
 
 ### 购票与充值
 
@@ -84,17 +89,21 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 #### 📍 主要地铁、有轨电车和快速公交线路图
 
-<embed src="/assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<div class="pdf-preview" role="region" aria-label="Tisséo 主要线路图 PDF 预览">
+  <embed class="pdf-preview__frame" src="/assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" title="Tisséo 主要线路图 PDF 预览">
+</div>
 
-*如无法显示，请 [📥 点击下载 Tisséo 主要线路图 (PDF)](../../../assets/cities/toulouse/transport/plan-lignes-principales.pdf)*
+<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/cities/toulouse/transport/plan-lignes-principales.pdf">下载 Tisséo 主要线路图（PDF）</a></p>
 
 ---
 
 #### ⏱️ 行程时间估算图（从市中心出发）
 
-<embed src="/assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px;">
+<div class="pdf-preview" role="region" aria-label="图卢兹行程时间估算图 PDF 预览">
+  <embed class="pdf-preview__frame" src="/assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" title="图卢兹行程时间估算图 PDF 预览">
+</div>
 
-*如无法显示，请 [📥 点击下载行程时间估算图 (PDF)](../../../assets/cities/toulouse/transport/Roue-des-temps.pdf)*
+<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/cities/toulouse/transport/Roue-des-temps.pdf">下载行程时间估算图（PDF）</a></p>
 
 ---
 
