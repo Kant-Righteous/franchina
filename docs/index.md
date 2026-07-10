@@ -14,14 +14,8 @@ hide:
     <picture>
       <source
         type="image/webp"
-        srcset="assets/home/hero_landing-480.webp 480w,
-                assets/home/hero_landing-720.webp 720w,
-                assets/home/hero_landing-1024.webp 1024w"
-        sizes="(max-width: 375px) 88vw,
-               (max-width: 600px) 330px,
-               (max-width: 960px) 420px,
-               520px">
-      <img src="assets/home/hero_landing.png" width="1024" height="1024" loading="eager" fetchpriority="high" alt="埃菲尔铁塔、书本和留学生组成的法国留学生活插画" draggable="false">
+        srcset="assets/home/hero_landing-1024.webp">
+      <img src="assets/home/hero_landing.jpg" width="1024" height="1024" loading="eager" fetchpriority="high" alt="埃菲尔铁塔、书本和留学生组成的法国留学生活插画" draggable="false">
     </picture>
   </div>
 </section>
