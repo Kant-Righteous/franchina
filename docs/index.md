@@ -62,6 +62,15 @@ hide:
   </div>
 </section>
 
+<section class="home-closing" aria-labelledby="home-closing-title">
+  <div class="home-closing__rule" aria-hidden="true">
+    <span></span>
+    <span></span>
+  </div>
+  <h2 id="home-closing-title"><span class="home-closing__intro">来自一位</span><span class="home-closing__highlight">留法学长</span><span class="home-closing__outro">的经验整理</span></h2>
+  <p>为你的出发和生活，提供一些参考。</p>
+</section>
+
 <style>
   .md-source-file, .git-revision-date-localized-plugin {
     display: none !important;
