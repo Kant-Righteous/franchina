@@ -14,8 +14,7 @@
    例如: color: var(--deep-blue);
    ======================================== */
 
-/* 引入 Google Fonts - 中法双语支持 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;700&display=swap');
+/* 字体由 Material 主题在 <head> 中加载；避免 CSS @import 形成串行阻塞。 */
 
 :root {
     /* ========================================

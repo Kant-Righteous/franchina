@@ -11,7 +11,12 @@ hide:
     <p class="tx-hero__tagline">陪你走过留法生活的<span class="tx-hero__nowrap">百宝箱</span></p>
   </div>
   <div class="tx-hero__image">
-    <img src="assets/home/hero_landing.png" alt="埃菲尔铁塔、书本和留学生组成的法国留学生活插画" draggable="false">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="assets/home/hero_landing-1024.webp">
+      <img src="assets/home/hero_landing.jpg" width="1024" height="1024" loading="eager" fetchpriority="high" alt="埃菲尔铁塔、书本和留学生组成的法国留学生活插画" draggable="false">
+    </picture>
   </div>
 </section>
 

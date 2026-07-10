@@ -59,15 +59,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
   min-width: 0;
+  justify-self: center;
+}
+
+.tx-hero__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .tx-hero__image img {
   display: block;
-  width: min(100%, 520px);
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   animation: home-float 5.5s var(--ease-standard) infinite;
+}
+
+/* 首屏不参与全局淡入位移动画，避免加载阶段产生额外的视觉跳动。 */
+.md-content__inner > .tx-hero {
+  animation: none;
 }
 
 @keyframes home-float {
@@ -311,9 +325,6 @@
 
   .tx-hero__image {
     grid-row: 1;
-  }
-
-  .tx-hero__image img {
     width: min(72vw, 420px);
   }
 
@@ -343,7 +354,7 @@
     font-size: clamp(20px, 5.6vw, 22px);
   }
 
-  .tx-hero__image img {
+  .tx-hero__image {
     width: min(88vw, 330px);
   }
 

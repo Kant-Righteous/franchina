@@ -72,6 +72,8 @@
 .md-header .md-logo img {
     height: 40px;
     width: auto;
+    aspect-ratio: 250 / 305;
+    object-fit: contain;
 }
 
 .md-header .md-logo {
