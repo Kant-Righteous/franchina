@@ -19,7 +19,9 @@
   <meta property="og:site_name" content="{{ config.site_name | e }}">
   <meta property="og:title" content="{{ share_title | e }}">
   <meta property="og:description" content="{{ share_description | e }}">
-  <meta property="og:url" content="{{ page.canonical_url | e }}">
+  {% if page.canonical_url %}
+    <meta property="og:url" content="{{ page.canonical_url | e }}">
+  {% endif %}
   <meta property="og:image" content="{{ share_image }}">
   <meta property="og:image:secure_url" content="{{ share_image }}">
   <meta property="og:image:type" content="image/png">
