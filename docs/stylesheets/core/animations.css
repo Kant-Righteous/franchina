@@ -3,33 +3,10 @@
    
    作用: 为网站添加流畅的动画效果
    包含内容:
-   - 页面加载淡入动画 (fadeIn)
    - 元素位置定位 (为悬停效果准备)
    
-   动画说明:
-   - fadeIn: 内容从下方淡入,持续0.6秒
-   - 应用于所有主内容区域的直接子元素
-   
-   设计理念: 微妙的动画提升用户体验,不过度炫技
+   页面加载时不执行全局入场动画，确保首个可见帧即为最终布局。
    ======================================== */
-
-/* 页面加载淡入效果 - 应用于所有内容子元素 */
-.md-content__inner>* {
-    animation: fadeIn var(--duration-normal) var(--ease-standard);
-}
-
-/* 淡入动画定义 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* 为悬停效果准备的相对定位 */
 .md-content a,

@@ -24,9 +24,8 @@ theme:
     scheme: default
     primary: indigo # Ignored due to CSS override, but keeping valid
     accent: pink # Ignored due to CSS override, but keeping valid
-  font:
-    text: Noto Sans SC # Loads webfont as fallback
-    code: Roboto Mono
+  # 使用系统字体，避免外部 Web Font 到达后引发布局闪动。
+  font: false
 
 extra_css:
   # Core 核心基础
