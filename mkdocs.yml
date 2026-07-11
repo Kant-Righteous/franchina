@@ -5,6 +5,7 @@ repo_url: ""
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   features:
     # - navigation.sections  # 禁用以启用折叠功能
