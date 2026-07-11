@@ -2,7 +2,7 @@
 
 {% block extrahead %}
   {{ super() }}
-  {% set share_image = config.site_url.rstrip("/") ~ "/assets/home/share-cover-white.png" %}
+  {% set share_image = config.site_url.rstrip("/") ~ "/assets/home/share-cover-transparent.png" %}
   {% if page.meta and page.meta.title %}
     {% set share_title = page.meta.title ~ " - " ~ config.site_name %}
   {% elif page.title and not page.is_homepage %}
