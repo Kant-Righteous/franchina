@@ -29,9 +29,12 @@ description: 为准备赴法国留学的学生提供行李打包思路、必带�
 * 健康记录、疫苗接种记录或国际保险证明
 * 中国驾照和符合要求的法语翻译件，仅限计划在法国驾驶的人
 
-出生证明等民事状态材料可能在办理法国医保、CAF等手续时使用，但具体文件形式、翻译方式和有效期应以办理机构的最新要求为准。
+出生证明等民事状态材料可能在办理[法国医保 Ameli](admin/after/ameli.md)、[CAF 住房补助](admin/after/caf.md)等手续时使用，但具体文件形式、翻译方式和有效期应以办理机构的最新要求为准。
 
-!!! note "不要把关键材料全部放托运行李"
+!!! note "CAF 资格提醒"
+    自 2026 年 7 月 1 日起，部分非欧盟学生的住房补助资格有所调整。申请前，建议查看 [CAF 官方资格说明](https://www.caf.fr/allocataires/actualites/actualites-nationales/apl-ce-qui-change-pour-certains-etudiants-partir-du-1er-juillet-2026)。
+
+!!! tip "不要把关键材料全部放托运行李"
     托运行李延误或丢失时，最麻烦的往往不是衣物，而是证件和入学文件。随身行李里至少保留一套完整的关键材料。
 
 ### 随身行李提醒

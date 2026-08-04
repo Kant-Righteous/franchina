@@ -47,10 +47,10 @@ copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 | 本站采用 <a 
 
 nav:
   - 首页: index.md
-  - 初到法国: pages/arrival/first-week.md
+  - 行李建议: pages/packing-list.md
+  - 初到法国: pages/first-week.md
   - 行政手续:
       - 赴法之前:
-          - 行李清单建议: pages/admin/before/packing-list.md
           - 办理护照: pages/admin/before/passport.md
           - 办理公证: pages/admin/before/notarization.md
           - 办理签证: pages/admin/before/visa.md
@@ -89,8 +89,7 @@ nav:
           - 生活圈: pages/cities/paris/life.md
   - 小工具:
       - 汇率计算器: pages/littleTools/CurrencyCalculator.md
-  - 关于:
-      - 关于我们: pages/about.md
+  - 关于: pages/about.md
 
 plugins:
   - search:

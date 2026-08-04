@@ -46,7 +46,6 @@ description: 2026 最新版法国 CAF 房屋补贴申请说明，涵盖非欧盟
 *   **签证页 + 入境章**、**VLS-TS 验证确认** 或 **居留卡** (Titre de séjour)
 *   **符合新政例外条件的证明**：例如 CROUS 奖学金通知、工作合同、工资单、auto-entrepreneur 活动证明、学徒或职业化合同等（按 CAF 要求上传）
 *   **出生公证双认证** (Acte de naissance traduit par un traducteur assermenté)
-    *   *这是最大的坑：国内办公证+外事认证带过来，最好再找法国宣誓翻译做一遍翻译。CAF 对此要求很严格。*
 *   **银行 RIB** (Relevé d'Identité Bancaire) - 必须是法国银行账户
 *   **住房合同** (Bail de location)
 *   **房东填写的证明** (Attestation de loyer) - 学生公寓通常会直接给你这张纸，私人房东需让他填。
