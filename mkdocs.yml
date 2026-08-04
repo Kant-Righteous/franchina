@@ -50,6 +50,7 @@ nav:
   - 初到法国: pages/arrival/first-week.md
   - 行政手续:
       - 赴法之前:
+          - 行李清单建议: pages/admin/before/packing-list.md
           - 办理护照: pages/admin/before/passport.md
           - 办理公证: pages/admin/before/notarization.md
           - 办理签证: pages/admin/before/visa.md
