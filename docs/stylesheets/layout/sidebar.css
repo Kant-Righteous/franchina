@@ -24,6 +24,11 @@
     /* Ensure text remains white on dark background */
 }
 
+/* 移动端主导航内嵌目录：保持标题文字和返回箭头在深色背景上清晰可见 */
+.md-nav--primary .md-nav--secondary .md-nav__title {
+    color: #ffffff;
+}
+
 /* 导航区域标题 */
 .md-nav__title {
     font-family: 'Noto Sans SC', sans-serif;

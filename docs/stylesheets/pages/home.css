@@ -141,6 +141,149 @@
   gap: var(--space-4);
 }
 
+.home-entry__cluster {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+}
+
+.home-entry__cluster .home-entry__card {
+  z-index: 3;
+  height: 100%;
+  transform-origin: left bottom;
+}
+
+.md-typeset .home-entry__subcard {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 4px;
+  color: var(--brand-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: none;
+  background: var(--color-info-bg);
+  border: 1px solid var(--color-info-border);
+  border-radius: var(--radius-md);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transform-origin: right bottom;
+  transition: opacity 180ms var(--ease-standard), transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.md-typeset .home-entry__subcard--packing {
+  z-index: 2;
+  color: var(--brand-accent-strong);
+  background: var(--color-table-hover);
+  border-color: var(--brand-accent);
+}
+
+.md-typeset .home-entry__subcard--admin {
+  z-index: 1;
+}
+
+.md-typeset .home-entry__subcard--residence {
+  z-index: 2;
+}
+
+.md-typeset .home-entry__subcard--health {
+  z-index: 1;
+  color: var(--brand-accent-strong);
+  background: var(--color-table-hover);
+  border-color: var(--brand-accent);
+}
+
+.home-entry__subcard-label {
+  width: 2em;
+}
+
+.home-entry__subcard-arrow {
+  align-self: flex-start;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.home-entry__cluster:hover .home-entry__subcard,
+.home-entry__cluster:focus-within .home-entry__subcard {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.home-entry__cluster:hover,
+.home-entry__cluster:focus-within {
+  z-index: 4;
+}
+
+.home-entry__cluster:hover .home-entry__subcard--packing,
+.home-entry__cluster:focus-within .home-entry__subcard--packing {
+  transform: translate(-35px, 5px) rotate(-3deg);
+}
+
+.home-entry__cluster:hover .home-entry__subcard--admin,
+.home-entry__cluster:focus-within .home-entry__subcard--admin {
+  transform: translate(-65px, 10px) rotate(-8deg);
+}
+
+.home-entry__cluster--after .home-entry__subcard {
+  flex-direction: row;
+  align-items: flex-start;
+  transform-origin: center bottom;
+}
+
+.home-entry__cluster--after .home-entry__subcard-label {
+  width: auto;
+  text-align: left;
+}
+
+.home-entry__cluster--after .home-entry__subcard-arrow {
+  align-self: flex-start;
+}
+
+.home-entry__cluster--after:hover .home-entry__subcard--residence,
+.home-entry__cluster--after:focus-within .home-entry__subcard--residence {
+  transform: translateY(-32px) rotate(3deg);
+}
+
+.home-entry__cluster--after:hover .home-entry__subcard--health,
+.home-entry__cluster--after:focus-within .home-entry__subcard--health {
+  transform: translateY(-65px) rotate(6deg);
+}
+
+.md-typeset .home-entry__cluster:hover .home-entry__card,
+.md-typeset .home-entry__cluster:focus-within .home-entry__card {
+  border-color: var(--color-link);
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+.md-typeset .home-entry__subcard:hover {
+  color: var(--color-link-hover);
+}
+
+.md-typeset .home-entry__subcard--packing:hover {
+  color: var(--brand-accent-strong);
+}
+
+.md-typeset .home-entry__subcard--health:hover {
+  color: var(--brand-accent-strong);
+}
+
+.md-typeset .home-entry__subcard:hover .home-entry__subcard-arrow {
+  transform: translateX(3px);
+}
+
+.md-typeset .home-entry__subcard:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
 .md-typeset .home-entry__card {
   position: relative;
   display: flex;
@@ -331,6 +474,18 @@
   .home-entry__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+}
+
+@media screen and (max-width: 960px), (hover: none) {
+  .md-typeset .home-entry__subcard {
+    display: none;
+  }
+
+  .md-typeset .home-entry__cluster:hover .home-entry__card,
+  .md-typeset .home-entry__cluster:focus-within .home-entry__card {
+    transform: translateY(-2px);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -415,6 +570,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-entry__cluster .home-entry__card,
+  .home-entry__subcard,
+  .home-entry__subcard-arrow {
+    transition: none;
+  }
+
   .home-closing__intro,
   .home-closing__outro,
   .home-closing__highlight {

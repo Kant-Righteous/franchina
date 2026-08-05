@@ -29,18 +29,38 @@ hide:
     <p>按你当前所处的阶段，快速找到常用信息。</p>
   </div>
   <div class="home-entry__grid">
-    <a class="home-entry__card" href="pages/admin/before/passport/">
-      <span class="home-entry__number" aria-hidden="true">01</span>
-      <h3>赴法之前</h3>
-      <p>护照、公证与签证等出发前准备</p>
-      <span class="home-entry__arrow" aria-hidden="true">→</span>
-    </a>
-    <a class="home-entry__card" href="pages/arrival/first-week/">
-      <span class="home-entry__number" aria-hidden="true">02</span>
-      <h3>抵法之后</h3>
-      <p>抵达第一周与重要行政手续</p>
-      <span class="home-entry__arrow" aria-hidden="true">→</span>
-    </a>
+    <div class="home-entry__cluster">
+      <a class="home-entry__card" href="pages/admin/before/passport/">
+        <span class="home-entry__number" aria-hidden="true">01</span>
+        <h3>赴法之前</h3>
+        <p>护照、公证与签证等出发前准备</p>
+        <span class="home-entry__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="home-entry__subcard home-entry__subcard--packing" href="pages/packing-list/">
+        <span class="home-entry__subcard-label">行李建议</span>
+        <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="home-entry__subcard home-entry__subcard--admin" href="pages/admin/before/visa/">
+        <span class="home-entry__subcard-label">办理签证</span>
+        <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="home-entry__cluster home-entry__cluster--after">
+      <a class="home-entry__card" href="pages/first-week/">
+        <span class="home-entry__number" aria-hidden="true">02</span>
+        <h3>抵法之后</h3>
+        <p>抵达第一周与重要行政手续</p>
+        <span class="home-entry__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="home-entry__subcard home-entry__subcard--residence" href="pages/admin/after/residence/">
+        <span class="home-entry__subcard-label">办理居留</span>
+        <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="home-entry__subcard home-entry__subcard--health" href="pages/admin/after/ameli/">
+        <span class="home-entry__subcard-label">办理医保</span>
+        <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
     <a class="home-entry__card" href="pages/life/finance/bank/">
       <span class="home-entry__number" aria-hidden="true">03</span>
       <h3>生活指南</h3>
