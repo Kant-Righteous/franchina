@@ -1,6 +1,6 @@
 # 本地交通
 
-里昂的公共交通由 TCL 运营。2025 年 9 月起，原有多个周边网络逐步统一为一个按 **6 个票价区（zones）**组织的 TCL 网络；在里昂市区和多数近郊通勤时通常涉及 zones 1–2，但跨区上学或实习前必须核对票种覆盖范围。网络说明见 [TCL 统一网络指南](https://www.tcl.fr/sites/default/files/2025-08/Guide%20du%20r%C3%A9seau%20TCL%20unifi%C3%A9%202025%20-%20web%20-%20accessible.pdf)。
+里昂的公共交通由 TCL 运营。2025 年 9 月起，原有多个周边网络逐步统一为一个按 **6 个票价区（zones）**组织的 TCL 网络；在里昂市区和多数近郊通勤时通常涉及 zones 1–2，但跨区上学或实习前必须核对票种覆盖范围。
 
 ## 网络构成
 
@@ -14,7 +14,7 @@
 | Métro D | Gare de Vaise、Vieux Lyon、Bellecour、Grange Blanche、Gare de Vénissieux |
 | Funiculaire F1 / F2 | Vieux Lyon 至 Saint-Just / Fourvière |
 
-地铁、电车和公交线路可能因施工调整；完整站点与实时状态应在 [TCL 全部线路页面](https://www.tcl.fr/lignes) 或 TCL 应用中确认。
+地铁、电车和公交线路可能因施工调整；完整站点与实时状态应在 [TCL 全部线路页面](https://www.tcl.fr/lignes)。
 
 ### 电车与公交
 
@@ -85,18 +85,10 @@ Vélo’v 是里昂大都会的公共自行车服务，设有机械车和电助�
 
 ### Lyon–Saint Exupéry 机场
 
-Rhônexpress 连接 Part-Dieu 与 Lyon–Saint Exupéry 机场，官方时刻页面列出的正常行程时间约为 30 分钟，见 [Rhônexpress 时刻表](https://www.rhonexpress.fr/fr_FR/horaires)。该服务采用自己的票价和购买规则，青年优惠与实时价格应在 [Rhônexpress 购票说明](https://www.rhonexpress.fr/fr_FR/blog-voyages/billet-rhonexpress) 中重新确认。
+Rhônexpress（机场专线） 连接 Part-Dieu 与 Lyon–Saint Exupéry 机场，官方时刻页面列出的正常行程时间约为 30 分钟，见 [Rhônexpress 时刻表](https://www.rhonexpress.fr/fr_FR/horaires)。该服务采用自己的票价和购买规则，青年优惠与实时价格应在 [Rhônexpress 购票说明](https://www.rhonexpress.fr/fr_FR/blog-voyages/billet-rhonexpress) 中重新确认。
 
 !!! tip "赶早班机"
     先确认首班车、计划到达航站楼的时间以及当日工程。夜间或多人同行时，可再比较出租车或预约车辆的总价，但应通过正规渠道预订。
-
-## 通勤选择建议
-
-1. 先从学校官网确认**实际教学楼地址**，而不是只输入学校名称。
-2. 分别测试工作日 08:00 和 22:00 的路线，关注末班车与换乘步行距离。
-3. 如果路线包含 zones 3–6，先按完整起终点核对月票覆盖区。
-4. 合同签署前至少实地走一次从车站到住房的夜间路线。
-5. 每逢罢工、极端天气或大型活动，出发前查看 TCL 与 SNCF 的实时公告。
 
 ---
 

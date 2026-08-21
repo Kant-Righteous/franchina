@@ -4,15 +4,13 @@
 
 马赛位于法国地中海沿岸，是 Bouches-du-Rhône 省和 Provence-Alpes-Côte d’Azur 大区的首府。城市沿海岸、丘陵和多个大学片区展开，空间尺度很大：地图上距离相近的两点，实际通勤时间可能因山地、港区和换乘而明显增加。
 
-根据 [INSEE 的马赛市镇数据](https://www.insee.fr/fr/statistiques/1405599?geo=COM-13055)，马赛市镇 2023 年人口为 **886,040 人**。人口、学生规模和住房数据常分别采用 Marseille commune、Aix-Marseille-Provence Métropole 或更大的大学体系口径，引用时不能混用。
+根据 [INSEE 的马赛市镇数据](https://www.insee.fr/fr/statistiques/1405599?geo=COM-13055)，马赛市镇 2023 年人口为 **886,040 人**。
 
-!!! tip "为什么选择马赛？"
+!!! tip "马赛的特点"
     - **专业体系完整**：Aix-Marseille Université（AMU）在市内设有 Centre、Timone、Luminy、Étoile 等多个教学片区。
     - **国际学生较多**：马赛市政府介绍称，市内有超过 6 万名学生；Aix-Marseille-Provence 大都会有超过 10 万名学生。
     - **地中海环境**：海岸、岛屿与 Parc national des Calanques 为周末活动提供了独特选择。
     - **铁路与航空连接**：Saint-Charles 是区域与高速铁路枢纽，机场有直达车站的接驳巴士。
-
-上述学生数字来自 [马赛市政府“城市与大学”页面](https://www.marseille.fr/education/marseille-ville-universitaire)，属于不同地理范围，不能用来推算马赛市镇人口比例。
 
 ## 气候与准备
 
@@ -25,7 +23,7 @@
 | 秋季 | 仍可能温暖，也可能出现短时强降雨 | 关注暴雨和城市内涝预警 |
 | 冬季 | 整体较温和，强风天体感偏冷 | 防风保暖；海上交通可能临时调整 |
 
-长期气候基准可参考 [Météo-France 的 Marseille–Marignane 气候资料](https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_13054001.pdf)。该观测站位于 Marignane，不能完全代表市中心或 Calanques 的微气候；当天安排仍应查看实时预报。
+长期气候基准可参考 [Météo-France 的 Marseille–Marignane 气候资料](https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_13054001.pdf)。
 
 ## 城市速览
 
@@ -73,9 +71,6 @@ Calanques 是国家公园而非普通城市公园。夏季访问会同时受到�
 
 2026 年前往 Calanque de Sugiton 及 Pierres Tombées 的预约要求，见 [国家公园 Sugiton 预约页面](https://calanques-parcnational.fr/fr/des-decouvertes/preparer-sa-visite/reservation-sugiton)：当前公告列明 **6 月 20—21 日、6 月 27 日至 8 月 30 日每日、9 月 5—6 日和 12—13 日**需要免费预约。预约通常在访问日前 3 日 09:00 开放、前 1 日 18:00 截止，名额与规则以实际页面为准。
 
-!!! danger "预约成功不等于当天一定开放"
-    Bouches-du-Rhône 在每年高火险季会按日管制林区访问。即使已有预约，也要在出发前查看 [省政府林区访问公告](https://www.bouches-du-rhone.gouv.fr/layout/set/print/Actions-de-l-Etat/Agriculture-foret-et-developpement-rural/Foret/Acces-aux-massifs/Acces-aux-massifs-forestiers-des-Bouches-du-Rhone2)；因火险关闭时不得进入。
-
 ## 官方实用链接
 
 - [马赛市政府](https://www.marseille.fr/)
@@ -86,5 +81,3 @@ Calanques 是国家公园而非普通城市公园。夏季访问会同时受到�
 - [Parc national des Calanques](https://www.calanques-parcnational.fr/)
 
 ---
-
-*人口、学生规模、Calanques 预约与防火信息最后核验：2026-08-12。自然区域的开放状态必须在出发当天再次确认。*
