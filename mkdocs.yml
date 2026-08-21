@@ -87,6 +87,14 @@ nav:
           - 城市简介: pages/cities/paris/index.md
           - 本地交通: pages/cities/paris/transport.md
           - 生活圈: pages/cities/paris/life.md
+      - 里昂:
+          - 城市简介: pages/cities/lyon/index.md
+          - 本地交通: pages/cities/lyon/transport.md
+          - 生活圈: pages/cities/lyon/life.md
+      - 马赛:
+          - 城市简介: pages/cities/marseille/index.md
+          - 本地交通: pages/cities/marseille/transport.md
+          - 生活圈: pages/cities/marseille/life.md
   - 小工具:
       - 汇率计算器: pages/littleTools/CurrencyCalculator.md
   - 关于: pages/about.md
