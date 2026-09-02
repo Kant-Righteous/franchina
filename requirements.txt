@@ -3,4 +3,3 @@ mkdocs-material>=9.5,<10
 mkdocs-minify-plugin>=0.7,<1
 mkdocs-git-revision-date-localized-plugin>=1.2,<2
 jieba>=0.42,<1
-click==8.2.1

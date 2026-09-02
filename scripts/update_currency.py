@@ -1,7 +1,6 @@
 import urllib.request
 import json
 import os
-import time
 import subprocess
 import sys
 from datetime import datetime
