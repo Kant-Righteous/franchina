@@ -1,0 +1,26 @@
+[Unit]
+Description=FranChina MCP Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/franchina-mcp/current
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=FRANCHINA_MCP_DB_PATH=/var/lib/franchina/rates.sqlite
+ExecStart=/opt/franchina-mcp/.venv/bin/python -m franchina_mcp.server
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/franchina
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,279 @@
+name: Deploy FranChina MCP to OCI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "mcp/franchina_mcp/**"
+      - "mcp/requirements.txt"
+      - "mcp/deploy/**"
+      - "mcp/README.md"
+      - "mcp/tests/**"
+      - ".github/workflows/deploy_mcp.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-franchina-mcp
+  cancel-in-progress: false
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect production deployment changes
+        id: production_changes
+        shell: bash
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          if [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            deployment_required=true
+          elif git diff --quiet "$BEFORE_SHA" "$AFTER_SHA" -- \
+            mcp/franchina_mcp \
+            mcp/requirements.txt \
+            mcp/deploy \
+            .github/workflows/deploy_mcp.yml; then
+            deployment_required=false
+          else
+            diff_status=$?
+            if [ "$diff_status" -ne 1 ]; then
+              exit "$diff_status"
+            fi
+            deployment_required=true
+          fi
+
+          echo "required=$deployment_required" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install MCP dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r mcp/requirements.txt
+
+      - name: Run MCP tests
+        working-directory: mcp
+        run: python -m unittest discover -s tests -v
+
+      - name: Compile MCP package
+        run: python -m compileall -q mcp/franchina_mcp
+
+      - name: Report test-only change
+        if: steps.production_changes.outputs.required != 'true'
+        run: echo "MCP tests passed; no production files changed, so deployment is skipped."
+
+      - name: Build MCP release archive
+        if: steps.production_changes.outputs.required == 'true'
+        run: |
+          tar -C mcp \
+            --exclude='*/__pycache__' \
+            --exclude='*.py[co]' \
+            --exclude='*.sqlite' \
+            --exclude='*.sqlite3' \
+            --exclude='*.db' \
+            --exclude='*.sqlite-*' \
+            --exclude='*.sqlite3-*' \
+            --exclude='*.db-*' \
+            -czf "franchina-mcp-${GITHUB_SHA}.tar.gz" \
+            franchina_mcp \
+            requirements.txt \
+            deploy/franchina-mcp.service
+
+      - name: Upload MCP release archive
+        if: steps.production_changes.outputs.required == 'true'
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "franchina-mcp-${{ github.sha }}.tar.gz"
+          target: "/tmp"
+
+      - name: Activate MCP release
+        if: steps.production_changes.outputs.required == 'true'
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          RELEASE_SHA: ${{ github.sha }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: RELEASE_SHA
+          script: |
+            set -eu
+
+            APP_DIR="/opt/franchina-mcp"
+            DATA_DIR="/var/lib/franchina"
+            RELEASE_DIR="$APP_DIR/releases/$RELEASE_SHA"
+            ARCHIVE_PATH="/tmp/franchina-mcp-$RELEASE_SHA.tar.gz"
+            VENV_DIR="$APP_DIR/.venv"
+            SERVICE_PATH="/etc/systemd/system/franchina-mcp.service"
+            CURRENT_PATH="$APP_DIR/current"
+            PREVIOUS_TARGET=""
+
+            show_diagnostics() {
+              sudo systemctl status franchina-mcp.service --no-pager --full || true
+              sudo journalctl -u franchina-mcp.service -n 100 --no-pager || true
+            }
+
+            rollback_release() {
+              if [ -z "$PREVIOUS_TARGET" ]; then
+                echo "No previous release is available for rollback." >&2
+                return 0
+              fi
+
+              echo "Rolling back current to $PREVIOUS_TARGET" >&2
+              rollback_failed=0
+
+              if ! sudo -u ubuntu ln -sfn "$PREVIOUS_TARGET" "$CURRENT_PATH"; then
+                echo "Failed to restore the previous current symlink." >&2
+                rollback_failed=1
+              fi
+
+              if [ -f "$PREVIOUS_TARGET/requirements.txt" ]; then
+                if ! sudo -u ubuntu "$VENV_DIR/bin/python" -m pip install \
+                  -r "$PREVIOUS_TARGET/requirements.txt"; then
+                  echo "Failed to restore previous Python dependencies." >&2
+                  rollback_failed=1
+                fi
+              else
+                echo "Previous release has no requirements.txt." >&2
+                rollback_failed=1
+              fi
+
+              if [ -f "$PREVIOUS_TARGET/deploy/franchina-mcp.service" ]; then
+                if ! sudo install -o root -g root -m 0644 \
+                  "$PREVIOUS_TARGET/deploy/franchina-mcp.service" "$SERVICE_PATH"; then
+                  echo "Failed to restore the previous systemd unit." >&2
+                  rollback_failed=1
+                fi
+              else
+                echo "Previous release has no systemd unit." >&2
+                rollback_failed=1
+              fi
+
+              if ! sudo systemctl daemon-reload; then
+                echo "systemd daemon-reload failed during rollback." >&2
+                rollback_failed=1
+              fi
+              if ! sudo systemctl restart franchina-mcp.service; then
+                echo "Previous release failed to restart." >&2
+                rollback_failed=1
+              fi
+
+              sleep 2
+              if ! sudo systemctl is-active --quiet franchina-mcp.service; then
+                echo "Previous release is not active after rollback." >&2
+                rollback_failed=1
+              fi
+              if ! curl --fail http://127.0.0.1:8765/health \
+                --silent --show-error --output /dev/null; then
+                echo "Previous release health check failed after rollback." >&2
+                rollback_failed=1
+              fi
+
+              if [ "$rollback_failed" -eq 0 ]; then
+                echo "Rollback health check passed." >&2
+              else
+                show_diagnostics
+              fi
+            }
+
+            fail_new_release() {
+              echo "$1" >&2
+              show_diagnostics
+              rollback_release
+              exit 1
+            }
+
+            sudo -u ubuntu python3 -c 'import sys; raise SystemExit(sys.version_info < (3, 10))'
+            sudo install -d -o ubuntu -g ubuntu -m 0755 "$APP_DIR"
+            sudo install -d -o ubuntu -g ubuntu -m 0755 "$APP_DIR/releases"
+            sudo install -d -o ubuntu -g ubuntu -m 0755 "$RELEASE_DIR"
+            sudo install -d -o ubuntu -g ubuntu -m 0750 "$DATA_DIR"
+            sudo -u ubuntu tar -xzf "$ARCHIVE_PATH" -C "$RELEASE_DIR"
+
+            if [ -e "$CURRENT_PATH" ] && [ ! -L "$CURRENT_PATH" ]; then
+              echo "$CURRENT_PATH exists and is not a symbolic link" >&2
+              exit 1
+            fi
+            if [ -L "$CURRENT_PATH" ]; then
+              PREVIOUS_TARGET=$(readlink -f "$CURRENT_PATH")
+              case "$PREVIOUS_TARGET" in
+                "$APP_DIR"/releases/*) ;;
+                *)
+                  echo "Refusing unexpected current target: $PREVIOUS_TARGET" >&2
+                  exit 1
+                  ;;
+              esac
+              if [ ! -d "$PREVIOUS_TARGET" ]; then
+                echo "Previous release target does not exist: $PREVIOUS_TARGET" >&2
+                exit 1
+              fi
+            fi
+
+            INSTALL_DEPENDENCIES=0
+            if [ ! -x "$VENV_DIR/bin/python" ]; then
+              sudo -u ubuntu python3 -m venv "$VENV_DIR"
+              INSTALL_DEPENDENCIES=1
+            elif [ ! -f "$APP_DIR/current/requirements.txt" ] || \
+                 ! cmp -s "$RELEASE_DIR/requirements.txt" "$APP_DIR/current/requirements.txt"; then
+              INSTALL_DEPENDENCIES=1
+            fi
+
+            if [ "$INSTALL_DEPENDENCIES" -eq 1 ]; then
+              sudo -u ubuntu "$VENV_DIR/bin/python" -m pip install --upgrade pip
+              sudo -u ubuntu "$VENV_DIR/bin/python" -m pip install \
+                -r "$RELEASE_DIR/requirements.txt"
+            fi
+
+            SERVICE_CHANGED=0
+            if ! sudo test -f "$SERVICE_PATH" || \
+               ! sudo cmp -s "$RELEASE_DIR/deploy/franchina-mcp.service" "$SERVICE_PATH"; then
+              SERVICE_CHANGED=1
+            fi
+
+            if ! sudo -u ubuntu ln -sfn "$RELEASE_DIR" "$CURRENT_PATH"; then
+              fail_new_release "Failed to switch current to the new release."
+            fi
+
+            if [ "$SERVICE_CHANGED" -eq 1 ]; then
+              if ! sudo install -o root -g root -m 0644 \
+                "$RELEASE_DIR/deploy/franchina-mcp.service" "$SERVICE_PATH"; then
+                fail_new_release "Failed to install the new systemd unit."
+              fi
+              if ! sudo systemctl daemon-reload; then
+                fail_new_release "systemd daemon-reload failed for the new release."
+              fi
+            fi
+            if ! sudo systemctl enable franchina-mcp.service; then
+              fail_new_release "Failed to enable the MCP service."
+            fi
+
+            if ! sudo systemctl restart franchina-mcp.service; then
+              fail_new_release "New MCP release failed to restart."
+            fi
+
+            sleep 2
+            if ! sudo systemctl is-active --quiet franchina-mcp.service; then
+              fail_new_release "New MCP release is not active."
+            fi
+            if ! curl --fail http://127.0.0.1:8765/health \
+              --silent --show-error --output /dev/null; then
+              fail_new_release "New MCP release health check failed."
+            fi
+
+            sudo systemctl status franchina-mcp.service --no-pager --full

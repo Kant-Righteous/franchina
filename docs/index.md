@@ -81,7 +81,7 @@ hide:
     <span></span>
     <span></span>
   </div>
-  <h2 id="home-closing-title"><span class="home-closing__intro">来自一位</span><span class="home-closing__highlight">留法学长</span><span class="home-closing__outro">的经验整理</span></h2>
+  <h2 id="home-closing-title"><span class="home-closing__intro">来自</span><span class="home-closing__highlight">学长学姐</span><span class="home-closing__outro">的经验整理</span></h2>
   <p>为你的出发和生活，提供一些参考。</p>
 </section>
 
