@@ -130,6 +130,20 @@ jobs:
               sudo journalctl -u franchina-mcp.service -n 100 --no-pager || true
             }
 
+            wait_for_health() {
+              health_waited=0
+              until curl --fail http://127.0.0.1:8765/health \
+                --silent --show-error --output /dev/null; do
+                if [ "$health_waited" -ge 60 ]; then
+                  echo "Health check did not pass within 60s." >&2
+                  return 1
+                fi
+                sleep 2
+                health_waited=$((health_waited + 2))
+              done
+              return 0
+            }
+
             rollback_release() {
               if [ -z "$PREVIOUS_TARGET" ]; then
                 echo "No previous release is available for rollback." >&2
@@ -175,13 +189,11 @@ jobs:
                 rollback_failed=1
               fi
 
-              sleep 2
               if ! sudo systemctl is-active --quiet franchina-mcp.service; then
                 echo "Previous release is not active after rollback." >&2
                 rollback_failed=1
               fi
-              if ! curl --fail http://127.0.0.1:8765/health \
-                --silent --show-error --output /dev/null; then
+              if ! wait_for_health; then
                 echo "Previous release health check failed after rollback." >&2
                 rollback_failed=1
               fi
@@ -268,12 +280,10 @@ jobs:
               fail_new_release "New MCP release failed to restart."
             fi
 
-            sleep 2
             if ! sudo systemctl is-active --quiet franchina-mcp.service; then
               fail_new_release "New MCP release is not active."
             fi
-            if ! curl --fail http://127.0.0.1:8765/health \
-              --silent --show-error --output /dev/null; then
+            if ! wait_for_health; then
               fail_new_release "New MCP release health check failed."
             fi
 
