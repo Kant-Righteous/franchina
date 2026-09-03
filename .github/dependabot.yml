@@ -1,14 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: pip
-    directory: "/"
-    schedule:
-      interval: weekly
-  - package-ecosystem: pip
-    directory: "/mcp"
-    schedule:
-      interval: weekly
+  # Python 依赖不启用 version updates：普通版本升级手动维护 requirements.txt
+  # （保持 mkdocs>=1.6,<2），已知漏洞由仓库 Settings 中的
+  # Dependabot Alerts / Security Updates 负责。
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: weekly
+      interval: quarterly
+    groups:
+      all-actions:
+        patterns:
+          - "*"
