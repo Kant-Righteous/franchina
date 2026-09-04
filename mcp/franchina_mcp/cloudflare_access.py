@@ -26,14 +26,13 @@ import jwt
 from jwt import PyJWK
 from jwt.exceptions import InvalidTokenError
 
+from .config import CLOUDFLARE_ACCESS_MODE
+from .public_gate import header_value, is_loopback_host, send_json_error
+
 logger = logging.getLogger(__name__)
 
-MODE_ENV = "FRANCHINA_MCP_MODE"
 TEAM_DOMAIN_ENV = "FRANCHINA_MCP_CF_TEAM_DOMAIN"
 APPLICATION_AUD_ENV = "FRANCHINA_MCP_CF_APPLICATION_AUD"
-
-LOOPBACK_MODE = "loopback"
-CLOUDFLARE_ACCESS_MODE = "cloudflare-access"
 
 ACCESS_CERTS_PATH = "/cdn-cgi/access/certs"
 ASSERTION_HEADER = "Cf-Access-Jwt-Assertion"
@@ -41,11 +40,6 @@ ASSERTION_HEADER_BYTES = ASSERTION_HEADER.encode("ascii").lower()
 ACCESS_JWT_ALGORITHM = "RS256"
 REQUIRED_CLAIMS = ("exp", "aud", "iss", "sub")
 TEAM_HOSTNAME_PATTERN = re.compile(r"[a-z0-9-]+(?:\.[a-z0-9-]+)+")
-
-# The Host values this origin accepts for machine-local traffic (the systemd
-# deployment health check and cloudflared on the same host). Everything else
-# counts as public traffic and always requires an Access assertion.
-LOOPBACK_HOSTNAMES = frozenset({"127.0.0.1", "localhost", "::1"})
 
 JwksFetcher = Callable[[str], Mapping[str, Any]]
 
@@ -141,18 +135,6 @@ def _normalize_team_domain(raw: str) -> str:
         )
 
     return f"https://{hostname}"
-
-
-def resolve_run_mode(environ: Mapping[str, str] | None = None) -> str:
-    environment = os.environ if environ is None else environ
-    raw = str(environment.get(MODE_ENV, "")).strip()
-    if not raw or raw == LOOPBACK_MODE:
-        return LOOPBACK_MODE
-    if raw == CLOUDFLARE_ACCESS_MODE:
-        return CLOUDFLARE_ACCESS_MODE
-    raise SystemExit(
-        f"{MODE_ENV} must be '{LOOPBACK_MODE}' or '{CLOUDFLARE_ACCESS_MODE}', got: {raw!r}"
-    )
 
 
 def _fetch_jwks_document(certs_url: str) -> dict[str, Any]:
@@ -305,39 +287,6 @@ class CloudflareAccessValidator:
         return claims
 
 
-def is_loopback_host(host: str) -> bool:
-    if not host:
-        return False
-    try:
-        hostname = urlsplit(f"//{host}").hostname
-    except ValueError:
-        return False
-    return hostname is not None and hostname.lower() in LOOPBACK_HOSTNAMES
-
-
-def _header_value(scope: dict[str, Any], name_bytes: bytes) -> str | None:
-    for key, value in scope.get("headers", []):
-        if key.lower() == name_bytes:
-            return value.decode("latin-1")
-    return None
-
-
-async def _send_unauthorized(send: Any) -> None:
-    body = b'{"error":"unauthorized"}'
-    await send(
-        {
-            "type": "http.response.start",
-            "status": 401,
-            "headers": [
-                (b"content-type", b"application/json"),
-                (b"content-length", str(len(body)).encode("ascii")),
-                (b"cache-control", b"no-store"),
-            ],
-        }
-    )
-    await send({"type": "http.response.body", "body": body})
-
-
 class CloudflareAccessMiddleware:
     """Pure ASGI gate that enforces Access assertions in public mode.
 
@@ -369,13 +318,13 @@ class CloudflareAccessMiddleware:
             await self.app(scope, receive, send)
             return
 
-        host = _header_value(scope, b"host") or ""
+        host = header_value(scope, b"host") or ""
         path = scope.get("path") or "/"
         if not self.requires_assertion(path=path, host=host):
             await self.app(scope, receive, send)
             return
 
-        assertion = _header_value(scope, ASSERTION_HEADER_BYTES)
+        assertion = header_value(scope, ASSERTION_HEADER_BYTES)
         if assertion is None:
             logger.warning(
                 "Rejected %s request to host %r without %s header",
@@ -383,7 +332,7 @@ class CloudflareAccessMiddleware:
                 host,
                 ASSERTION_HEADER,
             )
-            await _send_unauthorized(send)
+            await send_json_error(send, 401, {"error": "unauthorized"})
             return
 
         try:
@@ -392,7 +341,7 @@ class CloudflareAccessMiddleware:
             logger.warning(
                 "Rejected Access assertion for %s (host %r): %s", path, host, error
             )
-            await _send_unauthorized(send)
+            await send_json_error(send, 401, {"error": "unauthorized"})
             return
 
         await self.app(scope, receive, send)
