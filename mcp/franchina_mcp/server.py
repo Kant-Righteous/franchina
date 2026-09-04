@@ -12,16 +12,21 @@ from starlette.responses import JSONResponse
 from starlette.types import ASGIApp
 
 from . import __version__
+from .api_keys import ApiKeyAuthenticator, ApiKeyMiddleware, ApiKeyRepository
 from .cloudflare_access import (
-    CLOUDFLARE_ACCESS_MODE,
-    LOOPBACK_MODE,
-    MODE_ENV,
     CloudflareAccessMiddleware,
     CloudflareAccessSettings,
     CloudflareAccessValidator,
+)
+from .config import (
+    API_KEY_MODE,
+    CLOUDFLARE_ACCESS_MODE,
+    LOOPBACK_MODE,
+    MODE_ENV,
+    resolve_auth_database_path,
+    resolve_database_path,
     resolve_run_mode,
 )
-from .config import resolve_database_path
 from .database import RatesRepository
 from .models import (
     ExchangeRateBatch,
@@ -57,31 +62,41 @@ def _validate_public_mode(
     public: bool,
     authorization: AuthorizationConfiguration | None = None,
     access_validator: CloudflareAccessValidator | None = None,
+    api_key_authenticator: ApiKeyAuthenticator | None = None,
 ) -> None:
     if not public:
-        if access_validator is not None:
-            raise ValueError("access_validator is only valid in public mode")
+        if access_validator is not None or api_key_authenticator is not None:
+            raise ValueError("authentication backends are only valid in public mode")
         return
 
-    if authorization is not None and access_validator is not None:
-        raise ValueError(
-            "public mode accepts either an AuthorizationConfiguration or a "
-            "CloudflareAccessValidator, not both"
-        )
-    if access_validator is not None:
-        return
-
-    authorization_is_complete = (
-        authorization is not None
-        and isinstance(authorization.settings, AuthSettings)
-        and authorization.settings.resource_server_url is not None
-        and callable(getattr(authorization.token_verifier, "verify_token", None))
+    backends = sum(
+        backend is not None
+        for backend in (authorization, access_validator, api_key_authenticator)
     )
-    if not authorization_is_complete:
+    if backends == 0:
         raise ValueError(
-            "public mode requires AuthSettings with resource_server_url and a "
-            "TokenVerifier, or a CloudflareAccessValidator"
+            "public mode requires one of: AuthSettings with resource_server_url "
+            "and a TokenVerifier, a CloudflareAccessValidator, or an "
+            "ApiKeyAuthenticator"
         )
+    if backends > 1:
+        raise ValueError(
+            "public mode accepts exactly one authentication backend: an "
+            "AuthorizationConfiguration, a CloudflareAccessValidator, or an "
+            "ApiKeyAuthenticator"
+        )
+    if authorization is not None:
+        authorization_is_complete = (
+            isinstance(authorization.settings, AuthSettings)
+            and authorization.settings.resource_server_url is not None
+            and callable(getattr(authorization.token_verifier, "verify_token", None))
+        )
+        if not authorization_is_complete:
+            raise ValueError(
+                "public mode requires AuthSettings with resource_server_url and "
+                "a TokenVerifier, a CloudflareAccessValidator, or an "
+                "ApiKeyAuthenticator"
+            )
 
 
 def create_transport_security_settings(
@@ -89,11 +104,13 @@ def create_transport_security_settings(
     public: bool = False,
     authorization: AuthorizationConfiguration | None = None,
     access_validator: CloudflareAccessValidator | None = None,
+    api_key_authenticator: ApiKeyAuthenticator | None = None,
 ) -> TransportSecuritySettings:
     _validate_public_mode(
         public=public,
         authorization=authorization,
         access_validator=access_validator,
+        api_key_authenticator=api_key_authenticator,
     )
     allowed_hosts = list(LOOPBACK_ALLOWED_HOSTS)
     allowed_origins: list[str] = []
@@ -112,12 +129,14 @@ def create_server(
     *,
     authorization: AuthorizationConfiguration | None = None,
     access_validator: CloudflareAccessValidator | None = None,
+    api_key_authenticator: ApiKeyAuthenticator | None = None,
     public: bool = False,
 ) -> MCPServer:
     _validate_public_mode(
         public=public,
         authorization=authorization,
         access_validator=access_validator,
+        api_key_authenticator=api_key_authenticator,
     )
     if authorization is not None:
         authorization_notice = (
@@ -127,6 +146,12 @@ def create_server(
         authorization_notice = (
             "Public HTTP requests must pass Cloudflare Access; the origin "
             "cryptographically validates the Cf-Access-Jwt-Assertion header."
+        )
+    elif api_key_authenticator is not None:
+        authorization_notice = (
+            "Public HTTP requests require a per-user API key "
+            "(Authorization: Bearer); write tools additionally require the "
+            "rates:write scope."
         )
     else:
         authorization_notice = (
@@ -184,13 +209,16 @@ def create_streamable_http_app(
     stateless_http: bool = False,
     authorization: AuthorizationConfiguration | None = None,
     access_validator: CloudflareAccessValidator | None = None,
+    api_key_authenticator: ApiKeyAuthenticator | None = None,
+    max_request_body_bytes: int | None = None,
     public: bool = False,
 ) -> ASGIApp:
-    """Build the streamable HTTP app, wrapped for Cloudflare Access in public mode."""
+    """Build the streamable HTTP app, wrapped for authentication in public mode."""
     _validate_public_mode(
         public=public,
         authorization=authorization,
         access_validator=access_validator,
+        api_key_authenticator=api_key_authenticator,
     )
     app = server.streamable_http_app(
         streamable_http_path=streamable_http_path,
@@ -199,11 +227,18 @@ def create_streamable_http_app(
             public=public,
             authorization=authorization,
             access_validator=access_validator,
+            api_key_authenticator=api_key_authenticator,
         ),
         host=host,
     )
     if access_validator is not None:
         app = CloudflareAccessMiddleware(app, access_validator)
+    elif api_key_authenticator is not None:
+        middleware_options = (
+            {} if max_request_body_bytes is None
+            else {"max_request_body_bytes": max_request_body_bytes}
+        )
+        app = ApiKeyMiddleware(app, api_key_authenticator, **middleware_options)
     return app
 
 
@@ -236,11 +271,31 @@ def _run_cloudflare_access(repository: RatesRepository) -> None:
     uvicorn.run(app, host="127.0.0.1", port=8765)
 
 
+def _run_api_key(repository: RatesRepository) -> None:
+    import uvicorn
+
+    authenticator = ApiKeyAuthenticator(
+        ApiKeyRepository(resolve_auth_database_path())
+    )
+    server = create_server(
+        repository, public=True, api_key_authenticator=authenticator
+    )
+    app = create_streamable_http_app(
+        server,
+        host="127.0.0.1",
+        api_key_authenticator=authenticator,
+        public=True,
+    )
+    uvicorn.run(app, host="127.0.0.1", port=8765)
+
+
 def main() -> None:
     repository = RatesRepository(resolve_database_path())
     mode = resolve_run_mode()
     if mode == CLOUDFLARE_ACCESS_MODE:
         _run_cloudflare_access(repository)
+    elif mode == API_KEY_MODE:
+        _run_api_key(repository)
     elif mode == LOOPBACK_MODE:
         _run_loopback(repository)
     else:  # pragma: no cover - resolve_run_mode only returns known modes

@@ -228,28 +228,6 @@ class CloudflareAccessSettingsTests(unittest.TestCase):
             )
 
 
-class ResolveRunModeTests(unittest.TestCase):
-    def test_unset_or_loopback_defaults_to_loopback(self) -> None:
-        for environment in ({}, {access_module.MODE_ENV: ""}, {access_module.MODE_ENV: " loopback "}):
-            with self.subTest(environment=environment):
-                self.assertEqual(
-                    access_module.resolve_run_mode(environment),
-                    access_module.LOOPBACK_MODE,
-                )
-
-    def test_cloudflare_access_mode_is_explicit(self) -> None:
-        self.assertEqual(
-            access_module.resolve_run_mode(
-                {access_module.MODE_ENV: "cloudflare-access"}
-            ),
-            access_module.CLOUDFLARE_ACCESS_MODE,
-        )
-
-    def test_unknown_mode_fails_startup(self) -> None:
-        with self.assertRaises(SystemExit):
-            access_module.resolve_run_mode({access_module.MODE_ENV: "public"})
-
-
 class ValidatorStartupTests(unittest.TestCase):
     def test_validator_fails_fast_when_jwks_is_unreachable(self) -> None:
         def unreachable_fetch(_url: str) -> dict[str, Any]:
