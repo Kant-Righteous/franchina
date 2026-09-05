@@ -36,7 +36,7 @@ hide:
         <p>护照、公证与签证等出发前准备</p>
         <span class="home-entry__arrow" aria-hidden="true">→</span>
       </a>
-      <a class="home-entry__subcard home-entry__subcard--packing" href="pages/packing-list/">
+      <a class="home-entry__subcard home-entry__subcard--packing" href="pages/admin/before/packing-list/">
         <span class="home-entry__subcard-label">行李建议</span>
         <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
       </a>
@@ -46,7 +46,7 @@ hide:
       </a>
     </div>
     <div class="home-entry__cluster home-entry__cluster--after">
-      <a class="home-entry__card" href="pages/first-week/">
+      <a class="home-entry__card" href="pages/admin/after/first-week/">
         <span class="home-entry__number" aria-hidden="true">02</span>
         <h3>抵法之后</h3>
         <p>抵达第一周与重要行政手续</p>
@@ -67,9 +67,9 @@ hide:
       <p>财务、住房、交通与医疗信息</p>
       <span class="home-entry__arrow" aria-hidden="true">→</span>
     </a>
-    <a class="home-entry__card" href="pages/cities/toulouse/">
+    <a class="home-entry__card" href="pages/toulouse/">
       <span class="home-entry__number" aria-hidden="true">04</span>
-      <h3>城市指南</h3>
+      <h3>图卢兹专区</h3>
       <p>城市概况、本地交通与生活圈</p>
       <span class="home-entry__arrow" aria-hidden="true">→</span>
     </a>

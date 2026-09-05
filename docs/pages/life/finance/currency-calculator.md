@@ -622,7 +622,7 @@ hide:
         async function init() {
             try {
                 // 添加时间戳避免缓存
-                const resp = await fetch('/assets/littleTools/CurrencyCalculator/rates.json?v=' + Date.now());
+                const resp = await fetch('/assets/life/finance/currency-calculator/rates.json?v=' + Date.now());
                 if (!resp.ok) throw new Error('网络错误');
                 const data = await resp.json();
                 
@@ -887,7 +887,7 @@ hide:
         // 加载历史数据并初始化图表
         async function loadHistoryData() {
             try {
-                const resp = await fetch('/assets/littleTools/CurrencyCalculator/history.json?v=' + Date.now());
+                const resp = await fetch('/assets/life/finance/currency-calculator/history.json?v=' + Date.now());
                 if (!resp.ok) throw new Error('无法加载历史数据');
                 historyData = await resp.json();
                 buildUsdCny(historyData);

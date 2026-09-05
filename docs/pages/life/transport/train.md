@@ -1,8 +1,16 @@
-# 高铁列车
+# 高铁与城际列车 (Train SNCF)
+
+!!! abstract "速览"
+    * **官方订票**：使用官方 App **SNCF Connect**，统一购买高铁、区域列车和跨境列车车票。→ [查看购票渠道](#train-booking)
+    * **青年优惠**：12～27 岁可了解 **Carte Avantage Jeune**，购买前核对当期折扣和封顶规则。→ [查看青年优惠卡](#train-youth)
+    * **OUIGO 注意**：票价较低但行李限制严格，部分车站距离市区较远。→ [查看 OUIGO 规定](#train-ouigo)
+    * **乘车准备**：按车站要求预留检票时间，并给行李挂上姓名和电话。→ [查看行李规定](#train-baggage)
+
+---
 
 法国国家铁路公司 **SNCF** 运营着全国铁路网络，是城际出行最主要的方式。👉 [查看 TGV INOUI 路线地图](https://www.sncf-connect.com/train/horaires/carte-plan-reseau-tgv-inoui) | [SNCF 全国铁路网络地图](https://www.sncf-reseau.com/fr/carte/railway-maps)
 
-## 主要列车类型
+## 主要列车类型 {#train-types}
 
 | 类型 | 说明 | 特点 |
 |---|---|---|
@@ -14,7 +22,7 @@
 
 此外，SNCF 还运营多条**跨国高速列车**：Eurostar（英国）、Thalys（比利时/荷兰/德国）、TGV Lyria（瑞士）等。
 
-## 行李规定
+## 行李规定 {#train-baggage}
 
 火车行李规定因列车类型而异，**TGV INOUI 比较宽松，OUIGO 非常严格**：
 
@@ -27,7 +35,7 @@
 - **其他要求**：所有行李必须挂上**贴有个人信息的行李牌 (Étiquette)**，且乘客必须保证**能一次性自行搬运**所有行李。
 - *注：TER 区域列车目前暂未严格执行上述尺寸限制，但同样要求乘客能自行搬运且不阻塞通道。*
 
-### OUIGO（严格限制，超出会被罚款⚠️）
+### OUIGO（严格限制，超出会被罚款⚠️） {#train-ouigo}
 
 | 行李类型 | 尺寸限制 | 费用 |
 |---|---|---|
@@ -38,7 +46,7 @@
 !!! danger "OUIGO 行灵活罚款"
     OUIGO 行李检查非常严格！超尺寸或未提前购买额外行李选项，在站台可能被罚 **20–50€**，行李阻碍通道甚至可罚 **150€**。建议提前在线加购，比现场便宜得多。
 
-## 票价与购票
+## 票价与购票 {#train-booking}
 
 ### 票价等级
 
@@ -98,7 +106,7 @@ SNCF 对 TGV INOUI 和 Intercités 列车提供 **G30 Guarantee** 晚点赔偿�
 
 ### 青年优惠卡
 
-### Carte Avantage Jeune（青年优惠卡）
+### Carte Avantage Jeune（青年优惠卡） {#train-youth}
 
 - **适用人群**：12–27 岁，不要求法国国籍，国际学生也可办理
 - **价格**：49€/年

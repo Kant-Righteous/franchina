@@ -47,21 +47,20 @@ copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 | 本站采用 <a 
 
 nav:
   - 首页: index.md
-  - 行李建议: pages/packing-list.md
-  - 初到法国: pages/first-week.md
-  - 行政手续:
-      - 赴法之前:
-          - 办理护照: pages/admin/before/passport.md
-          - 办理公证: pages/admin/before/notarization.md
-          - 办理签证: pages/admin/before/visa.md
-      - 抵法之后:
-          - 办理居留: pages/admin/after/residence.md
-          - 办理医保: pages/admin/after/ameli.md
-          - 办理房补: pages/admin/after/caf.md
+  - 赴法之前:
+      - 行李建议: pages/admin/before/packing-list.md
+      - 办理护照: pages/admin/before/passport.md
+      - 办理公证: pages/admin/before/notarization.md
+      - 办理签证: pages/admin/before/visa.md
+  - 抵法之后:
+      - 初到法国: pages/admin/after/first-week.md
+      - 办理居留: pages/admin/after/residence.md
+      - 办理医保: pages/admin/after/ameli.md
+      - 办理房补: pages/admin/after/caf.md
   - 生活指南:
       - 财务管理:
           - 办理银行卡: pages/life/finance/bank.md
-          - 汇率计算器: pages/littleTools/CurrencyCalculator.md
+          - 汇率计算器: pages/life/finance/currency-calculator.md
       - 交通出行:
           - 自行车: pages/life/transport/bike.md
           - 公交: pages/life/transport/bus.md
@@ -74,15 +73,19 @@ nav:
           - 办理手机卡: pages/life/communication/sim-card.md
       - 住房管理: pages/life/housing.md
       - 医疗健康: pages/life/health.md
-  - 常用网站导航: pages/quick-links.md
+      - 残障学生支持: pages/life/disability-support.md
+      - AI 优惠与福利: pages/life/ai-benefits.md
+  - 图卢兹专区:
+      - 城市简介: pages/toulouse/index.md
+      - 本地交通: pages/toulouse/transport.md
+      - 生活圈: pages/toulouse/life.md
+      - 图卢兹学联: pages/toulouse/cssa.md
+  - 常用网站: pages/quick-links/index.md
   - 寻求帮助:
+      - 紧急求助: pages/help/emergency.md
       - 全法学联: pages/help/cssa.md
       - 驻法使领馆: pages/help/embassy.md
   - 城市指南:
-      - 图卢兹:
-          - 城市简介: pages/cities/toulouse/index.md
-          - 本地交通: pages/cities/toulouse/transport.md
-          - 生活圈: pages/cities/toulouse/life.md
       - 巴黎:
           - 城市简介: pages/cities/paris/index.md
           - 本地交通: pages/cities/paris/transport.md
@@ -96,8 +99,8 @@ nav:
           - 本地交通: pages/cities/marseille/transport.md
           - 生活圈: pages/cities/marseille/life.md
   - 小工具:
-      - 汇率计算器: pages/littleTools/CurrencyCalculator.md
-  - 关于: pages/about.md
+      - 汇率计算器: pages/life/finance/currency-calculator.md
+  - 关于: pages/about/index.md
 
 plugins:
   - search:

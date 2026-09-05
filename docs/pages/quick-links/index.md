@@ -41,7 +41,7 @@ description: 法国留学高频使用网站大汇总，涵盖行政、学生、�
         <div class="card-icon">🏠</div>
         <div class="card-content">
             <h3>CAF</h3>
-            <p>法国联邦家庭补助局，申请房屋补贴 (APL) 的唯一官方网站。</p>
+            <p>法国家庭补助金管理局（Caisse d'allocations familiales），申请住房补贴 (APL) 的官方网站。</p>
         </div>
     </a>
 </div>
@@ -145,6 +145,20 @@ description: 法国留学高频使用网站大汇总，涵盖行政、学生、�
         <div class="card-content">
             <h3>Too Good To Go</h3>
             <p>极具人气的环保省钱App，低价购买面包房、超市的“临期盲盒”。</p>
+        </div>
+    </a>
+    <a href="https://www.medadom.com/" class="link-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-icon">🩺</div>
+        <div class="card-content">
+            <h3>Medadom</h3>
+            <p>法国在线极速问诊与药房远程问诊亭平台，支持社保直报与处方开具。</p>
+        </div>
+    </a>
+    <a href="https://www.joybuy.com/" class="link-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-icon">🛍️</div>
+        <div class="card-content">
+            <h3>Joybuy</h3>
+            <p>优质中国商品与亚洲食品网购平台，全法通常 2-3 个工作日送达。</p>
         </div>
     </a>
 </div>
