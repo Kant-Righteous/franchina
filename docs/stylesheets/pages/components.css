@@ -457,3 +457,155 @@
     background-color: transparent;
     /* 子菜单激活不加背景，只变色，避免视觉杂乱 */
 }
+
+/* ========================================
+   紧急求助决策卡片 (Emergency Cards)
+   ======================================== */
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-3, 12px);
+    margin: var(--space-4, 16px) 0;
+}
+
+.emergency-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background-color: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+
+.emergency-card__header {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.35rem;
+}
+
+.emergency-card__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.625rem;
+    line-height: 1.45;
+}
+
+.emergency-card__meta {
+    font-size: 0.75rem;
+    color: var(--color-text);
+    background-color: var(--color-surface-subtle, #f6f6f6);
+    border-left: 3px solid var(--color-border);
+    padding: 6px 8px;
+    margin-bottom: 0.75rem;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.emergency-card__meta strong {
+    color: var(--color-heading);
+}
+
+.emergency-card__call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    background-color: #DC2626;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: filter 0.15s ease;
+}
+
+.emergency-card__call:hover {
+    filter: brightness(0.92);
+}
+
+.emergency-card__call--police {
+    background-color: #1D4ED8;
+}
+
+.emergency-card__call--fire {
+    background-color: #EA580C;
+}
+
+.emergency-card__call--eu {
+    background-color: #2563EB;
+}
+
+.emergency-card__call--sms {
+    background-color: #4B5563;
+}
+
+/* ========================================
+   呼救四大黄金要素步骤流 (Call Steps Flow)
+   ======================================== */
+.call-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3, 12px);
+    margin: var(--space-4, 16px) 0 var(--space-6, 24px);
+}
+
+@media screen and (max-width: 860px) {
+    .call-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .call-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.call-step-card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    background-color: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.call-step-card:hover {
+    border-color: var(--brand-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.call-step-card__num {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--brand-primary);
+    margin-bottom: 4px;
+}
+
+.call-step-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 4px;
+}
+
+.call-step-card__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+}
+

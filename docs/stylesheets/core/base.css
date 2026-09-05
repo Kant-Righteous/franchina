@@ -30,7 +30,7 @@ h6 {
     font-family: var(--md-text-font-family);
     color: var(--color-heading);
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
     line-height: 1.25;
 }
 

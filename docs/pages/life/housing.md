@@ -101,6 +101,9 @@ description: 覆盖找房渠道、租房 dossier、合同、押金、住房保�
 - 房租是否明显低于同区市场价。
 - 是否把护照、银行信息发给陌生人且没有必要。
 
+!!! warning "谨防租房诈骗升级（实地看房仍需核验）"
+    近年来出现诈骗分子利用短期民宿（Airbnb）带看冒充假房东、签署假合同并收取大额现金押金的恶性诈骗模式。关于房屋产权证明（Titre de propriété）、材料加水印（DossierFacile）与防坑全流程，请务必详细参阅 👉 **[反诈提醒：租房防骗篇](anti-fraud/housing.md)**。
+
 ## 官方参考
 
 - [Service-Public：押金规则](https://www.service-public.gouv.fr/particuliers/vosdroits/F31269)

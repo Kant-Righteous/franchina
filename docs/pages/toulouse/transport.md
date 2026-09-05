@@ -21,7 +21,7 @@
     图卢兹第三条地铁线 **Ligne C（Toulouse Aerospace Express, TAE）** 预计 **2028 年**开通，将连接 Colomiers / Airbus 工厂区域与市中心及东南部，全长约 27 km，设 21 站。届时图卢兹的地铁网络将大幅扩展。
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/VAL_52m_Toulouse.jpg/250px-VAL_52m_Toulouse.jpg" width="300" alt="图卢兹VAL地铁列车" />
+  <img src="/assets/toulouse/transport/val-metro.jpg" width="300" alt="图卢兹VAL地铁列车" />
 </div>
 
 ### 有轨电车
@@ -93,7 +93,7 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 ## 线路图与时刻表
 
-#### 📍 主要地铁、有轨电车和快速公交线路图
+### 📍 主要地铁、有轨电车和快速公交线路图
 
 <div class="pdf-preview" role="region" aria-label="Tisséo 主要线路图 PDF 预览">
   <embed class="pdf-preview__frame" src="/assets/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" title="Tisséo 主要线路图 PDF 预览">
@@ -103,7 +103,7 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 ---
 
-#### ⏱️ 行程时间估算图（从市中心出发）
+### ⏱️ 行程时间估算图（从市中心出发）
 
 <div class="pdf-preview" role="region" aria-label="图卢兹行程时间估算图 PDF 预览">
   <embed class="pdf-preview__frame" src="/assets/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" title="图卢兹行程时间估算图 PDF 预览">

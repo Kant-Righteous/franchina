@@ -210,7 +210,7 @@ hide:
 
     .calc-card {
         background: var(--c-bg-card);
-        border-radius: 24px;
+        border-radius: 16px;
         padding: 2.5rem 2rem; /* 减少纵向内边距 */
         box-shadow: var(--c-shadow);
         border: 1px solid var(--c-border);
@@ -335,7 +335,7 @@ hide:
         max-width: 100%; /* 限制为容器宽度 */
         white-space: normal; /* 确保可换行 */
         text-align: center; /* 换行后居中 */
-        font-size: clamp(2rem, 12vw, 3.5rem); /* 响应式字号 */
+        font-size: clamp(1.75rem, 6vw, 3rem); /* 响应式字号 */
         font-weight: 800;
         background: linear-gradient(135deg, var(--c-primary) 0%, #1E40AF 100%);
         -webkit-background-clip: text;
@@ -360,7 +360,7 @@ hide:
     .legal-footer {
         margin-top: 0.25rem;
         text-align: center;
-        font-size: 0.3rem;
+        font-size: 0.75rem;
         color: var(--c-text-light);
         opacity: 0.5;
     }
@@ -432,7 +432,7 @@ hide:
     /* 图表卡片容器 */
     .chart-card {
         background: var(--c-bg-card);
-        border-radius: 24px;
+        border-radius: 16px;
         padding: 1.5rem;
         box-shadow: var(--c-shadow);
         border: 1px solid var(--c-border);

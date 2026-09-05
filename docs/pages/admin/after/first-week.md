@@ -79,7 +79,7 @@ timeline
 * 📖 **深度指引**：详见 **[办理学生居留与签证验证](residence.md)**。
 
 ### 7. 注册法国国家社会医疗保险 (Ameli)
-* [ ] **外籍学生专属平台申请**：访问专属入口 [etudiant-etranger.ameli.fr](https://etudiant-etranger.ameli.fr)，上传护照、签证、在读证明、出生公证双认证与法国银行 RIB。
+* [ ] **外籍学生专属平台申请**：访问专属入口 [etudiant-etranger.ameli.fr](https://etudiant-etranger.ameli.fr)，上传护照、签证、在读证明、出生公证海牙认证（Apostille，旧版双认证亦有效）或法院宣誓翻译件与法国银行 RIB。
 * [ ] **获取临时社保号与权利证明**：材料初审后即可下载权利证明（Attestation de droits），凭此即可享受看病 70% 报销，无需等待实体卡寄到。
 * 📖 **深度指引**：详见 **[Ameli 注册与健康保险办理](ameli.md)** 及 **[法国看病就医指南](../../life/health.md)**。
 

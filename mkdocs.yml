@@ -1,6 +1,6 @@
 site_name: FranChina 法国留学
 site_url: https://franchina.qzz.io
-site_description: 你的法国留学生活百宝箱
+site_description: 图卢兹学联倾力打造的法国留学生活百宝箱，立足图卢兹，服务全法留学生
 repo_url: ""
 
 theme:
@@ -43,7 +43,7 @@ extra_css:
   # Responsive 响应式覆盖（必须在页面样式之后加载）
   - stylesheets/layout/responsive.css
 
-copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
+copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 · 图卢兹中国学者学生联合会 (UCECF-ST) 主办 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
 
 nav:
   - 首页: index.md
@@ -72,6 +72,10 @@ nav:
       - 信息通讯:
           - 办理手机卡: pages/life/communication/sim-card.md
       - 住房管理: pages/life/housing.md
+      - 反诈提醒:
+          - 租房防骗: pages/life/anti-fraud/housing.md
+          - 二手交易与换汇: pages/life/anti-fraud/secondhand-exchange.md
+          - 冒充公职与电信诈骗: pages/life/anti-fraud/telecom-impersonation.md
       - 医疗健康: pages/life/health.md
       - 残障学生支持: pages/life/disability-support.md
       - AI 优惠与福利: pages/life/ai-benefits.md
@@ -82,7 +86,9 @@ nav:
       - 图卢兹学联: pages/toulouse/cssa.md
   - 常用网站: pages/quick-links/index.md
   - 寻求帮助:
-      - 紧急求助: pages/help/emergency.md
+      - 紧急求助:
+          - 应急电话: pages/help/emergency.md
+          - 紧急呼叫沟通指南: pages/help/emergency-call-guide.md
       - 全法学联: pages/help/cssa.md
       - 驻法使领馆: pages/help/embassy.md
   - 城市指南:
@@ -110,6 +116,9 @@ plugins:
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
+
+hooks:
+  - scripts/mimetypes_hook.py
 
 extra:
   generator: false

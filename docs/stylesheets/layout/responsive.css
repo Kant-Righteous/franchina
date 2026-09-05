@@ -95,7 +95,7 @@
         max-width: 100%;
         font-size: clamp(22px, 6.25vw, 25px);
         line-height: 1.5;
-        white-space: nowrap;
+        white-space: normal;
     }
 }
 
