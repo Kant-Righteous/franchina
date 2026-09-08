@@ -14,10 +14,11 @@
 
 在巴黎常住，拥有一张交通卡（Cartes Navigo）是每天出行的必需品。大巴黎交通按圈（Zones）划分，共1-5圈。
 
-### Imagine R (学生神卡)
+### Imagine R Étudiant（学生年卡）
 对于 **26岁以下** 的在校学生（高中生、大学生），这绝对是最划算的选择：
 *   **权益**：全年无限制乘坐大巴黎 **1-5圈内** 的所有常规公共交通。周末、法国节假日也是完全免费在1-5圈穿梭（非常适合周末去远郊如凡尔赛宫、迪士尼玩）。
-*   **办理方法**：需要在法兰西岛交通网站（Île-de-France Mobilités）线上提交申请及注册证明文件，价格极为优惠（年费通常约 $350 - $400 欧左右，比成人年卡便宜近一半）。
+*   **价格**：2026–2027 学年 zones 1–5 为 **401.30€/年**（含 8€ 手续费，可一次性付清或分 9 期月付），明显低于成人 Navigo 年卡。年费每学年由法兰西岛交通局调整，办理前以官方页面为准。
+*   **办理方法**：在 [Île-de-France Mobilités 官网](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-imagine-r-etudiant)线上提交申请，需上传注册证明（Certificat de scolarité）等材料，受理周期较长，建议开学初尽早办理。
 
 ### Navigo Mois / Semaine (月卡/周卡)
 对于超过26岁的学生或是实习生，可以办理常规的 Navigo：
@@ -34,3 +35,11 @@
     - **Île-de-France Mobilités**：官方APP，不仅可以查路线，还可以直接用手机购买充值各类车票（必备）。
     - **Bonjour RATP**：传统官方APP，随时查看交通线路的异动和通告。
     - **Citymapper**：经常比谷歌地图提供更本土化、更精准的换乘组合方案，不仅包含公交，还会综合共享单车路线。
+
+## 官方参考
+
+- [Île-de-France Mobilités：Imagine R Étudiant（票价与办理）](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-imagine-r-etudiant)
+- [RATP：车票与交通卡](https://www.ratp.fr/titres-et-tarifs)
+
+---
+*Imagine R 票价最后核验：2026-09-04；本页其余内容为经验概述，出行前请以官方渠道公布的信息为准。*

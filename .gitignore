@@ -3,8 +3,8 @@ site/
 .mkdocs_cache/
 
 # Currency data (generated)
-docs/assets/littleTools/CurrencyCalculator/history.json
-docs/assets/littleTools/CurrencyCalculator/rates.json
+docs/assets/life/finance/currency-calculator/history.json
+docs/assets/life/finance/currency-calculator/rates.json
 
 # Python
 __pycache__/

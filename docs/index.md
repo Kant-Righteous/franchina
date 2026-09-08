@@ -36,7 +36,7 @@ hide:
         <p>护照、公证与签证等出发前准备</p>
         <span class="home-entry__arrow" aria-hidden="true">→</span>
       </a>
-      <a class="home-entry__subcard home-entry__subcard--packing" href="pages/packing-list/">
+      <a class="home-entry__subcard home-entry__subcard--packing" href="pages/admin/before/packing-list/">
         <span class="home-entry__subcard-label">行李建议</span>
         <span class="home-entry__subcard-arrow" aria-hidden="true">→</span>
       </a>
@@ -46,7 +46,7 @@ hide:
       </a>
     </div>
     <div class="home-entry__cluster home-entry__cluster--after">
-      <a class="home-entry__card" href="pages/first-week/">
+      <a class="home-entry__card" href="pages/admin/after/first-week/">
         <span class="home-entry__number" aria-hidden="true">02</span>
         <h3>抵法之后</h3>
         <p>抵达第一周与重要行政手续</p>
@@ -67,10 +67,10 @@ hide:
       <p>财务、住房、交通与医疗信息</p>
       <span class="home-entry__arrow" aria-hidden="true">→</span>
     </a>
-    <a class="home-entry__card" href="pages/cities/toulouse/">
+    <a class="home-entry__card" href="pages/toulouse/">
       <span class="home-entry__number" aria-hidden="true">04</span>
-      <h3>城市指南</h3>
-      <p>城市概况、本地交通与生活圈</p>
+      <h3>图卢兹专区</h3>
+      <p>学联大本营 · 城市交通与生活圈</p>
       <span class="home-entry__arrow" aria-hidden="true">→</span>
     </a>
   </div>
@@ -82,7 +82,8 @@ hide:
     <span></span>
   </div>
   <h2 id="home-closing-title"><span class="home-closing__intro">来自</span><span class="home-closing__highlight">学长学姐</span><span class="home-closing__outro">的经验整理</span></h2>
-  <p>为你的出发和生活，提供一些参考。</p>
+  <p>图卢兹中国学者学生联合会（UCECF-ST）携手各届优秀留法学子倾囊相授，<br>
+  为你的出发和生活提供坚实后盾。</p>
 </section>
 
 <style>

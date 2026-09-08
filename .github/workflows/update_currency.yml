@@ -27,7 +27,7 @@ jobs:
 
       - name: Backfill history
         run: |
-          python docs/assets/littleTools/CurrencyCalculator/fetch_history.py
+          python docs/assets/life/finance/currency-calculator/fetch_history.py
 
       - name: Run update script
         run: |
@@ -39,9 +39,9 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "docs/assets/littleTools/CurrencyCalculator/*.json"
-          target: "/var/www/franchina/assets/littleTools/CurrencyCalculator/"
-          strip_components: 4
+          source: "docs/assets/life/finance/currency-calculator/*.json"
+          target: "/var/www/franchina/assets/life/finance/currency-calculator/"
+          strip_components: 5
 
       - name: Purge Cloudflare Cache
         run: python scripts/purge_cloudflare.py

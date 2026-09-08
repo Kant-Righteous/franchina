@@ -4,6 +4,12 @@ description: 2026 最新版法国 CAF 房屋补贴申请说明，涵盖非欧盟
 ---
 # CAF 住房补助 (APL)
 
+!!! abstract "速览"
+    * **先判定资格**：2026-07-01 起，非欧盟留学生不再默认符合资格；没有适用例外时，应按没有房补制定预算。→ [查看资格判断](#caf-eligibility)
+    * **官方入口**：在 [caf.fr](https://www.caf.fr) 创建 Compte Allocataire 并提交申请。→ [查看申请流程](#caf-process)
+    * **必备材料**：护照、签证或居留证明、租房合同、租金证明、法国银行 RIB、出生公证及适用的例外证明。→ [查看材料清单](#caf-materials)
+    * **计发规则**：入住当月通常不计发；获批后保存好 **Numéro Allocataire**。→ [查看时间线](#caf-timeline)
+
 !!! warning "2026-07-01 起：非欧盟学生不再默认能领房补"
     如果你是中国国籍、刚来法国读书、仅持学生长期签证或学生居留，且没有 CROUS 社会标准奖学金、工作/自雇、学徒合同或职业化合同等例外情况，房补申请很可能无法通过。不要再把 CAF 房补默认算进第一年预算。
 
@@ -13,7 +19,7 @@ description: 2026 最新版法国 CAF 房屋补贴申请说明，涵盖非欧盟
 
 2026-07-01 起，非 UE / EEE / 瑞士学生的资格明显收紧。多数中国新生如果只是持 **VLS-TS étudiant** 或学生居留，且没有下面的例外条件，不能再按“留学生都能申请”来规划预算。
 
-## 2. 先判断你是否还可能符合条件
+## 2. 先判断你是否还可能符合条件 {#caf-eligibility}
 ### 非欧盟学生：这些情况才建议重点准备
 如果你是中国国籍或其他非 UE / EEE / 瑞士国籍，并且持有学习目的长期签证或居留，2026-07-01 后通常需要符合以下情况之一，才有机会继续获得住房补助：
 
@@ -32,25 +38,25 @@ description: 2026 最新版法国 CAF 房屋补贴申请说明，涵盖非欧盟
 *   你和房东有直系或近亲关系。
 *   你一年中实际居住法国住房的时间不足要求。
 
-## 3. 核心时间线（重要！）
+## 3. 核心时间线（重要！） {#caf-timeline}
 1.  **入住 (Check-in)**：拿到住房合同 (Bail) 和 住房证明 (Attestation de loyer)。
 2.  **先做资格判断**：如果你是非欧盟新生，先确认自己是否属于上面的可申请情形。没有例外条件时，不要把“先申请占坑”等同于一定会发钱。
 3.  **符合条件再尽快申请**：房补不是自动发放，需要在 [caf.fr](https://www.caf.fr) 官网提交申请。
 4.  **首月缺口**：**入住的第一个月通常没有房补**。例如 9 月申请，权利通常从 10 月开始计算，首笔款项可能在之后发放。
 5.  **材料补交**：系统可能允许后续补材料，但缺少关键资格材料时，CAF 可以暂停、拒绝或终止权利。
 
-## 4. 准备材料清单
+## 4. 准备材料清单 {#caf-materials}
 在申请过程中，你通常需要上传 PDF 扫描件：
 
 *   **护照** (Passeport)
 *   **签证页 + 入境章**、**VLS-TS 验证确认** 或 **居留卡** (Titre de séjour)
 *   **符合新政例外条件的证明**：例如 CROUS 奖学金通知、工作合同、工资单、auto-entrepreneur 活动证明、学徒或职业化合同等（按 CAF 要求上传）
-*   **出生公证双认证** (Acte de naissance traduit par un traducteur assermenté)
+*   **出生公证海牙认证** (Apostille，已办妥的旧版双认证同样有效) 或法国上诉法院宣誓翻译件 (Traducteur assermenté)
 *   **银行 RIB** (Relevé d'Identité Bancaire) - 必须是法国银行账户
 *   **住房合同** (Bail de location)
 *   **房东填写的证明** (Attestation de loyer) - 学生公寓通常会直接给你这张纸，私人房东需让他填。
 
-## 5. 申请流程概览
+## 5. 申请流程概览 {#caf-process}
 目前全法申请流程统一在 [caf.fr](https://www.caf.fr) 进行（全法语）。
 
 1.  **创建账户 (Créer un compte)**
@@ -93,7 +99,20 @@ A: 正常... 法国行政效率懂的都懂。
 *   如果材料齐了显示 "En cours de traitement"，只能等。
 *   可以通过 APP 里的 "Contacter ma CAF" 写邮件催，比打电话好用。
 
-## 7. 官方来源与核验日期
+## 7. 领不到房补时，还有哪些援助
+
+2026 年新政后，多数中国新生不再默认符合 CAF 房补资格。如果预算紧张，可以了解以下渠道（多数与国籍无关，但各有条件）：
+
+*   **CROUS 特殊援助（Aide spécifique）**：面向在读期间遭遇持续或突发经济困难的学生，**不设国籍条件**，分为年度性补助与一次性补助，由 CROUS 社工评估、委员会决定。可预约所在 CROUS 的社工（Service social）面谈申请，见 [Service-Public：年度特殊补助](https://www.service-public.gouv.fr/particuliers/vosdroits/F1024) 与 [Service-Public：一次性特殊补助](https://www.service-public.gouv.fr/particuliers/vosdroits/F34073)。
+*   **CROUS 食堂 1€ 餐**：自 2026-05-04 起面向所有学生，无需奖学金资格（见 [Service-Public 公告](https://www.service-public.gouv.fr/particuliers/actualites/A18811)）。
+*   **CROUSépicerie 食品援助点**：部分地区的 CROUS 设有平价食品杂货点，价格远低于市价，可在本地区 CROUS 网站查询是否有网点。
+*   **补充健康保险 CSS**：低收入者可申请免费或低价的 Complémentaire Santé Solidaire，见[医疗健康指南](../../life/health.md)。
+*   **学校紧急资助**：多数高校设有学生困难紧急基金，可咨询学校国际处或 CROUS 社工。
+
+!!! note "关于 CROUS 社会标准奖学金"
+    **Bourse sur critères sociaux（社会标准奖学金）一般不对国际学生开放**（难民等特定身份除外），这正是 2026 年 CAF 新政把它列为房补例外条件的原因。不要把它和上面不设国籍条件的特殊援助混淆。
+
+## 8. 官方来源与核验日期
 本页政策信息最后核验于 **2026-07-08**。主要参考：
 
 *   [CAF：APL - ce qui change pour certains étudiants à partir du 1er juillet 2026](https://www.caf.fr/allocataires/actualites/actualites-nationales/apl-ce-qui-change-pour-certains-etudiants-partir-du-1er-juillet-2026)

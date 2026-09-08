@@ -33,7 +33,7 @@ jobs:
 
       - name: Backfill history
         run: |
-          python docs/assets/littleTools/CurrencyCalculator/fetch_history.py
+          python docs/assets/life/finance/currency-calculator/fetch_history.py
 
       - name: Run currency update script
         run: |

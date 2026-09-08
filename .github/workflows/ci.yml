@@ -41,12 +41,12 @@ jobs:
         run: >-
           python -m ruff check --isolated --no-cache --select E4,E7,E9,F
           scripts mcp/franchina_mcp mcp/tests
-          docs/assets/littleTools/CurrencyCalculator/fetch_history.py
+          docs/assets/life/finance/currency-calculator/fetch_history.py
 
       - name: Compile site scripts
         run: >-
           python -m compileall -q scripts
-          docs/assets/littleTools/CurrencyCalculator/fetch_history.py
+          docs/assets/life/finance/currency-calculator/fetch_history.py
 
       - name: Build site
         run: python -m mkdocs build --strict --clean

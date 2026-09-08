@@ -30,7 +30,7 @@
     font-family: 'Noto Sans SC', sans-serif;
     font-weight: 600;
     font-size: 1.125rem;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
 }
 
 /* 导航链接基础样式 */

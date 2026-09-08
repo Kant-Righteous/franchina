@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Configuration
 API_URL = "https://open.er-api.com/v6/latest/EUR"
-OUTPUT_DIR = os.path.join("docs", "assets", "littleTools", "CurrencyCalculator")
+OUTPUT_DIR = os.path.join("docs", "assets", "life", "finance", "currency-calculator")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "rates.json")
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "history.json")
 

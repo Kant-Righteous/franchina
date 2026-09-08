@@ -21,7 +21,7 @@
     图卢兹第三条地铁线 **Ligne C（Toulouse Aerospace Express, TAE）** 预计 **2028 年**开通，将连接 Colomiers / Airbus 工厂区域与市中心及东南部，全长约 27 km，设 21 站。届时图卢兹的地铁网络将大幅扩展。
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/VAL_52m_Toulouse.jpg/250px-VAL_52m_Toulouse.jpg" width="300" alt="图卢兹VAL地铁列车" />
+  <img src="/assets/toulouse/transport/val-metro.jpg" width="300" alt="图卢兹VAL地铁列车" />
 </div>
 
 ### 有轨电车
@@ -76,34 +76,40 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 
 ### 购票与充值
 
-- **线下**：地铁站自动售票机（支持银行卡和现金）、Tisséo 营业厅
-- **线上**：[Tisséo 官网](https://www.tisseo.fr/) 或 Tisséo App
-- **刷卡乘车**：进站时在闸机或车内读卡器上刷 Pastel 卡；注意公交车上也需要**上车刷卡**
+- **线下**：地铁站自动售票机（支持银行卡和现金）、Tisséo 官方营业厅（Agence）
+- **线上**：[Tisséo 官网](https://www.tisseo.fr/) 或 Tisséo App（支持 NFC 手机贴卡充值与查实时时刻）
+- **刷卡乘车**：进站时在闸机或车内读卡器上刷 Pastel 卡；注意公交车上也必须**上车刷卡（Validation）**
+
+!!! tip "Pastel 学生优惠身份年度更新"
+    持有 Pastel 交通卡的同学注意：**每年秋季新学年开学后，必须前往 Tisséo 营业网点更新一次学生身份**，否则无法继续购买学生优惠票。
+
+    - **办理网点**：推荐前往 **Jean-Jaurès** 站或 **Arènes** 站的 Tisséo 官方营业厅（Agence commerciale）。
+    - **所需材料**：携带本人 Pastel 卡，出示当年学生证或电子版在读证明（Certificat de scolarité）即可，工作人员当场即可免费完成激活。
 
 !!! danger "逃票风险"
-    图卢兹的地铁和公交会有便衣查票员（Contrôleur）随机查票。如果被发现无票乘车，罚款 **35€ 起**（当场缴纳）或更高。请务必每次乘车刷卡！
+    Tisséo 网络有便衣查票员（Contrôleur）随机查票，无票乘车罚款 **35€ 起**。查票规则与罚款详情见[城市公共交通指南](../life/transport/bus.md)，请务必每次乘车刷卡！
 
 ---
 
 ## 线路图与时刻表
 
-#### 📍 主要地铁、有轨电车和快速公交线路图
+### 📍 主要地铁、有轨电车和快速公交线路图
 
 <div class="pdf-preview" role="region" aria-label="Tisséo 主要线路图 PDF 预览">
-  <embed class="pdf-preview__frame" src="/assets/cities/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" title="Tisséo 主要线路图 PDF 预览">
+  <embed class="pdf-preview__frame" src="/assets/toulouse/transport/plan-lignes-principales.pdf#view=FitH" type="application/pdf" title="Tisséo 主要线路图 PDF 预览">
 </div>
 
-<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/cities/toulouse/transport/plan-lignes-principales.pdf">下载 Tisséo 主要线路图（PDF）</a></p>
+<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/toulouse/transport/plan-lignes-principales.pdf">下载 Tisséo 主要线路图（PDF）</a></p>
 
 ---
 
-#### ⏱️ 行程时间估算图（从市中心出发）
+### ⏱️ 行程时间估算图（从市中心出发）
 
 <div class="pdf-preview" role="region" aria-label="图卢兹行程时间估算图 PDF 预览">
-  <embed class="pdf-preview__frame" src="/assets/cities/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" title="图卢兹行程时间估算图 PDF 预览">
+  <embed class="pdf-preview__frame" src="/assets/toulouse/transport/Roue-des-temps.pdf#view=FitH" type="application/pdf" title="图卢兹行程时间估算图 PDF 预览">
 </div>
 
-<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/cities/toulouse/transport/Roue-des-temps.pdf">下载行程时间估算图（PDF）</a></p>
+<p class="pdf-download"><span>无法显示预览或希望离线查看？</span><a href="/assets/toulouse/transport/Roue-des-temps.pdf">下载行程时间估算图（PDF）</a></p>
 
 ---
 
@@ -146,7 +152,7 @@ Tisséo 运营 **149 条公交线路**，其中包括 **10 条 Linéo 快速公�
 | 北 | 图卢兹–利摩日 | 利摩日、奥尔良 |
 
 !!! tip "薅羊毛：奥克西塔尼大区 1 欧火车 🚄"
-    图卢兹所在的**奥克西塔尼大区（Occitanie）**有一项超级福利：**每个月的第一个周末**（7 月和 8 月除外），大区内的 liO TER 区域列车票价**只需 1 欧元**！车票通常在提前 10 天开售，非常适合周末去周边城市（如卡尔卡松、纳博讷、蒙彼利埃等）短途游。记得提前（最好提前3-5天，因为当天必然没票）在 SNCF Connect App 或 官网抢票！
+    **每月第一个周末**（7、8 月除外），大区内 liO TER 区域列车只需 **1 欧元**，非常适合去卡尔卡松、纳博讷等周边城市短途游。车票提前约 10 天开售且极为抢手，抢票时机与注意事项详见[高铁与城际列车指南](../life/transport/train.md)。
 
 ---
 

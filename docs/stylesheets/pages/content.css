@@ -39,7 +39,7 @@
     margin-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    letter-spacing: -0.03em;
+    letter-spacing: normal;
 }
 
 /* 二级标题 */
@@ -51,7 +51,7 @@
     margin-bottom: 1rem;
     padding-left: 0;
     border-left: none;
-    letter-spacing: -0.02em;
+    letter-spacing: normal;
 }
 
 /* 三级标题 */
@@ -61,7 +61,7 @@
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
 }
 
 /* 段落样式 */
