@@ -14,7 +14,7 @@ description: 详细指导在法国拨打 15、17、18、112 以及发送 114 短
 
 ---
 
-## 核心沟通原则（怎么沟通？）
+## 核心沟通原则
 
 在接通 15、17、18 或 112 后，请牢记以下四大通话原则：
 
@@ -23,7 +23,7 @@ description: 详细指导在法国拨打 15、17、18、112 以及发送 114 短
 - **请抑制恐慌，不要只顾自己盲目宣泄**；
 - 认真聆听接线员提出的每个问题，并**按对方的提问顺序如实、简短回答**。
 
-### 2. 绝对不要主动挂断电话（Ne raccrochez jamais en premier）
+### 2. 绝对不要主动挂断电话
 法国公共救援系统实行**“边通话边出警”**机制：
 - 在您与接线员对话的同时，后台系统通常已将信息同步推送给所在辖区的消防站、救护车队（SAMU/SMUR）或巡逻警车，**继续通话绝不会耽误车辆出发**；
 - 接线员可能需要持续评估伤者状况并在急救人员抵达前提供指导；
@@ -43,34 +43,34 @@ description: 详细指导在法国拨打 15、17、18、112 以及发送 114 短
 
 ---
 
-## 呼救四大黄金要素（必须提供什么？）
+## 呼救四大黄金要素
 
 法国官方急救与报警标准化信息采集严格遵循 **Où - Qui - Quoi - État** 四大要素：
 
 <div class="call-steps-grid">
   <div class="call-step-card">
     <span class="call-step-card__num">Étape 1</span>
-    <div class="call-step-card__title">Où · 在哪里</div>
+    <div class="call-step-card__title">Où·在哪里</div>
     <div class="call-step-card__desc">精确地址、楼栋门牌与门禁 Digicode 密码</div>
   </div>
   <div class="call-step-card">
     <span class="call-step-card__num">Étape 2</span>
-    <div class="call-step-card__title">Qui · 我是谁</div>
+    <div class="call-step-card__title">Qui·我是谁</div>
     <div class="call-step-card__desc">呼救者身份与可随时接通的回拨电话</div>
   </div>
   <div class="call-step-card">
     <span class="call-step-card__num">Étape 3</span>
-    <div class="call-step-card__title">Quoi · 何险情</div>
+    <div class="call-step-card__title">Quoi·何险情</div>
     <div class="call-step-card__desc">具体险情性质与现场次生安全危险</div>
   </div>
   <div class="call-step-card">
     <span class="call-step-card__num">Étape 4</span>
-    <div class="call-step-card__title">État · 生命体征</div>
+    <div class="call-step-card__title">État·生命体征</div>
     <div class="call-step-card__desc">伤员人数、有无意识反应与呼吸状态</div>
   </div>
 </div>
 
-### ① 精确地址与通行代码（Où）——重中之重
+### ① 精确地址与通行代码（Où）
 
 这是全法所有救援部门出动最关键的前提。法国住宅多为历史街区公寓，结构复杂：
 
