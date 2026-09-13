@@ -31,6 +31,11 @@
     --color-surface: #ffffff;
     --color-surface-subtle: #f6f6f6;
     --color-border: #dddddd;
+    --color-border-soft: #dce5f6;
+    --color-border-muted: #e4eaf5;
+    --color-surface-tint: #f7f9ff;
+    --color-scrollbar: #ccd5e5;
+    --color-scrollbar-hover: #aabbd8;
     --color-heading: #161616;
     --color-text: #3a3a3a;
     --color-text-muted: #666666;

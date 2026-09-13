@@ -51,15 +51,15 @@
     }
 
     /* 稳定中文标题层级 */
-    .md-content h1 {
+    .md-content__inner > h1 {
         font-size: clamp(28px, 7.5vw, 32px);
     }
 
-    .md-content h2 {
+    .md-content__inner > h2 {
         font-size: clamp(22px, 5.5vw, 24px);
     }
 
-    .md-content h3 {
+    .md-content__inner > h3 {
         font-size: clamp(18px, 4.5vw, 20px);
     }
 
@@ -68,10 +68,6 @@
         padding: var(--space-6) var(--gutter-tablet);
     }
 
-    /* 与内容 gutter 精确匹配，避免首页 breakout 产生横向滚动 */
-    .tx-hero {
-        margin-inline: calc(var(--gutter-tablet) * -1);
-    }
 
     .md-typeset pre,
     .md-typeset .highlight,
@@ -86,23 +82,61 @@
         padding: var(--space-4) var(--gutter-mobile);
     }
 
-    .tx-hero {
-        margin-inline: calc(var(--gutter-mobile) * -1);
-        padding-inline: var(--gutter-mobile);
-    }
-
-    .tx-hero__content p {
-        max-width: 100%;
-        font-size: clamp(22px, 6.25vw, 25px);
-        line-height: 1.5;
-        white-space: normal;
-    }
 }
 
 /* 极窄手机为长中文站点标题保留完整显示空间 */
 @media screen and (max-width: 360px) {
     .md-header__title {
         font-size: 18px;
+    }
+}
+
+@media(max-width:800px) {
+    .md-main__inner:not(:has(.tx-hero)) {
+        margin-top: 8px;
+    }
+
+    .md-content__inner:not(:has(.tx-hero)) {
+        padding-top: 0;
+    }
+
+    .md-content__inner:not(:has(.tx-hero))::before {
+        display: none;
+    }
+}
+
+@media(max-width:960px) {
+    .md-content__inner > h1 {
+        font-size: 32px;
+        padding: 23px 20px 29px;
+        border-radius: 12px;
+    }
+
+    .md-content__inner > h1::after {
+        left: 20px;
+    }
+
+    .md-content__inner > h2 {
+        font-size: 24px;
+    }
+
+    .md-content__inner > h3 {
+        font-size: 21px;
+    }
+}
+
+@media(max-width:600px) {
+    .md-content__inner > h1 {
+        font-size: 30px;
+    }
+
+    .md-content__inner > h2 {
+        font-size: 23px;
+        padding-left: 13px;
+    }
+
+    .md-content p:has(>img:only-child) {
+        padding: 6px;
     }
 }
 
@@ -138,6 +172,7 @@
     .md-content a,
     .md-nav__link,
     .md-tabs__link,
+    .md-tabs__link::after,
     .md-search__input,
     .md-button {
         transition-duration: 0.01ms;
