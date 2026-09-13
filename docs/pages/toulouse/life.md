@@ -35,7 +35,7 @@
 !!! warning "租房建议与防诈防线"
     - **CROUS 大学宿舍**：最便宜的选择（约 150–350€/月），名额有限，需提前在 [trouverunlogement.lescrous.fr](https://trouverunlogement.lescrous.fr/) 申请。
     - **全法通用规则见专页**：找房渠道、租房 dossier、押金上限与看房防骗等，见[住宿与租房](../life/housing.md)。特别提醒：**签署租房合同（Bail）前，房东或中介无权收取任何“看房费、定金、留房费”**，凡要求看房前转账者一律为诈骗。
-    - **治安防范区域**：图卢兹整体安全稳定，但 Mirail、Bellefontaine、Empalot 以及深夜的火车站（Gare Matabiau）周边人员流动复杂，租房与晚归时尽量结伴，提高防范意识。
+    - **治安防范区域**：图卢兹整体安全稳定，但 Mirail、Bellefontaine、Empalot 以及深夜的火车站（Gare Matabiau）周边人员流动复杂，租房与晚归时尽量结伴，提高防范意识。各街区详细治安分区与说明见[治安指南](safety.md)。
 
 ---
 
