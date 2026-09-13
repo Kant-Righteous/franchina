@@ -3,8 +3,8 @@
    
    作用: 控制网站顶部导航区域的外观
    包含内容:
-   - 顶部导航栏 (.md-header) - 深蓝色渐变
-   - 标签栏 (.md-tabs) - 继承导航栏渐变
+   - 顶部导航栏 (.md-header) - 品牌蓝色
+   - 标签栏 (.md-tabs) - 与导航栏同色
    - 网站标题样式
    - 导航链接及悬停效果 (下划线动画)
    - 搜索框样式 (半透明背景、悬停效果)
@@ -12,17 +12,17 @@
    设计特点: 统一的深蓝色主题,粉红色下划线强调
    ======================================== */
 
-/* 顶部导航栏 - 轻微纵向渐变，与标签栏连续衔接 */
+/* 顶部导航栏 */
 .md-header {
-    background: linear-gradient(to bottom, #00006f 0%, var(--brand-primary) 100%);
     border-bottom: 0;
     box-shadow: none;
+    background: var(--brand-primary);
 }
 
-/* 标签栏延续同一渐变，避免两层导航之间出现分隔线 */
+/* 标签栏 */
 .md-tabs {
-    background: linear-gradient(to bottom, var(--brand-primary) 0%, #1010a8 100%);
-    border-bottom: 0;
+    background: var(--brand-primary);
+    border-bottom: 1px solid #ffffff1a;
 }
 
 /* 网站标题 */
@@ -37,9 +37,12 @@
 .md-tabs__link {
     color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
-    font-size: 0.875rem;
-    transition: color var(--duration-fast) var(--ease-standard);
     position: relative;
+    margin-top: 10px;
+    padding: 5px 7px 10px;
+    font-size: 16px;
+    opacity: .78;
+    transition: color .2s,opacity .2s;
 }
 
 /* 导航链接悬停效果 */
@@ -49,11 +52,12 @@
 
 /* 搜索框基础样式 */
 .md-search__input {
-    background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-md);
     color: #ffffff;
     transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+    border-radius: 7px;
+    background: #ffffff12;
+    border-color: #ffffff30;
 }
 
 /* 搜索框悬停和聚焦效果 */
@@ -66,6 +70,16 @@
 /* 搜索框占位符文字 */
 .md-search__input::placeholder {
     color: rgba(255, 255, 255, 0.85);
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border-color: transparent;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input::placeholder {
+    color: var(--color-text-muted);
 }
 
 /* Logo 与主要控件保持在 48px Header 内，并提供足够热区 */
@@ -88,4 +102,33 @@
     outline: 2px solid #ffffff;
     outline-offset: 1px;
     box-shadow: 0 0 0 4px var(--color-focus-ring);
+}
+
+.md-tabs__link::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 2px;
+    height: 2px;
+    background: var(--brand-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.md-tabs__link:hover,.md-tabs__item--active .md-tabs__link {
+    opacity: 1;
+}
+
+.md-tabs__link:hover::after,.md-tabs__item--active .md-tabs__link::after {
+    transform: scaleX(1);
+}
+
+.md-tabs__link:focus-visible {
+    opacity: 1;
+}
+
+.md-tabs__link:focus-visible::after {
+    transform: scaleX(1);
 }

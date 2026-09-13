@@ -44,6 +44,7 @@ extra_css:
   - stylesheets/layout/responsive.css
 
 extra_javascript:
+  - javascripts/site-enhancements.js
   - javascripts/image-lightbox.js
 
 copyright: "Copyright &copy; 2024-2026 FranChina 法国留学 · 图卢兹中国学者学生联合会 (UCECF-ST) 主办 | 本站采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a> 协议进行许可，未经授权禁止商业使用。"
