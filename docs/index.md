@@ -7,7 +7,7 @@ hide:
 
 <section class="tx-hero" aria-labelledby="home-title">
   <div class="tx-hero__content">
-    <div class="route-mark" aria-hidden="true"><span>CN</span><span class="route-mark__line"><svg viewBox="0 0 24 20"><path d="m2 12 7-2L17 2c1-1 3 1 2 2l-8 8-2 6-2-1 1-6-6 3zM12 7 6 4l-1 2 5 3m3 2 3 5 2-2-3-5"></path></svg></span><span>FR</span></div>
+    <div class="route-mark route-mark--compact" aria-hidden="true"><span>CN</span><span class="route-mark__line"><svg viewBox="0 0 24 20"><path d="m2 12 7-2L17 2c1-1 3 1 2 2l-8 8-2 6-2-1 1-6-6 3zM12 7 6 4l-1 2 5 3m3 2 3 5 2-2-3-5"></path></svg></span><span>FR</span></div>
     <h1 id="home-title"><span class="hero-wordmark">FranChina</span><span class="tx-hero__en">From China to France</span></h1>
     <p class="tx-hero__tagline">陪你走过留法生活的<span class="tx-hero__nowrap">百宝箱</span></p>
   </div>
@@ -27,6 +27,13 @@ hide:
         srcset="assets/home/hero_landing-1024.webp">
       <img src="assets/home/hero_landing.jpg" width="1024" height="1024" loading="eager" fetchpriority="high" alt="埃菲尔铁塔、书本和留学生组成的法国留学生活插画" draggable="false">
     </picture>
+  </div>
+  <div class="route-flight" aria-hidden="true">
+    <span class="route-flight__label route-flight__label--cn">CN</span>
+    <svg class="route-flight__path" viewBox="0 0 110 46"><path d="M4 37 C28 39 57 3 106 9"></path><circle cx="4" cy="37" r="2.3" fill="var(--brand-primary)"></circle><circle cx="106" cy="9" r="2.3" fill="var(--brand-accent)"></circle></svg>
+    <span class="route-flight__label route-flight__label--fr">FR</span>
+    <svg class="route-flight__plane" viewBox="0 0 24 20"><path d="m2 12 7-2L17 2c1-1 3 1 2 2l-8 8-2 6-2-1 1-6-6 3zM12 7 6 4l-1 2 5 3m3 2 3 5 2-2-3-5"></path></svg>
+    <svg class="route-flight__plane route-flight__plane--return" viewBox="0 0 24 20"><path d="m2 12 7-2L17 2c1-1 3 1 2 2l-8 8-2 6-2-1 1-6-6 3zM12 7 6 4l-1 2 5 3m3 2 3 5 2-2-3-5"></path></svg>
   </div>
   <svg aria-hidden="true" class="hero-journey" viewBox="0 0 260 71"><path d="M4 53C59 65 86 5 124 18S173 65 253 14" stroke="#000091" stroke-dasharray="3 6" stroke-opacity=".18"></path><circle cx="4" cy="53" fill="#000091" fill-opacity=".35" r="3"></circle><path d="m246 12 8 1-3 8" stroke="#000091" stroke-opacity=".4"></path></svg>
 </section>

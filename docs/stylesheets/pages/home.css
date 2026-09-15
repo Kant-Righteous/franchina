@@ -540,6 +540,139 @@
     transform: rotate(-12deg);
 }
 
+.route-flight {
+    display: none;
+    position: absolute;
+    left: 45%;
+    top: 55%;
+    width: 162px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+    color: var(--brand-primary);
+}
+
+.route-flight__label {
+    position: absolute;
+    font: 500 11px/1.2 ui-monospace, Consolas, monospace;
+    letter-spacing: .16em;
+    opacity: .72;
+}
+
+.route-flight__label--cn {
+    left: 0;
+    top: 32px;
+}
+
+.route-flight__label--fr {
+    right: 0;
+    top: 3px;
+}
+
+.route-flight__path {
+    position: absolute;
+    left: 26px;
+    top: 0;
+    width: 110px;
+    height: 46px;
+    overflow: visible;
+}
+
+.route-flight__path path {
+    fill: none;
+    stroke: var(--color-border-soft);
+    stroke-width: 1;
+}
+
+.route-flight__plane {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    width: 23px;
+    height: 21px;
+    fill: var(--color-surface);
+    stroke: var(--brand-primary);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: translate(-50%, -50%) rotate(17deg);
+}
+
+@media (min-width: 961px) {
+    .route-mark--compact {
+        visibility: hidden;
+    }
+    .route-flight {
+        display: block;
+    }
+}
+
+.route-flight__plane--return {
+    opacity: 0;
+}
+
+@supports (offset-path: path("M0 0 L1 1")) {
+    .route-flight__plane {
+        left: 0;
+        top: 0;
+        offset-path: path("M30 37 C54 39 83 3 132 9");
+        offset-anchor: 50% 50%;
+        offset-rotate: auto;
+        offset-distance: 50%;
+        transform: rotate(45deg);
+    }
+    .route-flight__plane--return {
+        offset-rotate: auto 180deg;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        .route-flight__plane {
+            animation: route-flight-pass 9.6s linear infinite;
+        }
+        .route-flight__plane--return {
+            animation-name: route-flight-return;
+        }
+    }
+}
+
+@keyframes route-flight-pass {
+    0% {
+        offset-distance: 22%;
+        opacity: 0;
+    }
+    3% {
+        offset-distance: 22%;
+        opacity: 1;
+    }
+    42% {
+        offset-distance: 82%;
+        opacity: 1;
+    }
+    45%, 100% {
+        offset-distance: 82%;
+        opacity: 0;
+    }
+}
+
+@keyframes route-flight-return {
+    0%, 50% {
+        offset-distance: 82%;
+        opacity: 0;
+    }
+    53% {
+        offset-distance: 82%;
+        opacity: 1;
+    }
+    92% {
+        offset-distance: 22%;
+        opacity: 1;
+    }
+    95%, 100% {
+        offset-distance: 22%;
+        opacity: 0;
+    }
+}
+
 .scene-badge.is-related {
     border-color: var(--brand-primary);
     background: #f4f7ff;
