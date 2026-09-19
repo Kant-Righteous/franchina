@@ -1,0 +1,195 @@
+/* ========================================
+   图卢兹餐厅卫生查询地图 (food-safety.css)
+
+   作用: 餐厅卫生在线查询页的地图容器、
+   类型筛选、图例、结论徽章与弹窗样式
+   ======================================== */
+
+/* ---------- 地图容器 ---------- */
+.map-shell {
+    position: relative;
+    z-index: 0;
+    margin: 26px 0 10px;
+    border: 1px solid #dae3f3;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px -14px #00009130;
+    overflow: hidden;
+}
+
+#toulouse-map {
+    height: 560px;
+    background: #eef2f7;
+}
+
+@media (max-width: 700px) {
+    #toulouse-map { height: 420px; }
+}
+
+/* 加载失败提示 */
+.map-error {
+    color: var(--color-danger-text);
+    font-size: 13.5px;
+    margin: 0 0 26px;
+}
+
+/* ---------- 类型筛选 ---------- */
+.map-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--color-border-muted);
+    background: var(--color-surface-tint);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #b7c7e9 transparent;
+}
+
+.map-filters::-webkit-scrollbar { height: 6px; }
+.map-filters::-webkit-scrollbar-thumb { background: #b7c7e9; border-radius: 999px; }
+
+.map-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex: 0 0 auto;
+    min-height: 30px;
+    padding: 0 11px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--color-text);
+    font: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.map-filter .n { color: var(--color-text-muted); font-weight: 500; }
+.map-filter.active { background: var(--brand-primary); border-color: var(--brand-primary); color: #fff; }
+.map-filter.active .n { color: #ffffffc9; }
+
+/* ---------- 数量气泡与店铺圆点 ---------- */
+.map-shell .clu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000091;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: var(--md-text-font-family);
+    box-shadow: 0 2px 8px rgba(0, 0, 40, 0.35);
+}
+
+.map-shell .vdot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 40, 0.4);
+}
+
+.map-shell .vdot--1 { background: #18753c; }
+.map-shell .vdot--2 { background: #0063cb; }
+.map-shell .vdot--3 { background: #e2760b; }
+.map-shell .vdot--4 { background: #ce0500; }
+
+/* ---------- 图例（点击版块折叠/展开，小屏默认折叠为图标） ---------- */
+.map-legend {
+    position: absolute;
+    left: 12px;
+    bottom: 14px;
+    z-index: 1000;
+    background: #fffffff2;
+    border: 1px solid #d5def0;
+    border-radius: 9px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--color-text);
+    line-height: 1.9;
+    box-shadow: 0 2px 8px rgba(0, 0, 40, 0.12);
+    cursor: pointer;
+    user-select: none;
+}
+
+.map-legend:hover { background: #fff; border-color: #c6d4f7; }
+
+.map-legend:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}
+
+.map-legend .map-legend-toggle { display: none; }
+
+.map-legend:not(.is-open) { padding: 9px; }
+
+.map-legend:not(.is-open) .map-legend-toggle { display: flex; }
+
+.map-legend:not(.is-open) .map-legend-body { display: none; }
+
+.map-legend-toggle svg { display: block; }
+
+.map-legend .row { display: flex; align-items: center; gap: 7px; }
+.map-legend .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ---------- 地图控件：还原初始视图 ---------- */
+.leaflet-bar a.map-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.leaflet-bar a.map-reset svg { display: block; }
+
+/* ---------- 弹窗 ---------- */
+.leaflet-popup-content-wrapper { border-radius: 10px; }
+.leaflet-popup-content { font-family: var(--md-text-font-family); margin: 12px 16px; line-height: 1.55; }
+.pop-name { font-weight: 700; font-size: 14px; color: #161616; }
+.pop-addr { font-size: 12px; color: #666; margin: 2px 0 6px; }
+.pop-links { margin-top: 7px; display: flex; gap: 8px; flex-wrap: wrap; }
+.pop-links a {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-link);
+    text-decoration: none;
+    border: 1px solid #c6d4f7;
+    border-radius: 6px;
+    padding: 3px 9px;
+    background: #f7f9ff;
+}
+.pop-links a:hover { background: #edf3ff; }
+
+/* ---------- 卫生结论徽章 ---------- */
+.hygiene-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.6;
+}
+
+.hygiene-chip::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+}
+
+.hygiene-chip--green  { color: #18753c; background: #eaf6ef; border: 1px solid #b8e0c6; }
+.hygiene-chip--blue   { color: #0063cb; background: #e8edff; border: 1px solid #c6d4f7; }
+.hygiene-chip--orange { color: #b34000; background: #fff4e8; border: 1px solid #f0cfb2; }
+.hygiene-chip--red    { color: #ce0500; background: #ffe9e9; border: 1px solid #f3c2c2; }

@@ -40,6 +40,7 @@ extra_css:
   - stylesheets/pages/components.css
   - stylesheets/pages/home.css
   - stylesheets/pages/quick-links.css
+  - stylesheets/pages/food-safety.css
   # Responsive 响应式覆盖（必须在页面样式之后加载）
   - stylesheets/layout/responsive.css
 
@@ -88,6 +89,7 @@ nav:
       - 本地交通: pages/toulouse/transport.md
       - 生活圈: pages/toulouse/life.md
       - 治安指南: pages/toulouse/safety.md
+      - 餐厅卫生查询: pages/toulouse/food-safety.md
       - 图卢兹学联: pages/toulouse/cssa.md
   - 常用网站: pages/quick-links/index.md
   - 寻求帮助:
