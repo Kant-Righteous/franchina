@@ -37,7 +37,7 @@
 
 ---
 
-<p style="font-size: 0.85em; color: #999; text-align: center; margin-top: 2rem;">地图与查询数据来自法国农业部 Alim'confiance 官方开放数据平台，底图 © OpenStreetMap 贡献者，以官方公布为准。最后核验：2026-09-17</p>
+<p style="font-size: 0.85em; color: #999; text-align: center; margin-top: 2rem;">地图与查询数据来自法国农业部 Alim'confiance 官方开放数据平台， © OpenStreetMap。最后核验：2026-09-17</p>
 
 <script>
 (function () {
