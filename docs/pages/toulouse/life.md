@@ -6,11 +6,11 @@
 
 ### 主要大学
 
-| 大学 | 强势学科 | 校区位置 |
-|---|---|---|
-| **图卢兹第一大学（Capitole, UT1）** | 法学、经济学、管理学 | 市中心 Capitole 附近 |
-| **图卢兹第二大学（Jean-Jaurès, UT2J）** | 人文、艺术、社会科学、语言 | Mirail 校区（地铁 A 线） |
-| **图卢兹第三大学（Paul-Sabatier, UT3）** | 自然科学、工程、医学 | Rangueil 校区（地铁 B 线） |
+| 大学                              | 强势学科          | 校区位置                |
+| ------------------------------- | ------------- | ------------------- |
+| **图卢兹第一大学（Capitole, UT1）**      | 法学、经济学、管理学    | 市中心 Capitole 附近     |
+| **图卢兹第二大学（Jean-Jaurès, UT2J）**  | 人文、艺术、社会科学、语言 | Mirail 校区（地铁 A 线）   |
+| **图卢兹第三大学（Paul-Sabatier, UT3）** | 自然科学、工程、医学    | Rangueil 校区（地铁 B 线） |
 
 此外还有多所工程师学院和商学院：**INSA Toulouse**（工程师院校）、**ISAE-SUPAERO**（航空航天工程顶尖院校）、**TBS Education**（图卢兹商学院）、**INP Toulouse**（理工学院联盟）等。
 
@@ -23,14 +23,14 @@
 
 选择住房区域是留学生最关心的问题之一。以下是图卢兹主要居住区域的特点：
 
-| 区域 | 特点 | 月租参考（Studio） | 适合人群 |
-|---|---|---|---|
-| **Capitole / Centre-ville** | 市中心，生活便利，夜生活丰富 | 500–700€ | 喜欢热闹、不介意租金较高 |
-| **Jean-Jaurès / Carmes** | 市中心偏南，安静且便利 | 450–650€ | 追求生活品质 |
-| **Rangueil / Saouzelong** | 靠近 UT3 和 INSA | 350–500€ | UT3 / INSA 学生首选 |
-| **Saint-Cyprien** | 加龙河左岸，文艺氛围 | 400–550€ | 喜欢安静文艺风格 |
-| **Mirail / Reynerie** | 靠近 UT2J，租金最低 | 300–450€ | 预算有限的 UT2J 学生 |
-| **Compans-Caffarelli** | 靠近日本花园和运河 | 400–600€ | 地铁 B 线沿线，出行方便 |
+| 区域                          | 特点             | 月租参考（Studio） | 适合人群            |
+| --------------------------- | -------------- | ------------ | --------------- |
+| **Capitole / Centre-ville** | 市中心，生活便利，夜生活丰富 | 500–700€     | 喜欢热闹、不介意租金较高    |
+| **Jean-Jaurès / Carmes**    | 市中心偏南，安静且便利    | 450–650€     | 追求生活品质          |
+| **Rangueil / Saouzelong**   | 靠近 UT3 和 INSA  | 350–500€     | UT3 / INSA 学生首选 |
+| **Saint-Cyprien**           | 加龙河左岸，文艺氛围     | 400–550€     | 喜欢安静文艺风格        |
+| **Mirail / Reynerie**       | 靠近 UT2J，租金最低   | 300–450€     | 预算有限的 UT2J 学生   |
+| **Compans-Caffarelli**      | 靠近日本花园和运河      | 400–600€     | 地铁 B 线沿线，出行方便   |
 
 !!! warning "租房建议与防诈防线"
     - **CROUS 大学宿舍**：最便宜的选择（约 150–350€/月），名额有限，需提前在 [trouverunlogement.lescrous.fr](https://trouverunlogement.lescrous.fr/) 申请。
@@ -43,18 +43,17 @@
 
 ### 日常购物
 
-| 超市类型 | 代表品牌 | 特点 |
-|---|---|---|
-| **大型超市** | Carrefour、Leclerc、Auchan | 品类齐全，适合周末大采购（多在郊区） |
-| **中型超市** | Monoprix、Carrefour City、Intermarché | 市区内方便日常购物 |
-| **折扣超市** | Lidl、Aldi、Action | 价格最实惠，日用品去 Action 白菜价 |
-| **有机/健康** | Biocoop、Naturalia | 有机食品，价格偏高 |
+| 超市类型      | 代表品牌                                | 特点                    |
+| --------- | ----------------------------------- | --------------------- |
+| **大型超市**  | Carrefour、Leclerc、Auchan            | 品类齐全，适合周末大采购（多在郊区）    |
+| **中型超市**  | Monoprix、Carrefour City、Intermarché | 市区内方便日常购物             |
+| **折扣超市**  | Lidl、Aldi、Action                    | 价格最实惠，日用品去 Action 白菜价 |
+| **有机/健康** | Biocoop、Naturalia                   | 有机食品，价格偏高             |
 
 ### 亚洲超市 🥢
 
 图卢兹有多家亚超，可以买到中国调料、速冻食品、火锅底料等：
 **Minfoo**、**Paris Store**、**Fujia**、**Panda** 等
-
 
 !!! tip "网购与学生省钱工具"
     - **[Joybuy](https://www.joybuy.com/)**：欧洲优质中国商品与亚洲食品网购平台，图卢兹通常 **2-3 工作日送达**，买米面调料与零食省时省力。
@@ -69,24 +68,24 @@
 
 ### 图卢兹必吃
 
-| 美食 | 说明 |
-|---|---|
-| **油封鸭（Confit de Canard）** | 鸭腿慢煮至酥烂，南法经典菜肴 |
-| **卡酥锅（Cassoulet）** | 图卢兹灵魂菜肴！白豆 + 鸭腿肉 + 图卢兹香肠慢炖，冬天来一锅超满足 |
-| **图卢兹香肠（Saucisse de Toulouse）** | 粗长的猪肉香肠，烤或煎，超市和市场都能买到 |
-| **鸭胸（Magret de Canard）** | 法国西南部特色，外焦里嫩 |
-| **紫罗兰糖果（Violette de Toulouse）** | 紫罗兰花瓣做的糖果，图卢兹特产伴手礼 |
-| **Fénétra** | 图卢兹传统杏仁柠檬蛋糕 |
+| 美食                              | 说明                                  |
+| ------------------------------- | ----------------------------------- |
+| **油封鸭（Confit de Canard）**       | 鸭腿慢煮至酥烂，南法经典菜肴                      |
+| **卡酥锅（Cassoulet）**              | 图卢兹灵魂菜肴！白豆 + 鸭腿肉 + 图卢兹香肠慢炖，冬天来一锅超满足 |
+| **图卢兹香肠（Saucisse de Toulouse）** | 粗长的猪肉香肠，烤或煎，超市和市场都能买到               |
+| **鸭胸（Magret de Canard）**        | 法国西南部特色，外焦里嫩                        |
+| **紫罗兰糖果（Violette de Toulouse）** | 紫罗兰花瓣做的糖果，图卢兹特产伴手礼                  |
+| **Fénétra**                     | 图卢兹传统杏仁柠檬蛋糕                         |
 
 ### 学生食堂（CROUS）
 
 CROUS 大学食堂提供**极其实惠**的餐食：
 
 - **学生价**：自 **2026-05-04** 起，全国所有学生在 CROUS 餐厅均可享受 **1€** 完整套餐（前菜 + 主菜 + 甜点），无需奖学金资格；付款前需激活 Izly。适用范围与套餐构成以 [CROUS 官方公告](https://www.lescrous.fr/2026/04/le-repas-a-1-euro-pour-tous-les-etudiants-deploye-a-partir-du-4-mai-2026/) 为准。
-- **主要餐厅**：Resto'U Arsenal（市中心）、Resto'U Paul-Sabatier（Rangueil）、Resto'U Mirail 等
+- **每日菜单**：40 余家食堂、咖啡厅与餐车的当日菜单和开放时间，均可在 [Crous 官网餐厅目录](https://www.crous-toulouse.fr/se-restaurer/ou-manger/nos-lieux-de-restauration/) 查询，支持按片区、类型和营业时间筛选
+- **主要餐厅**：[Resto U' Arsenal](https://www.crous-toulouse.fr/restaurant/resto-u-arsenal/)（市中心）、[Resto U' Le Théorème](https://www.crous-toulouse.fr/restaurant/resto-u-le-theoreme/)（Rangueil / Paul-Sabatier 校区）、[Resto U' Arum](https://www.crous-toulouse.fr/restaurant/resto-u-arum/)（Jean-Jaurès / Mirail 校区）
 - **营业时间**：午餐 11:30–13:30，部分餐厅晚餐 18:30–20:00
-- **支付方式**：Izly App 或 Izly 卡（需提前充值）
-
+- **支付方式**：Izly App 或 学生卡
 
 ### 中餐与亚洲美食
 
@@ -131,14 +130,14 @@ CROUS 大学食堂提供**极其实惠**的餐食：
 
 <p style="font-size: 0.85em; color: #666; text-align: right; margin-bottom: 0.5rem;"> <i>以下为大致月均开支参考，因个人消费习惯而异</i></p>
 
-| 项目 | 月均费用 | 备注 |
-|---|---|---|
-| 🏠 **住房**（Studio） | 350–650€ | 2026 年新政后多数非欧盟新生无 CAF 房补资格，预算请按全额计算（见[CAF 指南](../admin/after/caf.md)） |
-| 🚇 **交通** | ~16€/月 | Pastel 学生 31 日票，价格与办理见[本地交通](./transport.md) |
-| 🍽️ **餐饮** | 150–350€ | 主要自己做饭 |
-| 📱 **手机** | 5–15€ | Free Mobile / B&You 等廉价套餐 |
-| 🎬 **休闲/社交** | 100–200€ | 电影、咖啡、周末活动 |
-| **合计** | **约 600–1,200€/月** | 图卢兹整体生活成本较巴黎低 30–40% |
+| 项目                | 月均费用               | 备注                                                                    |
+| ----------------- | ------------------ | --------------------------------------------------------------------- |
+| 🏠 **住房**（Studio） | 350–650€           | 2026 年新政后多数非欧盟新生无 CAF 房补资格，预算请按全额计算（见[CAF 指南](../admin/after/caf.md)） |
+| 🚇 **交通**         | ~16€/月             | Pastel 学生 31 日票，价格与办理见[本地交通](./transport.md)                          |
+| 🍽️ **餐饮**        | 150–350€           | 主要自己做饭                                                                |
+| 📱 **手机**         | 5–15€              | Free Mobile / B&You 等廉价套餐                                             |
+| 🎬 **休闲/社交**      | 100–200€           | 电影、咖啡、周末活动                                                            |
+| **合计**            | **约 600–1,200€/月** | 图卢兹整体生活成本较巴黎低 30–40%                                                  |
 
 ---
 
@@ -150,17 +149,18 @@ CROUS 大学食堂提供**极其实惠**的餐食：
 
 图卢兹大学城各公立大学设有学生专属预防医疗与健康促进中心 **SIMPPS**（Service Interuniversitaire de Médecine Préventive et de Promotion de la Santé，详见 [Welcome Desk SIMPPS 官方指南](https://welcomedesk.univ-toulouse.fr/en/settle/health-social-support/simpps-medical-and-welfare-service-dedicated-students)）。校医面向本校学生，等待时间短、看诊费用低，紧急情况支持直接前往现场（Walk-in）候诊：
 
-| 大学 / 校区 | 覆盖院校范围 | 联系方式 |
-|---|---|---|
-| **图卢兹一大 (UT1 Capitole)** | UT1、ENSEEIHT、isdaT、Sciences Po Toulouse | **秘书处**：`+33 (0)5 61 63 37 25`<br>**护士台**：`+33 (0)5 61 63 37 49` |
-| **图卢兹二大 (UT2J Jean Jaurès)** | UT2J、INSA Toulouse、ENVT | **秘书处**：`05 61 50 41 41`<br>**护士台**：`05 61 50 38 61` |
-| **图卢兹三大 (UT3 Paul Sabatier)** | UT3、Toulouse-INP、INSA Toulouse、ISAE-SUPAERO | **秘书处**：`05 61 55 73 67`<br>**护士台**：`05 61 55 73 59` |
+| 大学 / 校区                       | 覆盖院校范围                                      | 联系方式                                                             |
+| ----------------------------- | ------------------------------------------- | ---------------------------------------------------------------- |
+| **图卢兹一大 (UT1 Capitole)**      | UT1、ENSEEIHT、isdaT、Sciences Po Toulouse     | **秘书处**：`+33 (0)5 61 63 37 25`<br>**护士台**：`+33 (0)5 61 63 37 49` |
+| **图卢兹二大 (UT2J Jean Jaurès)**  | UT2J、INSA Toulouse、ENVT                     | **秘书处**：`05 61 50 41 41`<br>**护士台**：`05 61 50 38 61`             |
+| **图卢兹三大 (UT3 Paul Sabatier)** | UT3、Toulouse-INP、INSA Toulouse、ISAE-SUPAERO | **秘书处**：`05 61 55 73 67`<br>**护士台**：`05 61 55 73 59`             |
 
 - **新生医保活动**：每年 9~10 月开学季，Ameli / CPAM 工作人员通常会在 UT1 Arsenal 校区 0 层（Rez-de-chaussée）设立宣传点，可现场咨询医保卡（Carte Vitale）与办理学生补充医疗保险（Mutuelle）。
 
 ### 公立医院急诊（Urgences）
 
 若发生严重创伤、急性重症等突发险情，可直接前往图卢兹设有 24 小时急诊的公立医院：
+
 - **Hôpital Purpan**（西北部，有轨电车 T1 可达）
 - **Hôpital Rangueil**（南部，地铁 B 线 Université Paul Sabatier 附近）
 
@@ -197,14 +197,14 @@ CROUS 大学食堂提供**极其实惠**的餐食：
 
 ## 实用链接
 
-| 资源 | 链接 |
-|---|---|
-| CROUS Toulouse | [crous-toulouse.fr](https://www.crous-toulouse.fr/) |
-| Tisséo（公共交通） | [tisseo.fr](https://www.tisseo.fr/) |
-| 图卢兹旅游局 | [toulouse-tourisme.com](https://www.toulouse-tourisme.com/) |
-| Doctolib（预约医生） | [doctolib.fr](https://www.doctolib.fr/) |
-| CAF Toulouse（房补） | [caf.fr](https://www.caf.fr/) |
-| 图卢兹市政府 | [metropole.toulouse.fr](https://metropole.toulouse.fr/) |
+| 资源               | 链接                                                          |
+| ---------------- | ----------------------------------------------------------- |
+| CROUS Toulouse   | [crous-toulouse.fr](https://www.crous-toulouse.fr/)         |
+| Tisséo（公共交通）     | [tisseo.fr](https://www.tisseo.fr/)                         |
+| 图卢兹旅游局           | [toulouse-tourisme.com](https://www.toulouse-tourisme.com/) |
+| Doctolib（预约医生）   | [doctolib.fr](https://www.doctolib.fr/)                     |
+| CAF Toulouse（房补） | [caf.fr](https://www.caf.fr/)                               |
+| 图卢兹市政府           | [metropole.toulouse.fr](https://metropole.toulouse.fr/)     |
 
 ---
 
