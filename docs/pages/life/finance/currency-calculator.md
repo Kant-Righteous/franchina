@@ -7,6 +7,27 @@ hide:
 # 汇率计算器
 
 <div class="currency-wrapper">
+    <!-- 汇率来源 -->
+    <div class="source-section" id="sourceSection" hidden>
+        <div class="source-card">
+            <div class="source-header">
+                <div class="source-title">汇率来源</div>
+                <select class="source-select" id="sourceSelect" aria-label="选择汇率来源"></select>
+            </div>
+            <div class="source-detail">
+                <div class="source-name">
+                    <span id="sourceName"></span>
+                    <span class="source-frequency" id="sourceFrequency"></span>
+                </div>
+                <p class="source-desc" id="sourceDesc"></p>
+                <div class="source-meta">
+                    <span><span id="sourceDateLabel">数据日期</span>：<strong id="sourceDate"></strong></span>
+                    <span id="sourceLinkWrap">数据来源：<a class="source-link" id="sourceLink" target="_blank" rel="noopener"></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 顶部汇率展示 -->
     <div class="rates-hero">
         <div class="rate-card">
@@ -66,6 +87,7 @@ hide:
             <div class="result-display" id="result-container">
                 <span class="currency-symbol" id="res-symbol">¥</span>
                 <span class="result-number" id="result">--</span>
+                <span class="result-note" id="resultNote"></span>
             </div>
         </div>
     </div>
@@ -101,7 +123,7 @@ hide:
     </div>
 
     <div class="legal-footer">
-        <p style="margin-bottom: 0.5rem;">数据来源：ExchangeRate-API </p>
+        <p style="margin-bottom: 0.5rem;">数据来源：<span id="legalSources">ExchangeRate-API</span></p>
         <p style="margin-bottom: 0.5rem;">汇率仅供参考</p>
         <p style="margin-bottom: 0.5rem;">免责声明：本工具提供的汇率数据仅供参考，不作为交易依据。请注意，银行和交易所通常会在交易汇率的基础上收取一定的点差（上浮汇率）。使用本数据前请谨慎评估风险。</p>
         <p>本网站不对因使用本数据而产生的任何直接或间接损失承担法律责任。</p>
@@ -137,6 +159,119 @@ hide:
         --c-border: #334155;
         --c-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
         --c-shadow-hover: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* 汇率来源 */
+    .source-section {
+        margin-bottom: 2rem;
+    }
+
+    .source-section[hidden] {
+        display: none;
+    }
+
+    .source-card {
+        background: var(--c-bg-card);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem 1.5rem;
+        box-shadow: var(--c-shadow);
+        border: 1px solid var(--c-border);
+    }
+
+    .source-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--c-border);
+    }
+
+    .source-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--c-text);
+    }
+
+    .currency-wrapper select.source-select {
+        width: 320px;
+        max-width: 100%;
+        height: 44px;
+        padding: 0 2.5rem 0 1rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        line-height: 40px;
+        text-align: left;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2364748B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.8rem center;
+        background-size: 18px;
+    }
+
+    .source-name {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.6rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--c-text);
+    }
+
+    .source-frequency {
+        padding: 0.15rem 0.6rem;
+        border-radius: 999px;
+        background: var(--c-primary-light);
+        color: var(--c-primary);
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .source-frequency:empty {
+        display: none;
+    }
+
+    .currency-wrapper .source-desc {
+        margin: 0 0 0.75rem;
+        font-size: 0.8rem;
+        line-height: 1.7;
+        color: var(--c-text-light);
+    }
+
+    .currency-wrapper .source-desc:empty {
+        display: none;
+    }
+
+    .source-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.5rem;
+        font-size: 0.75rem;
+        color: var(--c-text-light);
+    }
+
+    .source-meta strong {
+        color: var(--c-text);
+        font-weight: 600;
+    }
+
+    .source-meta [hidden] {
+        display: none;
+    }
+
+    .currency-wrapper .source-link {
+        color: var(--c-primary);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .currency-wrapper .source-link:hover {
+        text-decoration: underline;
     }
 
     /* 顶部卡片区域 */
@@ -191,6 +326,12 @@ hide:
         font-weight: 700;
         color: var(--c-text);
         font-feature-settings: "tnum";
+    }
+
+    .rate-value.is-empty {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--c-text-light);
     }
 
     .update-status {
@@ -356,6 +497,26 @@ hide:
         font-weight: 500;
     }
 
+    .result-number.is-empty {
+        font-size: 1rem;
+        font-weight: 600;
+        background: none;
+        -webkit-text-fill-color: var(--c-text-light);
+        color: var(--c-text-light);
+    }
+
+    .result-note {
+        flex-basis: 100%;
+        font-size: 0.78rem;
+        line-height: 1.6;
+        color: var(--c-text-light);
+        word-break: normal;
+    }
+
+    .result-note:empty {
+        display: none;
+    }
+
     /* 页脚 */
     .legal-footer {
         margin-top: 0.25rem;
@@ -376,6 +537,22 @@ hide:
             padding: 0 0.25rem; /* 最小化左右内边距 */
         }
         
+        .source-card {
+            padding: 1rem 0.5rem;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .source-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .currency-wrapper select.source-select {
+            width: 100%;
+        }
+
         .calc-card {
             padding: 1.5rem 0.5rem; /* 最小化左右内边距 */
             background: transparent;
@@ -614,52 +791,217 @@ hide:
             to: document.getElementById('toCurrency'),
             swap: document.getElementById('swapBtn'),
             result: document.getElementById('result'),
-            resSymbol: document.getElementById('res-symbol')
+            resSymbol: document.getElementById('res-symbol'),
+            resultNote: document.getElementById('resultNote'),
+            sourceSection: document.getElementById('sourceSection'),
+            sourceSelect: document.getElementById('sourceSelect'),
+            sourceName: document.getElementById('sourceName'),
+            sourceFrequency: document.getElementById('sourceFrequency'),
+            sourceDesc: document.getElementById('sourceDesc'),
+            sourceDateLabel: document.getElementById('sourceDateLabel'),
+            sourceDate: document.getElementById('sourceDate'),
+            sourceLinkWrap: document.getElementById('sourceLinkWrap'),
+            sourceLink: document.getElementById('sourceLink'),
+            legalSources: document.getElementById('legalSources')
         };
-        
-        let rateData = {};
 
-        async function init() {
+        const DATA_BASE = '/assets/life/finance/currency-calculator/';
+        const LIVE_ID = 'live';
+        const SYMBOLS = { CNY: '¥', EUR: '€', USD: '$' };
+        const NAMES = { CNY: '人民币', EUR: '欧元', USD: '美元' };
+
+        // 所有来源统一为「1 外币 = ? 人民币」
+        let sources = [];
+        let current = null;
+
+        async function fetchJson(name) {
+            // 添加时间戳避免缓存
+            const resp = await fetch(DATA_BASE + name + '?v=' + Date.now());
+            if (!resp.ok) throw new Error(name + ' 请求失败：' + resp.status);
+            return resp.json();
+        }
+
+        function safeUrl(value) {
             try {
-                // 添加时间戳避免缓存
-                const resp = await fetch('/assets/life/finance/currency-calculator/rates.json?v=' + Date.now());
-                if (!resp.ok) throw new Error('网络错误');
-                const data = await resp.json();
-                
-                if (data.result === 'success') {
-                    rateData = data.rates;
-                    updateHeader(data.time_last_update_utc);
-                    calculate();
-                }
+                const url = new URL(value);
+                return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '';
             } catch (e) {
-                console.error(e);
-                els.lastUpdate.textContent = '无法获取最新汇率数据';
+                return '';
             }
         }
 
-        function updateHeader(timeStr) {
-            // 计算基础汇率（1 外币 = ? 人民币）
-            if (rateData.CNY && rateData.EUR && rateData.USD) {
-                const eurToCny = rateData.CNY / rateData.EUR;
-                const usdToCny = rateData.CNY / rateData.USD;
-                
-                els.rateEur.textContent = eurToCny.toFixed(4);
-                els.rateUsd.textContent = usdToCny.toFixed(4);
+        function hostOf(url) {
+            try {
+                return new URL(url).hostname.replace(/^www\./, '');
+            } catch (e) {
+                return url;
             }
-            
-            // 更新时间
-            if (timeStr) {
-                const date = new Date(timeStr);
-                els.lastUpdate.textContent = '更新时间: ' + date.toLocaleString('zh-CN', {
-                    year: 'numeric',
-                     month: '2-digit',
-                    day: '2-digit'
-                });
+        }
+
+        function formatIsoDate(value) {
+            return /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? value.replace(/-/g, '/') : '';
+        }
+
+        function buildLiveSource(data) {
+            if (!data || data.result !== 'success' || !data.rates) return null;
+            const r = data.rates;
+            if (!(r.CNY > 0 && r.EUR > 0 && r.USD > 0)) return null;
+
+            let dateText = '';
+            if (data.time_last_update_utc) {
+                const date = new Date(data.time_last_update_utc);
+                if (!Number.isNaN(date.getTime())) {
+                    dateText = date.toLocaleString('zh-CN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit'
+                    });
+                }
             }
+
+            return {
+                id: LIVE_ID,
+                label: '实时汇率',
+                rateLabel: '实时汇率',
+                creditName: 'ExchangeRate-API',
+                frequency: '每日更新',
+                description: 'ExchangeRate-API 把各国央行参考汇率和外汇市场报价加权合成为市场中间价，人民币汇率也由此得出。不含银行点差，适合日常估算，实际换汇价格通常略差一些。',
+                sourceUrl: 'https://www.exchangerate-api.com/',
+                dateLabel: '更新时间',
+                dateText: dateText,
+                rates: { EUR: r.CNY / r.EUR, USD: r.CNY / r.USD }
+            };
+        }
+
+        function buildOfficialSource(item, index) {
+            if (!item || typeof item.label !== 'string' || !item.label) return null;
+            const rates = {};
+            ['EUR', 'USD'].forEach(code => {
+                const entry = item.rates && item.rates[code];
+                const value = entry ? Number(entry.rate) : NaN;
+                if (Number.isFinite(value) && value > 0) rates[code] = value;
+            });
+            if (!rates.EUR && !rates.USD) return null;
+
+            return {
+                id: 'official-' + index,
+                label: item.label,
+                rateLabel: typeof item.rate_label === 'string' && item.rate_label ? item.rate_label : item.label,
+                creditName: item.label,
+                frequency: typeof item.frequency === 'string' ? item.frequency : '',
+                description: typeof item.description === 'string' ? item.description : '',
+                sourceUrl: safeUrl(item.website) || safeUrl(item.source_url),
+                dateLabel: '数据日期',
+                dateText: formatIsoDate(item.latest_date),
+                rates: rates
+            };
+        }
+
+        async function init() {
+            const [liveResult, officialResult] = await Promise.allSettled([
+                fetchJson('rates.json'),
+                fetchJson('mcp_rates.json')
+            ]);
+
+            if (liveResult.status === 'rejected') console.error(liveResult.reason);
+            const live = liveResult.status === 'fulfilled' ? buildLiveSource(liveResult.value) : null;
+
+            const officialData = officialResult.status === 'fulfilled' ? officialResult.value : null;
+            const official = officialData && Array.isArray(officialData.sources)
+                ? officialData.sources.map(buildOfficialSource).filter(Boolean)
+                : [];
+
+            sources = (live ? [live] : []).concat(official);
+            if (sources.length === 0) {
+                els.lastUpdate.textContent = '无法获取最新汇率数据';
+                return;
+            }
+
+            renderSelector(official.length > 0);
+            els.legalSources.textContent = Array.from(new Set(sources.map(s => s.creditName))).join('、');
+            selectSource(sources[0].id);
+        }
+
+        function renderSelector(visible) {
+            els.sourceSection.hidden = !visible;
+            if (!visible) return;
+
+            els.sourceSelect.textContent = '';
+            sources.forEach(source => {
+                const option = document.createElement('option');
+                option.value = source.id;
+                option.textContent = source.label;
+                els.sourceSelect.appendChild(option);
+            });
+        }
+
+        function selectSource(id) {
+            current = sources.find(s => s.id === id) || sources[0];
+
+            els.sourceSelect.value = current.id;
+
+            renderDetail();
+            updateHeader();
+            calculate();
+        }
+
+        function renderDetail() {
+            els.sourceName.textContent = current.rateLabel;
+            els.sourceFrequency.textContent = current.frequency;
+            els.sourceDesc.textContent = current.description;
+            els.sourceDateLabel.textContent = current.dateLabel;
+            els.sourceDate.textContent = current.dateText || '—';
+            els.sourceLinkWrap.hidden = !current.sourceUrl;
+            if (current.sourceUrl) {
+                els.sourceLink.href = current.sourceUrl;
+                els.sourceLink.textContent = hostOf(current.sourceUrl);
+            }
+        }
+
+        function updateHeader() {
+            // 顶部汇率卡片（1 外币 = ? 人民币）
+            [[els.rateEur, current.rates.EUR], [els.rateUsd, current.rates.USD]].forEach(([el, rate]) => {
+                el.textContent = rate ? rate.toFixed(4) : '暂无数据';
+                el.classList.toggle('is-empty', !rate);
+            });
+
+            let text = current.dateText ? current.dateLabel + ': ' + current.dateText : '';
+            if (current.id !== LIVE_ID) text += (text ? ' · ' : '') + current.rateLabel;
+            els.lastUpdate.textContent = text;
+        }
+
+        function cnyPer(code) {
+            if (code === 'CNY') return 1;
+            return current.rates[code] || null;
         }
 
         function calculate() {
-            if (!rateData.CNY) return; // 尚未就绪
+            if (!current) return; // 尚未就绪
+
+            const fromCode = els.from.value;
+            const toCode = els.to.value;
+            const fromRate = cnyPer(fromCode);
+            const toRate = cnyPer(toCode);
+
+            if (fromRate === null || toRate === null) {
+                const missing = fromRate === null ? fromCode : toCode;
+                els.result.classList.add('is-empty');
+                els.result.textContent = '该来源暂无' + NAMES[missing] + '汇率';
+                els.resSymbol.textContent = '';
+                els.resultNote.textContent = '请切换其他汇率来源';
+                return;
+            }
+
+            els.result.classList.remove('is-empty');
+            els.resSymbol.textContent = SYMBOLS[toCode] || '';
+
+            // 交叉汇率经人民币桥接：金额 × 源币种人民币价 ÷ 目标币种人民币价
+            const unitRate = fromRate / toRate;
+            let note = '1 ' + fromCode + ' = ' + unitRate.toFixed(4) + ' ' + toCode;
+            if (fromCode !== 'CNY' && toCode !== 'CNY' && fromCode !== toCode) {
+                note += '（经人民币折算：' + fromRate.toFixed(4) + ' ÷ ' + toRate.toFixed(4) + '）';
+            }
+            els.resultNote.textContent = note + ' · 按' + current.rateLabel;
 
             const amount = parseFloat(els.amount.value);
             if (isNaN(amount)) {
@@ -667,39 +1009,23 @@ hide:
                 return;
             }
 
-            const fromCode = els.from.value;
-            const toCode = els.to.value;
-
-            // 算法：金额 / 汇率(源) * 汇率(目标)
-            // （许多接口以欧元为基准，这里汇率相对基准货币）
-            // 输入(源) -> 基准 -> 输出(目标)
-            // 基准值 = 金额 / 源汇率
-            // 目标值 = 基准值 * 目标汇率
-            
-            const valInBase = amount / rateData[fromCode];
-            const result = valInBase * rateData[toCode];
-
-            // 展示结果
-            els.result.textContent = result.toLocaleString('zh-CN', {
+            els.result.textContent = (amount * unitRate).toLocaleString('zh-CN', {
                 maximumFractionDigits: 2,
                 minimumFractionDigits: 2
             });
-            
-            // 货币符号
-            const symbols = { 'CNY': '¥', 'EUR': '€', 'USD': '$' };
-            els.resSymbol.textContent = symbols[toCode] || '';
         }
 
         // 事件监听
+        els.sourceSelect.addEventListener('change', () => selectSource(els.sourceSelect.value));
         els.amount.addEventListener('input', calculate);
         els.from.addEventListener('change', calculate);
         els.to.addEventListener('change', calculate);
-        
+
         els.swap.addEventListener('click', () => {
             const t = els.from.value;
             els.from.value = els.to.value;
             els.to.value = t;
-            
+
             // 交换图标旋转动画
             const icon = els.swap.querySelector('.swap-icon');
             if(icon) {
@@ -707,7 +1033,7 @@ hide:
                  icon.style.transform = 'rotate(180deg)';
                  setTimeout(() => icon.style.transform = 'none', 300);
             }
-            
+
             calculate();
         });
 
