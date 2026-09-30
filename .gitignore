@@ -5,6 +5,7 @@ site/
 # Currency data (generated)
 docs/assets/life/finance/currency-calculator/history.json
 docs/assets/life/finance/currency-calculator/rates.json
+docs/assets/life/finance/currency-calculator/mcp_rates.json
 
 # Python
 __pycache__/
