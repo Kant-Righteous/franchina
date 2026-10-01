@@ -132,3 +132,38 @@
 .md-tabs__link:focus-visible::after {
     transform: scaleX(1);
 }
+
+/* GitHub 仓库入口 */
+.md-header__source {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin-left: var(--space-2);
+}
+
+.md-header__source .md-source__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.md-header__source .md-source__icon svg {
+    margin: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+/* 仅展示图标，仓库名供屏幕阅读器读取 */
+.md-header__source .md-source__repository {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}

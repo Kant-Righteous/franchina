@@ -1,12 +1,14 @@
 site_name: FranChina 法国留学
 site_url: https://franchina.qzz.io
 site_description: 图卢兹学联倾力打造的法国留学生活百宝箱，立足图卢兹，服务全法留学生
-repo_url: ""
+repo_url: https://github.com/Kant-Righteous/franchina
 
 theme:
   name: material
   custom_dir: overrides
   language: zh
+  icon:
+    repo: fontawesome/brands/github
   features:
     # - navigation.sections  # 禁用以启用折叠功能
     - navigation.tabs
