@@ -6,9 +6,9 @@
 
 ## 一分钟了解 FranChina
 
-[![FranChina 产品介绍视频封面：熊猫 Logo、标语与标出图卢兹的法国地图](video/media/franchina-cover.png)](video/media/franchina-promo.mp4)
+https://github.com/user-attachments/assets/aa953762-6133-4897-a356-69f7f105bb4f
 
-[观看 FranChina 产品介绍视频（57 秒）](video/media/franchina-promo.mp4)
+无法播放时可[下载 FranChina 产品介绍视频（57 秒）](video/media/franchina-promo.mp4)。
 
 ---
 
