@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-01",
+  "sources": [
+    {
+      "id": "live",
+      "label": "实时汇率",
+      "rateLabel": "市场中间价",
+      "eur": 7.613,
+      "usd": 6.7132
+    },
+    {
+      "id": "BOC",
+      "label": "中国银行",
+      "rateLabel": "现汇卖出价",
+      "eur": 7.6329,
+      "usd": 6.7269
+    },
+    {
+      "id": "ICBC",
+      "label": "工商银行",
+      "rateLabel": "现汇卖出价",
+      "eur": 7.6362,
+      "usd": 6.7272
+    },
+    {
+      "id": "CIB",
+      "label": "兴业银行",
+      "rateLabel": "现汇卖出价",
+      "eur": 7.6335,
+      "usd": 6.7204
+    },
+    {
+      "id": "UNIONPAY",
+      "label": "银联",
+      "rateLabel": "银联卡境外交易汇率",
+      "eur": 7.6457,
+      "usd": 6.7254
+    },
+    {
+      "id": "ALIPAY",
+      "label": "支付宝",
+      "rateLabel": "境外支付汇率",
+      "eur": 7.6442,
+      "usd": 6.7198
+    }
+  ]
+}
