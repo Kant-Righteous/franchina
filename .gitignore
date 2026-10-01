@@ -27,6 +27,7 @@ mcp/__pycache__/
 *.db-*
 
 # Local agent/planning artifacts
+.claude/
 docs/superpowers/
 .superpowers/
 superpowers/

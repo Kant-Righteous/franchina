@@ -1,0 +1,386 @@
+{
+  "fps": 30,
+  "durationInFrames": 1712,
+  "voice": "human recording",
+  "provider": "Human recording",
+  "scenes": [
+    {
+      "id": "france",
+      "from": 0,
+      "durationInFrames": 261,
+      "audio": {
+        "src": "audio/scene-france.mp3",
+        "from": 39,
+        "durationMs": 7440,
+        "speechEndMs": 7090
+      },
+      "chunks": [
+        {
+          "text": "刚到法国的时候",
+          "startMs": 1500,
+          "endMs": 2640
+        },
+        {
+          "text": "*住哪里*、*怎么坐车*、*银行卡怎么开*",
+          "startMs": 2990,
+          "endMs": 5940
+        },
+        {
+          "text": "几乎每件事都要重新找答案",
+          "startMs": 6390,
+          "endMs": 8390
+        }
+      ],
+      "marks": {
+        "住哪里": 2990,
+        "怎么坐车": 3860,
+        "银行卡怎么开": 4940
+      }
+    },
+    {
+      "id": "chaos",
+      "from": 261,
+      "durationInFrames": 255,
+      "audio": {
+        "src": "audio/scene-chaos.mp3",
+        "from": 8,
+        "durationMs": 7660,
+        "speechEndMs": 7310
+      },
+      "chunks": [
+        {
+          "text": "信息其实不少",
+          "startMs": 467,
+          "endMs": 1627
+        },
+        {
+          "text": "只是散落在各个*网站*、*群聊*和*帖子*里",
+          "startMs": 2187,
+          "endMs": 4837
+        },
+        {
+          "text": "翻了很久",
+          "startMs": 5357,
+          "endMs": 5957
+        },
+        {
+          "text": "也不确定是不是*最新的*",
+          "startMs": 5957,
+          "endMs": 7577
+        }
+      ],
+      "marks": {
+        "网站": 3412,
+        "群聊": 3762,
+        "帖子": 4299,
+        "最新的": 7091
+      }
+    },
+    {
+      "id": "reveal",
+      "from": 516,
+      "durationInFrames": 390,
+      "audio": {
+        "src": "audio/scene-reveal.mp3",
+        "from": 14,
+        "durationMs": 10960,
+        "speechEndMs": 10610
+      },
+      "chunks": [
+        {
+          "text": "*FranChina* 把这些整理到了一个地方",
+          "startMs": 667,
+          "endMs": 2797
+        },
+        {
+          "text": "出发前的*签证*、*公证*",
+          "startMs": 3217,
+          "endMs": 4627
+        },
+        {
+          "text": "落地后的*居留*、*医保*和*房补*",
+          "startMs": 4997,
+          "endMs": 6697
+        },
+        {
+          "text": "还有银行、交通和*防骗提醒*",
+          "startMs": 7127,
+          "endMs": 9037
+        },
+        {
+          "text": "按你现在的阶段就能找到",
+          "startMs": 9447,
+          "endMs": 11077
+        }
+      ],
+      "marks": {
+        "FranChina": 667,
+        "签证": 3887,
+        "公证": 4222,
+        "居留": 5587,
+        "医保": 5882,
+        "房补": 6371,
+        "防骗提醒": 8325
+      }
+    },
+    {
+      "id": "toulouse",
+      "from": 906,
+      "durationInFrames": 345,
+      "audio": {
+        "src": "audio/scene-toulouse.mp3",
+        "from": 10,
+        "durationMs": 10120,
+        "speechEndMs": 9770
+      },
+      "chunks": [
+        {
+          "text": "如果你在*图卢兹*",
+          "startMs": 533,
+          "endMs": 1593
+        },
+        {
+          "text": "这里还有更贴近本地的内容",
+          "startMs": 2083,
+          "endMs": 3743
+        },
+        {
+          "text": "*地铁公交*和学生票",
+          "startMs": 4383,
+          "endMs": 5763
+        },
+        {
+          "text": "各个*街区的治安*",
+          "startMs": 6293,
+          "endMs": 7458
+        },
+        {
+          "text": "*餐厅卫生*查询",
+          "startMs": 7458,
+          "endMs": 8673
+        },
+        {
+          "text": "还有学联的*迎新会*",
+          "startMs": 8963,
+          "endMs": 10103
+        }
+      ],
+      "marks": {
+        "图卢兹": 1139,
+        "地铁公交": 4383,
+        "街区的治安": 6626,
+        "餐厅卫生": 7458,
+        "迎新会": 9676
+      }
+    },
+    {
+      "id": "rates",
+      "from": 1251,
+      "durationInFrames": 255,
+      "audio": {
+        "src": "audio/scene-rates.mp3",
+        "from": 10,
+        "durationMs": 6760,
+        "speechEndMs": 6410
+      },
+      "chunks": [
+        {
+          "text": "也有每天更新的实用工具",
+          "startMs": 533,
+          "endMs": 2363
+        },
+        {
+          "text": "比如*多来源汇率*",
+          "startMs": 2813,
+          "endMs": 3963
+        },
+        {
+          "text": "欧元、美元换人民币",
+          "startMs": 4103,
+          "endMs": 5543
+        },
+        {
+          "text": "一眼就能对比",
+          "startMs": 5923,
+          "endMs": 6743
+        }
+      ],
+      "marks": {
+        "多来源汇率": 3142
+      }
+    },
+    {
+      "id": "outro",
+      "from": 1506,
+      "durationInFrames": 206,
+      "audio": {
+        "src": "audio/scene-outro.mp3",
+        "from": 18,
+        "durationMs": 3400,
+        "speechEndMs": 3050
+      },
+      "chunks": [
+        {
+          "text": "*FranChina*",
+          "startMs": 800,
+          "endMs": 1410
+        },
+        {
+          "text": "陪你走过留法生活的*百宝箱*",
+          "startMs": 1950,
+          "endMs": 3650
+        }
+      ],
+      "marks": {
+        "FranChina": 800,
+        "百宝箱": 3225
+      }
+    }
+  ],
+  "captions": [
+    {
+      "sceneId": "france",
+      "text": "刚到法国的时候",
+      "startMs": 1420,
+      "endMs": 2910
+    },
+    {
+      "sceneId": "france",
+      "text": "*住哪里*、*怎么坐车*、*银行卡怎么开*",
+      "startMs": 2910,
+      "endMs": 6310
+    },
+    {
+      "sceneId": "france",
+      "text": "几乎每件事都要重新找答案",
+      "startMs": 6310,
+      "endMs": 8600
+    },
+    {
+      "sceneId": "chaos",
+      "text": "信息其实不少",
+      "startMs": 9087,
+      "endMs": 10807
+    },
+    {
+      "sceneId": "chaos",
+      "text": "只是散落在各个*网站*、*群聊*和*帖子*里",
+      "startMs": 10807,
+      "endMs": 13977
+    },
+    {
+      "sceneId": "chaos",
+      "text": "翻了很久",
+      "startMs": 13977,
+      "endMs": 14577
+    },
+    {
+      "sceneId": "chaos",
+      "text": "也不确定是不是*最新的*",
+      "startMs": 14577,
+      "endMs": 16827
+    },
+    {
+      "sceneId": "reveal",
+      "text": "*FranChina* 把这些整理到了一个地方",
+      "startMs": 17787,
+      "endMs": 20337
+    },
+    {
+      "sceneId": "reveal",
+      "text": "出发前的*签证*、*公证*",
+      "startMs": 20337,
+      "endMs": 22117
+    },
+    {
+      "sceneId": "reveal",
+      "text": "落地后的*居留*、*医保*和*房补*",
+      "startMs": 22117,
+      "endMs": 24247
+    },
+    {
+      "sceneId": "reveal",
+      "text": "还有银行、交通和*防骗提醒*",
+      "startMs": 24247,
+      "endMs": 26567
+    },
+    {
+      "sceneId": "reveal",
+      "text": "按你现在的阶段就能找到",
+      "startMs": 26567,
+      "endMs": 28827
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "如果你在*图卢兹*",
+      "startMs": 30653,
+      "endMs": 32203
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "这里还有更贴近本地的内容",
+      "startMs": 32203,
+      "endMs": 34503
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "*地铁公交*和学生票",
+      "startMs": 34503,
+      "endMs": 36413
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "各个*街区的治安*",
+      "startMs": 36413,
+      "endMs": 37578
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "*餐厅卫生*查询",
+      "startMs": 37578,
+      "endMs": 39083
+    },
+    {
+      "sceneId": "toulouse",
+      "text": "还有学联的*迎新会*",
+      "startMs": 39083,
+      "endMs": 40853
+    },
+    {
+      "sceneId": "rates",
+      "text": "也有每天更新的实用工具",
+      "startMs": 42153,
+      "endMs": 44433
+    },
+    {
+      "sceneId": "rates",
+      "text": "比如*多来源汇率*",
+      "startMs": 44433,
+      "endMs": 45723
+    },
+    {
+      "sceneId": "rates",
+      "text": "欧元、美元换人民币",
+      "startMs": 45723,
+      "endMs": 47543
+    },
+    {
+      "sceneId": "rates",
+      "text": "一眼就能对比",
+      "startMs": 47543,
+      "endMs": 48993
+    },
+    {
+      "sceneId": "outro",
+      "text": "*FranChina*",
+      "startMs": 50920,
+      "endMs": 52070
+    },
+    {
+      "sceneId": "outro",
+      "text": "陪你走过留法生活的*百宝箱*",
+      "startMs": 52070,
+      "endMs": 54400
+    }
+  ]
+}
