@@ -35,6 +35,7 @@ video/
 │   ├── audio.ts        # 背景音乐位置与人声闪避
 │   ├── FranChinaPromo.tsx
 │   └── Root.tsx
+├── media/              # 仓库 README 使用的压缩成片与封面
 ├── recording/          # 真人录音放这里（原始录音不进 git）
 └── tts-cache/          # 逐词时间戳缓存，用于 --no-tts 重建时间轴
 ```
@@ -46,6 +47,13 @@ npm i
 npm run dev                                   # Remotion Studio 预览
 npx remotion render FranChinaPromo out/franchina-promo.mp4 --codec=h264 --crf=18
 npx remotion still Cover-16x9 out/covers/cover-16x9.png        # 另有 Cover-3x4、Cover-9x16
+```
+
+更新仓库 README 中的成片与封面（压缩到约 9 MB）：
+
+```bash
+npx remotion ffmpeg -i out/franchina-promo.mp4 -c:v libx264 -preset slow -crf 26 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k media/franchina-promo.mp4
+npx remotion still Cover-16x9 media/franchina-cover.png
 ```
 
 使用真人录音：按 [recording/README.md](recording/README.md) 录好放进 `recording/`，然后运行 `python scripts/generate_voiceover.py --source recording`。脚本按停顿把录音对齐到稿件（不做语音识别），统一响度并裁切成分场景音频，字幕与画面重点词随之对齐。
