@@ -8,7 +8,7 @@
 
 https://github.com/user-attachments/assets/aa953762-6133-4897-a356-69f7f105bb4f
 
-无法播放时可[下载 FranChina 产品介绍视频（57 秒）](video/media/franchina-promo.mp4)。
+[ FranChina 产品介绍视频（57 秒）](video/media/franchina-promo.mp4)。
 
 ---
 
