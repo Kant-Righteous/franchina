@@ -100,7 +100,7 @@ hide:
     <span></span>
   </div>
   <h2 id="home-closing-title"><span class="home-closing__intro">来自</span><span class="home-closing__highlight">学长学姐</span><span class="home-closing__outro">的经验整理</span></h2>
-  <p>图卢兹中国学者学生联合会（UCECF-ST）携手各届优秀留法学子倾囊相授，<br>
+  <p>图卢兹中国学者学生联合会（UCECF-ST）<br>携手各届优秀留法学子倾囊相授，<br>
   为你的出发和生活提供坚实后盾。</p>
 </section>
 
