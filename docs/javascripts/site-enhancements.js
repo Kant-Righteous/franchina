@@ -171,6 +171,7 @@
       let fitScale = 1;
       let naturalWidth = 1;
       let naturalHeight = 1;
+      let fitLimit = Infinity;
       let previousOverflow = '';
       let active = false;
       let pinch = null;
@@ -182,6 +183,7 @@
         fitScale = Math.max(0.01, Math.min(
           (viewport.clientWidth - 24) / naturalWidth,
           (viewport.clientHeight - 24) / naturalHeight,
+          fitLimit / Math.max(naturalWidth, naturalHeight),
           1
         ));
       }
@@ -243,6 +245,7 @@
         title.textContent = source.alt || '查看图片';
         image.alt = source.alt;
         image.src = source.currentSrc || source.src;
+        fitLimit = Number(source.dataset.viewerFit) || Infinity;
         naturalWidth = source.naturalWidth || source.width || 1;
         naturalHeight = source.naturalHeight || source.height || 1;
         previousOverflow = document.documentElement.style.overflow;
