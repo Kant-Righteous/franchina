@@ -35,7 +35,7 @@
 扫描下方二维码即可访问 FranChina，欢迎转发给身边的留法同学：
 
 <figure class="site-qr">
-  <img src="../../assets/about/franchina-qr.svg" alt="FranChina 网站二维码" width="200" height="200">
+  <img src="../../assets/about/franchina-qr.png" alt="FranChina 网站二维码" width="200" height="200">
   <figcaption>
     <span class="site-qr__label">扫码访问 FranChina</span>
     <a href="https://franchina.qzz.io">franchina.qzz.io</a>
