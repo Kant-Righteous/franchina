@@ -28,7 +28,19 @@
 * **学联官方邮箱**：[ucecf.st@gmail.com](mailto:ucecf.st@gmail.com)
 * **网站管理邮箱**：[franchina.gestion@gmail.com](mailto:franchina.gestion@gmail.com)
 * **官方微信公众号**：微信搜索关注 `图卢兹学生学者联合会`
-* **图卢兹新生与联络群**：详见 👉 **[图卢兹学联官方专页](../toulouse/cssa.md)** 获取学联小助手微信号与入群方式
+* **图卢兹学联专页**：👉 **[图卢兹学联官方专页](../toulouse/cssa.md)**
+
+### 分享本站
+
+扫描下方二维码即可访问 FranChina，欢迎转发给身边的留法同学：
+
+<figure class="site-qr">
+  <img src="../../assets/about/franchina-qr.svg" alt="FranChina 网站二维码" width="200" height="200">
+  <figcaption>
+    <span class="site-qr__label">扫码访问 FranChina</span>
+    <a href="https://franchina.qzz.io">franchina.qzz.io</a>
+  </figcaption>
+</figure>
 
 ## ⚠️ 免责声明
 
