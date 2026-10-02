@@ -86,9 +86,8 @@ nav:
       - 图卢兹学联: pages/toulouse/cssa.md
   - 常用网站: pages/quick-links/index.md
   - 寻求帮助:
-      - 紧急求助:
-          - 应急电话: pages/help/emergency.md
-          - 紧急呼叫沟通指南: pages/help/emergency-call-guide.md
+      - 应急电话: pages/help/emergency.md
+      - 紧急呼叫沟通指南: pages/help/emergency-call-guide.md
       - 全法学联: pages/help/cssa.md
       - 驻法使领馆: pages/help/embassy.md
   - 城市指南:
