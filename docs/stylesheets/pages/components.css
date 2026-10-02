@@ -764,7 +764,6 @@
     box-shadow: 0 3px 14px #1d335018;
     user-select: none;
     -webkit-user-drag: none;
-    pointer-events: none;
 }
 
 @media(max-width:600px) {
