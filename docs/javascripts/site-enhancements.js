@@ -290,9 +290,10 @@
         }
       });
       on(viewport, 'wheel', event => {
-        if (!event.ctrlKey) return;
+        if (event.shiftKey || !event.deltaY) return;
         event.preventDefault();
-        zoomTo(scale * Math.exp(-event.deltaY * 0.005), event.clientX, event.clientY);
+        const delta = event.deltaMode === 1 ? event.deltaY * 16 : event.deltaY;
+        zoomTo(scale * Math.exp(-Math.max(-100, Math.min(100, delta)) * 0.005), event.clientX, event.clientY);
       }, { passive: false });
       on(viewport, 'dblclick', event => {
         event.preventDefault();
