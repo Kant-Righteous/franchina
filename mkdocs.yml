@@ -67,6 +67,7 @@ nav:
   - 生活指南:
       - 财务管理:
           - 办理银行卡: pages/life/finance/bank.md
+          - 跨境汇款与取现: pages/life/finance/remittance-cash.md
           - 汇率计算器: pages/life/finance/currency-calculator.md
       - 交通出行:
           - 自行车: pages/life/transport/bike.md
