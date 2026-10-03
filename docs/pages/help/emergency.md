@@ -6,7 +6,7 @@ description: 汇总法国核心法定紧急号码（15、17、18、112）、紧�
 # 紧急求助与应急热线
 
 !!! abstract "速览"
-    * **首选直拨**：医疗急救打 **15**（SAMU）、治安报警打 **17**、消防救援打 **18**、欧洲通用求助打 **112**。
+    * **首选直拨**：医疗急救打 **[15](#emergency-15)**（SAMU）、治安报警打 **[17](#emergency-17)**、消防救援打 **[18](#emergency-18)**、欧洲通用求助打 **[112](#emergency-112)**。
     * **锁屏与网络**：法国公共应急呼叫全天候免费，手机锁屏界面可直接呼叫。请注意：多数法国电信网络要求手机插有有效 SIM 卡才能接入紧急网络；误拨切勿直接挂断。
     * **隐蔽报警**：身处无法出声的危险险境（如入室抢劫、暴力威胁）或听障语障人士，可直接向 **114** 发送短信。
     * **非危重急症**：夜间或周末急性不适但无生命危险时，可联系 **SOS Médecins** 协调上门或就近看诊。
@@ -17,25 +17,25 @@ description: 汇总法国核心法定紧急号码（15、17、18、112）、紧�
 ## 紧急呼叫直拨入口
 
 <div class="emergency-grid">
-    <div class="emergency-card">
+    <div class="emergency-card" id="emergency-15">
         <div class="emergency-card__header">🚑 医疗急救 (SAMU)</div>
         <div class="emergency-card__desc">突发心胸剧痛、昏迷、严重呼吸困难、大出血等危及生命的急性重症。</div>
         <div class="emergency-card__meta"><strong>沟通要点</strong>：接通后由急救医生问诊指导。需详报患者意识与呼吸、既往病史、确切门禁代码（Digicode）。听从指令切勿先挂断。</div>
         <a href="tel:15" class="emergency-card__call">拨打 15</a>
     </div>
-    <div class="emergency-card">
+    <div class="emergency-card" id="emergency-17">
         <div class="emergency-card__header">👮 治安报警 (Police / Gendarmerie)</div>
         <div class="emergency-card__desc">正在发生的人身侵害、持械暴力、抢劫、入室行窃或严重治安事件。市区为警察，郊区为宪兵。</div>
         <div class="emergency-card__meta"><strong>沟通要点</strong>：报清精准案发位置、嫌疑人体貌特征与逃跑方向、伤亡情况。现场优先隐蔽确保自身安全，避免正面冲突。</div>
         <a href="tel:17" class="emergency-card__call emergency-card__call--police">拨打 17</a>
     </div>
-    <div class="emergency-card">
+    <div class="emergency-card" id="emergency-18">
         <div class="emergency-card__header">🚒 消防救援 (Pompiers)</div>
         <div class="emergency-card__desc">火灾、燃气泄漏、溺水、高空坠落、严重车祸困人等。兼负紧急陆上医学救护，出警极快。</div>
         <div class="emergency-card__meta"><strong>沟通要点</strong>：说明险情类型、火势烟雾、具体楼层房号、有无人员受困或受伤、有无易燃易爆源。配合指引疏散。</div>
         <a href="tel:18" class="emergency-card__call emergency-card__call--fire">拨打 18</a>
     </div>
-    <div class="emergency-card">
+    <div class="emergency-card" id="emergency-112">
         <div class="emergency-card__header">🇪🇺 欧洲统一急救 (112)</div>
         <div class="emergency-card__desc">不确定找哪个部门、需英语协助、重大事故或跨国漫游手机求助（欧盟全境通用免费）。</div>
         <div class="emergency-card__meta"><strong>沟通要点</strong>：接通可直接表明需要英语（"English please"）。讲明所在城市国别、事件性质与现场伤情，由中心统筹调度派警。</div>
