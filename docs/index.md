@@ -8,7 +8,7 @@ hide:
 <section class="tx-hero" aria-labelledby="home-title">
   <div class="tx-hero__content">
     <div class="route-mark route-mark--compact" aria-hidden="true"><span>CN</span><span class="route-mark__line"><svg viewBox="0 0 24 20"><path d="m2 12 7-2L17 2c1-1 3 1 2 2l-8 8-2 6-2-1 1-6-6 3zM12 7 6 4l-1 2 5 3m3 2 3 5 2-2-3-5"></path></svg></span><span>FR</span></div>
-    <h1 id="home-title"><span class="hero-wordmark">FranChina</span><span class="tx-hero__en">From China to France</span></h1>
+    <h1 id="home-title"><span class="hero-wordmark">FranChina</span> <span class="tx-hero__en">From China to France</span></h1>
     <p class="tx-hero__tagline">陪你走过留法生活的<span class="tx-hero__nowrap">百宝箱</span></p>
   </div>
   <div class="tx-hero__image">

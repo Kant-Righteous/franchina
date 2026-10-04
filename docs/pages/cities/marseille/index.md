@@ -1,3 +1,8 @@
+---
+title: 马赛留学城市简介
+description: 马赛留学城市概况：地中海气候与行前准备、Aix-Marseille Université 等高校校区、城市特色与周末去处，以及官方实用链接。
+---
+
 # 马赛 Marseille
 
 ## 概述
