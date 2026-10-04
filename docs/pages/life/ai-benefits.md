@@ -1,6 +1,6 @@
 ---
 title: 留学生 AI 优惠与数字福利指南
-description: 汇总在法留学生的 AI 与数字会员优惠，涵盖 Google AI Plus、GitHub Copilot Student、Canva Campus、JoyPlus 及学生认证与续费条件。
+description: 在法留学生可用的 AI 与数字会员优惠：Google AI Plus、GitHub Copilot Student、Canva Campus 等，附学生认证与续费条件。
 ---
 
 # AI 优惠与数字福利
