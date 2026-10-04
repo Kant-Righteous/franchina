@@ -1,17 +1,20 @@
 ---
 title: 留学生 AI 优惠与数字福利指南
-description: 汇总在法留学生可享有的主流 AI 工具、数字订阅与学生特权通道，涵盖 Revolut 联名权益、Google Gemini、GitHub Copilot 及法国高校认证攻略。
+description: 汇总在法留学生的 AI 与数字会员优惠，涵盖 Google AI Plus、GitHub Copilot Student、Canva Campus、JoyPlus 及学生认证与续费条件。
 ---
 
 # AI 优惠与数字福利
 
 !!! abstract "速览"
-    * **银行特权**：Revolut 等数字银行在其升级方案中提供 ChatGPT Plus 等会员权益，并提供一次性虚拟卡防止试用扣费。
-    * **学生免费通道**：凭借法国高校分配的 edu 邮箱认证 GitHub Student Pack，免费解锁 GitHub Copilot。
-    * **高校生态**：部分工程师院校及高商接入教育版 Google Workspace，支持深度体验内置 AI 协同。
-    * **防扣费策略**：绑定各类试用（Free Trial）平台时，使用一次性虚拟银行卡，防止试用期满自动扣费。
+    * **Google 学生优惠**：法国符合条件的高校学生可领取 **Google AI Plus 12 个月免费试用**，含 **400 GB** 云存储，须在 **2026 年 12 月 31 日前**兑换。
+    * **编程工具**：通过 GitHub Education 学生认证后，可免费激活 **Copilot Student**；模型由 Auto 自动选择，用量受方案限制。
+    * **Canva 高校会员**：学校开通 **Canva Campus** 并授予访问权限后，可使用 Pro 与 Premium 工具。
+    * **Joybuy 学生优惠**：法国站曾推出 **JoyPlus 学生价**；当前价格、认证条件与试用资格须在账户内确认。
+    * **续费管理**：带付款方式的试用可能自动续费，须在订阅平台取消；一次性虚拟卡不适用于订阅付款。
 
-在法国留学期间，充分利用学生身份与本地数字账户特权，可以免费或以极低成本获取市面上主流的人工智能助手与生产力工具。本篇为您梳理实用的 AI 工具优惠通道与申领指南。
+学生优惠包括免费方案、限时试用、付费折扣和学校授权。申领前确认适用地区、账号类型、学生资格及到期价格。
+
+**最后核验：2026 年 10 月 3 日。** 活动价格与资格以各平台官方入口及兑换页面为准。
 
 ---
 
@@ -19,14 +22,13 @@ description: 汇总在法留学生可享有的主流 AI 工具、数字订阅与
 
 ### Revolut 联名数字特权
 
-作为留学生常用的多币种数字账户，**[Revolut](https://www.revolut.com/)** 在其升级计划（Premium、Metal、Ultra）以及迎新推广中，整合了数字生活与主流 AI 工具订阅：
+法国地区的 Revolut 付费方案包含部分数字订阅权益，各档方案所含会员不同：
 
-- **ChatGPT Plus 会员特权**：Revolut 与 OpenAI 合作，在其高级方案特权中为符合资格的用户提供 **ChatGPT Plus** 订阅权益（通常 Ultra / Metal 方案赠送较长周期，Premium / Plus 促销期提供数月试用）。可在 Revolut App 内依次进入「我的方案 (Your plan)」→「权益 (Benefits)」领取并激活。
-- **免额外订阅费**：特权直接包含在对应月费方案中，激活后无需向 OpenAI 另行支付订阅费。
-- **学生迎新活动**：每年 9~10 月开学季，Revolut 常联合高校或学生专属优惠网络推出限时免月费试用，试用期内亦可同步激活包含的 AI 增值服务。
+- **AI 权益**：官方法国方案页中，**[Revolut Premium](https://www.revolut.com/fr-FR/revolut-premium/)** 列有 **Perplexity Pro**，**[Revolut Metal](https://www.revolut.com/fr-FR/metal/)** 列有 **12 个月 ChatGPT Go**，两档均含 **Lovable Lite**；领取资格与激活方式见 App 内对应权益及合作方条款。
+- **升级前确认**：先查看自己的地区与方案包含哪些会员，再比较方案总费用和单独订阅费用。
 
-!!! tip "虚拟一次性卡防自动续费"
-    在绑定各类免费试用（Free Trial）的 AI 平台时，推荐使用 Revolut 生成的**一次性虚拟卡（Virtual Disposable Card）**。此类卡片完成首笔 0 元扣费验证后卡号立即失效，可从根本上避免试用期结束后被平台意外自动扣款。
+!!! tip "试用订阅请用普通虚拟卡"
+    Revolut 的**一次性虚拟卡（Carte virtuelle à usage unique）**每次付款后自动更换卡号，[官方说明](https://help.revolut.com/fr-FR/help/cards/card-issue/my-disposable-virtual-card-is-not-working/)其不能用于订阅、定期扣款和押金类付款。绑定免费试用（Free Trial）时使用普通虚拟卡，并在试用到期前到订阅平台取消续费。
 
 !!! warning "虚拟银行资金安全提示"
     Revolut 属于立陶宛注册的线上数字银行（Neobank / 虚拟银行）。虽然其持有合规的欧盟银行牌照，理论上同样受到欧盟法定存款保险制度（EDIS 最高 10 万欧元保额）保护，但在实际使用中：
@@ -37,52 +39,80 @@ description: 汇总在法留学生可享有的主流 AI 工具、数字订阅与
 
 ## 主流 AI 平台学生通道
 
-### 1. GitHub Copilot（代码与学术写作助手）
+### 1. GitHub Copilot Student（编程助手）
 
-微软与 GitHub 为全球在校学生免费提供原本售价 $10/月的 **GitHub Copilot**：
+通过 GitHub Education 认证的学生可免费领取 **Copilot Student**，用于代码补全、编程问答及开发任务辅助。
 
-- **包含权益**：VS Code、JetBrains、Neovim 等 IDE 插件的实时代码生成、终端命令辅助、Copilot Chat 问答。
-- **申请途径**：通过 **[GitHub Student Developer Pack](https://education.github.com/pack)** 认证。
-- **认证材料**：法国大学分配的学生邮箱（如 `@univ-toulouse.fr`、`@etudiant...`），或上传当学年的法语在读证明（Certificat de scolarité）拍照件。
-- **审核周期**：通常 1~3 个工作日内完成，有效期为 1~2 年，毕业前可每年重新验证续期。
+- **申请资格**：年满 **13 岁**，在授予学位或文凭的项目就读，并持有个人 GitHub 账号。
+- **认证入口与材料**：进入 [GitHub Education benefits](https://github.com/settings/education/benefits)，选择 **Start an application**。可按要求提供带当前在读日期的学生证、课表、成绩单或 **Certificat de scolarité**（在读证明）。若系统要求学校邮箱，须先在 GitHub 账号中添加并验证该邮箱。详见[官方学生申请指南](https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student)。
+- **激活会员**：认证获批后，在权益页选择 **Learn more** 并按提示激活 Copilot Student。认证批准和会员激活是两个步骤，权益同步可能需要数天。详见[学生免费激活说明](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students)。
+- **模型与额度**：学生方案使用 **Auto 自动选择模型**，有方案规定的 AI 用量额度。详见[Copilot 方案对照](https://docs.github.com/en/copilot/get-started/plans)及[模型选择规则](https://github.blog/changelog/2026-06-24-changes-to-model-selection-for-free-and-student-plans/)。
+- **资格维护**：GitHub 每月重新评估学生资格，按账户提示补充认证材料。
 
 ### 2. Google Gemini & Google One AI
 
-- **Google One AI Premium 试用**：Google 针对个人用户常年提供 1~2 个月的 Google One AI Premium（包含 Gemini Advanced 及 2TB 云存储）免费试用通道。
-- **高校 Google Workspace 专享**：如果所在院校接入了 Google Workspace for Education（如部分工程师院校或高商），登录学校账号即可直接体验整合进 Google Docs、Gmail 与 Drive 的教育版 Gemini 功能。
-- **教育优惠计划**：定期关注 Google 面向欧洲高校学生的官方活动，在高校网络环境下绑定新账户通常享有更长的免订阅期。
+- **法国免费学生活动**：当前提供 **Google AI Plus 12 个月免费试用**，包含 **400 GB** 云存储及更高的 Gemini 使用额度，可从 [Google 法国学生优惠入口](https://gemini.google/fr/students/?hl=fr)申领。新用户及 2025 年 AI Pro 试用已到期的学生可按资格申请。
+- **申请条件**：年满 **18 岁**、在支持地区的高校就读，通过 **SheerID** 学生认证，使用**个人 Google 账号**并提供有效付款方式。家庭组成员等账号限制见[学生优惠条款](https://one.google.com/offer/studentoffer8?g1_landing_page=0)。该活动须使用个人账号申领，学校发放的 Workspace for Education 账号不适用。
+- **期限与续费**：须在 **2026 年 12 月 31 日前**兑换；免费期从兑换日起计算。法国活动页标示到期后自动按 **4.99 €/月**续费，须在免费期结束前取消才能避免后续扣款。
+- **AI Pro 学生方案**：[Google One 学生帮助](https://support.google.com/googleone/answer/17422238?hl=fr)另列有两项付费学生方案：**折扣价 Google AI Pro**，以及 **AI Pro + YouTube Premium 学生套装**，在读期间最长可连续使用 4 年。两者均须通过 SheerID 认证，开放地区与价格见对应兑换页。
+- **学校 Workspace 权益**：学校账号内的 Gmail、Docs、Drive 等 Gemini 功能取决于学校购买的版本、许可证及管理员设置，可向学校 IT 服务确认。详见[Google 教育账号功能说明](https://support.google.com/drive/answer/13952129?co=DASHER._Family%3DEducation&hl=fr)。
 
 ### 3. Perplexity Pro（学术检索与研报引擎）
 
-Perplexity 是留学生撰写文献综述、查阅多语言学术资料的核心工具之一：
+Perplexity 可用于检索资料、查阅引用来源及辅助整理文献。
 
-- **高校学生专属通道**：Perplexity 每年会开展全球高校迎新邀请活动，使用以 `.edu` 或欧洲大学域名后缀的官方学生邮箱注册，即可直接获赠数月乃至一整年的 **Perplexity Pro** 尊享会员。
-- **核心价值**：支持在多家主流底座模型间切换，提供精确的学术论文来源索引与文件深度解析功能（具体可用模型以平台当前配置为准）。
+- **学生折扣**：**Education Pro** 面向通过认证的学生和教育工作者提供付费优惠，金额以结账页为准。
+- **申请方法**：可用个人或学校邮箱注册，在升级菜单选择 **Education** → **Verify as student**，完成 SheerID 认证。详见[Education Pro 官方说明](https://www.perplexity.ai/help-center/zh-CN/articles/12590157-shen-me-shi-education-pro)。
+- **已有会员权益**：如果自己的 Revolut 方案包含 Perplexity Pro，可先查看领取条件，避免重复订阅。
 
-### 4. Notion AI（学业管理与笔记排版）
+### 4. Notion（学业管理与笔记排版）
 
-- **Notion Plus 教育版**：所有在校留学生使用学校邮箱均可**永久免费**升级为 Notion Plus 个人方案（原价 $10/月）。
-- **Notion AI 试用与特惠**：学生认证用户不仅享受无限制页面与团队协作，还可优先体验 Notion AI 的文本润色、摘要生成与多语言翻译辅助功能。
+- **免费教育方案**：认可高校的学生可用学校邮箱申请个人 **Education Plan**，适用于**单成员工作区**，包括最多 100 位访客、无限文件上传及 30 天页面历史。
+- **认证与续期**：学校邮箱须是 Notion 账号的主邮箱，每年重新验证；无法继续验证时，工作区转为 Free 方案。详见[Notion 教育方案与资格](https://www.notion.com/help/notion-for-education)。
+- **AI 功能**：Free 与 Plus 方案提供有限的 AI 体验额度；完整 Notion AI 包含在 Business 与 Enterprise 中。详见[Notion AI 常见问题](https://www.notion.com/help/notion-ai-faqs)。
 
 ### 5. JetBrains AI Assistant
 
-- **JetBrains 全家桶免费**：计算机、数据科学及工程类留学生可通过 **[JetBrains 学生授权](https://www.jetbrains.com/community/education/#students)** 免费使用 IntelliJ IDEA、PyCharm、CLion 等专业版开发环境。
-- **AI 助手配额**：教育许可证用户可直接开启 IDE 内置的 JetBrains AI Assistant，享受代码补全与智能重构配额。
+- **免费开发工具**：符合资格的学生可通过 [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/)免费使用专业开发工具，用于非商业教育用途；学生授权每年续期。
+- **认证方式**：按申请页要求使用大学邮箱、ISIC/ITIC 或 GitHub Student Developer Pack 等认证方式。
+- **AI 权益**：教育授权可使用 **AI Free**；兼容版本可提供 **30 天 AI Trial**，长期 AI Pro 与 AI Ultimate 须另行订阅。详见[教育授权中的 AI 方案说明](https://youtrack.jetbrains.com/articles/SUPPORT-A-395)。
+
+### 6. Canva（演示文稿、简历与设计）
+
+- **大学生会员通道**：如果学校开通 **Canva Campus**，获得学校授权的学生可免费使用 Pro 与 Premium 工具；访问权限由学校管理。
+- **查询方式**：尝试用学校邮箱登录 Canva，或向学校 IT 服务、学生事务部门询问 Campus 授权及加入方式。
+- **方案区别**：**Canva Education** 免费方案面向符合条件的中小学教师及受邀学生；高校学生通过学校的 Campus 方案领取对应权益，也可使用个人 Canva Free。
+- **毕业前保存作品**：学校账号或授权结束前，将需要保留的设计复制到个人账号。
+
+官方入口：[Canva 法国学生会员与资格说明](https://www.canva.com/fr_fr/education/etudiants/)。
+
+---
+
+## 购物会员学生优惠
+
+### Joybuy JoyPlus 学生会员
+
+- **法国学生优惠**：Joybuy 在 **2026 年 3 月 16 日上线公告**中公布过 **2.99 €/月**学生价。该价格属于上线活动价，当前学生价格、认证方式与可领取优惠须在 [JoyPlus 会员页](https://www.joybuy.fr/membership)或法国站 App 内确认。来源：[Joybuy 法国上线公告](https://about.joybuy.com/fr/joybuy-arrive-en-france/)。
+- **会员权益**：符合条件的 Joybuy 自营商品可享会员免费配送、专属优惠及积分；查看商品页的 **Vendu et expédié par Joybuy**（由 Joybuy 销售并配送）标识及活动条件。
+- **免费试用**：法国站提供符合资格的新用户 **30 天免费试用**；会员须年满 **18 岁**，试用通常每位用户仅限一次。
+- **续费与取消**：试用结束自动转为付费会员，月付或年付方案自动续期。可在 JoyPlus 会员管理页关闭下一期自动续费，办理前核对下次扣款日期。
+
+官方规则：[JoyPlus 法国会员条款](https://www.joybuy.fr/help/joybuy-plus-terms)。
 
 ---
 
 ## 欧洲高校学生认证关键步骤
 
-在申请上述 AI 学生特权时，请按照以下标准流程准备，以确保快速通过第三方验证平台（如 SheerID、UNiDAYS 或 GitHub Education）：
+各平台接受的账号与证明材料不同，申请时按对应入口的要求准备：
 
 ```mermaid
 graph LR
-    A[激活大学 Webmail] --> B[下载最新在读证明]
-    B --> C[使用校园网络提交验证]
-    C --> D[完成双重认证并激活]
+    A[确认地区与优惠资格] --> B[按平台要求准备账号和材料]
+    B --> C[提交学生认证]
+    C --> D[激活权益并记录到期日]
 ```
 
-1. **激活学校官方 Webmail**：入学注册完成后，第一时间在学校 ENT（Environnement Numérique de Travail）系统激活官方提供的学生邮箱。
-2. **下载当学年正规证明**：统一使用含有防伪验证码或二维码的 **Certificat de scolarité**（在读证明 PDF），不要使用未经盖章的简易录取函或学生证照片。
-3. **姓名与学校完全一致**：认证时填写的英文字母姓名必须与护照及学校系统注册的名字完全吻合，学校名称建议输入法文全称（如 *Université Toulouse Capitole* 而非缩写）。
-4. **日历设置取消提醒**：凡涉及绑定付款方式的试用优惠，激活后立即在手机日历设置“到期前 3 天提醒”，若后续不再使用可及时退订，保障个人资金安全。
+1. **激活学校邮箱**：在学校 ENT（Environnement Numérique de Travail）系统激活 Webmail，保留收取认证邮件的权限。法国学校邮箱使用各自域名，认证时选择平台认可的学校。
+2. **按平台准备材料**：下载当学年的 **Certificat de scolarité**（在读证明）；GitHub 也接受符合要求的学生证、课表或成绩单。Notion 个人教育方案须使用学校邮箱认证。
+3. **核对账户信息**：按表单要求填写姓名、学校与在读信息；Google 学生活动使用个人 Google 账号，Canva Campus 按学校提供的账号或邀请方式加入。
+4. **记录到期与续费日期**：带付款方式的试用可设置到期前 3 天提醒；不再使用时在原购买平台取消续费，并保存取消确认。
