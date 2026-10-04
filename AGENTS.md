@@ -42,6 +42,8 @@ FranChina 的文档直接服务在法中国留学生。所有用户可见的文�
 - `python -m mkdocs build --strict --clean`：执行严格的干净构建，任何警告都会导致失败。
 - `python scripts/update_currency.py`：获取远程汇率并重写生成数据，仅在任务明确要求更新汇率时运行。
 
+在 Windows 上优先使用 `.venv/Scripts/python -m mkdocs ...`，确保使用虚拟环境中的插件版本。本地预览也可通过 `.claude/launch.json` 中名为 `mkdocs` 的配置启动。
+
 ## 内容研究与事实核验
 
 FranChina 面向在法中国留学生。签证、居留、医保、CAF、税务、银行、交通、医疗、学校注册、费用、资格和办理期限均属于可能变化的信息。修改此类内容时：
@@ -89,6 +91,24 @@ FranChina 采用 Material for MkDocs 主题，深色代码块在文档中具有�
   - 需要强调、提示或折叠补充的内容，必须使用 Material 提供的提示块（Admonitions，如 `!!! note "提示标题"`、`!!! warning "注意事项"`、`???+ tip "折叠补充"`），严禁为了“外框视觉”而滥用代码块。
 - **代码块的适用边界**：代码块（` ``` `）仅严格用于展示真实可执行的代码、脚本、配置文件片段或终端命令行（如 `python -m mkdocs serve`）。
 
+### 标题锚点
+
+`toc` 扩展未配置 `slugify`，纯中文标题的锚点按出现顺序自动编号为 `_1`、`_2`……，增删或调整标题会改变后续锚点。
+
+- 需要被站内或外部链接定位的小节，必须写显式锚点，例如 `## 购票与打卡 {#bus-validation}`。
+- 不得链接到 `#_3` 这类自动编号锚点。
+- 修改已有显式锚点前，先全局搜索 `#锚点名` 的引用并同步更新。
+
+## 页面元数据与搜索引擎优化
+
+浏览器标题、搜索结果摘要和社交分享卡片由页面 front matter 与 `overrides/main.html` 共同生成。新增或修改页面时：
+
+- **`description` 必填**：除首页外，每个页面都在 front matter 中填写 `description`，概括本页实际覆盖的内容，长度约 30～90 个字符，过长会在搜索结果中被截断；不得写正文中没有的信息或空泛宣传语。
+- **网页标题来源**：`<title>` 优先使用 front matter 的 `title`，否则使用 `mkdocs.yml` 中的导航名，而不是正文 H1。导航名较通用或在多个城市重复时（如「本地交通」「生活圈」「城市简介」），必须添加带城市名的 `title`，例如 `title: 里昂本地交通`；导航文字保持不变。
+- **H1 自明**：正文 H1 脱离导航也应能看懂，城市专区页面的 H1 包含城市名，例如 `# 图卢兹本地交通`。全站的网页标题和 H1 均不应重复。
+- **模板输出**：`overrides/main.html` 负责 og/twitter 分享标签，并在首页输出 `WebSite` JSON-LD 声明站点名；修改该模板时不得删除这些输出。
+- **验证文件**：`docs/` 根目录下的 `google*.html`、`baidu_verify_*.html`、`5054bc86….txt`（微信验证）和 `robots.txt` 用于搜索引擎与平台验证，不得删除、移动或改名。
+
 ## 编码风格与命名约定
 
 内容应使用简洁、可验证的中文。Markdown 标题按层级递进，不要跳级。新页面文件名采用小写 kebab-case，例如 `docs/pages/life/health-insurance.md`；不要在未更新全部引用时重命名现有混合大小写路径。修改 CSS 前先查找并复用 `docs/stylesheets/core/variables.css` 中的变量。Python 使用四空格缩进和 `snake_case` 命名。
@@ -127,6 +147,8 @@ git status --short
 - 图片、PDF、附件、表格、提示块和折叠块；
 - 浏览器控制台及 MkDocs 终端中的 404。
 
+严格构建的 INFO 输出也需留意：页面未加入 `nav`、Markdown 中使用 `/assets/...` 绝对链接等提示不会导致构建失败，但同样属于需要处理的问题。`minify` 插件会去掉 HTML 属性的引号，在 `site/` 中核对输出时应搜索 `name=description`、`type=application/ld+json` 这类无引号写法。
+
 验证完成后应汇报修改文件、运行命令、通过项、未验证内容和遗留风险。
 
 ## Git、提交与 Pull Request
@@ -137,3 +159,11 @@ git status --short
 - 提交信息采用简洁的 Conventional Commits 风格前缀，如 `docs:`、`fix:`、`feat:` 和 `chore:`；每个提交只处理一个主题，例如 `docs: 更新巴黎交通指南`。
 - 使用 `feature/caf-guide` 这类主题分支，并向 `main` 提交 PR。
 - PR 应说明改动目的、列出受影响页面和已执行的校验、关联相关 Issue；涉及可见布局或样式变化时附截图。
+- 开 PR 前先合并最新的 `origin/main` 并重新执行严格构建；不得 rebase 或强制推送已推送的分支。
+- 仓库惯例使用 squash 合并，合并后的提交标题形如 `docs: 补全页面摘要 (#52)`。合并他人提交的 PR 前须获得用户对该 PR 的单独确认。
+- GitHub CLI 安装在 `C:\Program Files\GitHub CLI\gh.exe`；在 Bash 中 `gh` 可能不在 `PATH`，此时使用完整路径。
+
+### 换行符与 GitHub Desktop
+
+- 仓库启用 `core.autocrlf=true`，工作区文件可能同时存在 LF 和 CRLF。脚本批量修改时应按字节读写或保留原有换行符；Python 在 Windows 上使用 `write_text` 会把 `\n` 写成 CRLF。提交前用 `git diff --stat` 确认没有出现整文件改动。
+- 用户同时使用 GitHub Desktop，它在切换分支时会把未提交的改动自动存入名为 `!!GitHub_Desktop<分支名>` 的 stash。若发现改动“消失”，先运行 `git stash list` 核对，用 `git stash apply` 恢复并确认无误后再 `git stash drop`，不得重做或丢弃这些改动。

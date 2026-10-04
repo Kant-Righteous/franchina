@@ -15,7 +15,7 @@ description: 图卢兹治安分区总览：Empalot、Les Cocus 等需提高警�
 ## 治安分区总览
 
 <div align="center" markdown="span">
-  [![图卢兹治安分区总览图](/assets/toulouse/safety/safety-overview-map.jpeg){ width="720" loading=lazy }](/assets/toulouse/safety/safety-overview-map.jpeg)
+  [![图卢兹治安分区总览图](../../assets/toulouse/safety/safety-overview-map.jpeg){ width="720" loading=lazy }](../../assets/toulouse/safety/safety-overview-map.jpeg)
 </div>
 
 ## 治安较差的街区
@@ -25,19 +25,19 @@ description: 图卢兹治安分区总览：Empalot、Les Cocus 等需提高警�
 ### Empalot：高失业率地区，曾发生枪击案
 
 <div align="center" markdown="span">
-  [![Empalot 街区位置示意](/assets/toulouse/safety/empalot.png){ width="640" loading=lazy }](/assets/toulouse/safety/empalot.png)
+  [![Empalot 街区位置示意](../../assets/toulouse/safety/empalot.png){ width="640" loading=lazy }](../../assets/toulouse/safety/empalot.png)
 </div>
 
 ### Les Cocus：贩毒与命案较多
 
 <div align="center" markdown="span">
-  [![Les Cocus 街区位置示意](/assets/toulouse/safety/les-cocus.png){ width="640" loading=lazy }](/assets/toulouse/safety/les-cocus.png)
+  [![Les Cocus 街区位置示意](../../assets/toulouse/safety/les-cocus.png){ width="640" loading=lazy }](../../assets/toulouse/safety/les-cocus.png)
 </div>
 
 ### La Vache：治安一般，需提高警惕
 
 <div align="center" markdown="span">
-  [![La Vache 街区位置示意](/assets/toulouse/safety/la-vache.png){ width="640" loading=lazy }](/assets/toulouse/safety/la-vache.png)
+  [![La Vache 街区位置示意](../../assets/toulouse/safety/la-vache.png){ width="640" loading=lazy }](../../assets/toulouse/safety/la-vache.png)
 </div>
 
 ### Arnaud Bernard：夜生活区，吵闹但不算真正危险
@@ -45,13 +45,13 @@ description: 图卢兹治安分区总览：Empalot、Les Cocus 等需提高警�
 图卢兹第一大学（UT1）就在附近，夜间酒吧餐馆人流较多，比较吵闹。
 
 <div align="center" markdown="span">
-  [![Arnaud Bernard 街区位置示意](/assets/toulouse/safety/arnaud-bernard.png){ width="640" loading=lazy }](/assets/toulouse/safety/arnaud-bernard.png)
+  [![Arnaud Bernard 街区位置示意](../../assets/toulouse/safety/arnaud-bernard.png){ width="640" loading=lazy }](../../assets/toulouse/safety/arnaud-bernard.png)
 </div>
 
 ### Faourette：敏感地区
 
 <div align="center" markdown="span">
-  [![Faourette 街区位置示意](/assets/toulouse/safety/faourette.png){ width="640" loading=lazy }](/assets/toulouse/safety/faourette.png)
+  [![Faourette 街区位置示意](../../assets/toulouse/safety/faourette.png){ width="640" loading=lazy }](../../assets/toulouse/safety/faourette.png)
 </div>
 
 ### Matabiau：火车站所在地，人员流动复杂，要防小偷
@@ -59,19 +59,19 @@ description: 图卢兹治安分区总览：Empalot、Les Cocus 等需提高警�
 火车站（Gare Matabiau）周边白天也需注意随身财物，夜晚尽量结伴。
 
 <div align="center" markdown="span">
-  [![Matabiau 街区位置示意](/assets/toulouse/safety/matabiau.png){ width="640" loading=lazy }](/assets/toulouse/safety/matabiau.png)
+  [![Matabiau 街区位置示意](../../assets/toulouse/safety/matabiau.png){ width="640" loading=lazy }](../../assets/toulouse/safety/matabiau.png)
 </div>
 
 ### Le Papus：老旧街区，居住环境较差
 
 <div align="center" markdown="span">
-  [![Le Papus 街区位置示意](/assets/toulouse/safety/le-papus.png){ width="640" loading=lazy }](/assets/toulouse/safety/le-papus.png)
+  [![Le Papus 街区位置示意](../../assets/toulouse/safety/le-papus.png){ width="640" loading=lazy }](../../assets/toulouse/safety/le-papus.png)
 </div>
 
 ### Cugnaux：市郊街区，治安一般
 
 <div align="center" markdown="span">
-  [![Cugnaux 街区位置示意](/assets/toulouse/safety/cugnaux.png){ width="640" loading=lazy }](/assets/toulouse/safety/cugnaux.png)
+  [![Cugnaux 街区位置示意](../../assets/toulouse/safety/cugnaux.png){ width="640" loading=lazy }](../../assets/toulouse/safety/cugnaux.png)
 </div>
 
 ### Le Mirail 片区：暴力与贩毒事件多发
@@ -79,13 +79,13 @@ description: 图卢兹治安分区总览：Empalot、Les Cocus 等需提高警�
 主要包括 **Mirail – Université、La Reynerie、Bellefontaine** 三片，经常发生暴力、犯罪、烧车、追逐、贩毒等事件。学生除白天上课外，尽量不要在夜晚出没于此。
 
 <div align="center" markdown="span">
-  [![Mirail – Université 一带位置示意（红圈标注）](/assets/toulouse/safety/mirail.png){ width="640" loading=lazy }](/assets/toulouse/safety/mirail.png)
+  [![Mirail – Université 一带位置示意（红圈标注）](../../assets/toulouse/safety/mirail.png){ width="640" loading=lazy }](../../assets/toulouse/safety/mirail.png)
 </div>
 
 ### Bagatelle：欧洲有名的敏感地区
 
 <div align="center" markdown="span">
-  [![Bagatelle 街区位置示意](/assets/toulouse/safety/bagatelle-1.png){ width="640" loading=lazy }](/assets/toulouse/safety/bagatelle-1.png)
+  [![Bagatelle 街区位置示意](../../assets/toulouse/safety/bagatelle-1.png){ width="640" loading=lazy }](../../assets/toulouse/safety/bagatelle-1.png)
 </div>
 
 Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）：
@@ -106,7 +106,7 @@ Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）
 市中心南侧，安静且生活便利。
 
 <div align="center" markdown="span">
-  [![Les Carmes 街区位置示意](/assets/toulouse/safety/les-carmes.png){ width="640" loading=lazy }](/assets/toulouse/safety/les-carmes.png)
+  [![Les Carmes 街区位置示意](../../assets/toulouse/safety/les-carmes.png){ width="640" loading=lazy }](../../assets/toulouse/safety/les-carmes.png)
 </div>
 
 ### Saint-Cyprien
@@ -114,7 +114,7 @@ Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）
 加龙河左岸，文艺氛围浓厚，紧邻 Prairie des Filtres 河畔草坪。
 
 <div align="center" markdown="span">
-  [![Saint-Cyprien 街区位置示意](/assets/toulouse/safety/saint-cyprien.png){ width="640" loading=lazy }](/assets/toulouse/safety/saint-cyprien.png)
+  [![Saint-Cyprien 街区位置示意](../../assets/toulouse/safety/saint-cyprien.png){ width="640" loading=lazy }](../../assets/toulouse/safety/saint-cyprien.png)
 </div>
 
 ### Côte Pavée
@@ -122,7 +122,7 @@ Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）
 市中心东南侧的住宅街区，街道安静。
 
 <div align="center" markdown="span">
-  [![Côte Pavée 街区位置示意](/assets/toulouse/safety/cote-pavee.png){ width="640" loading=lazy }](/assets/toulouse/safety/cote-pavee.png)
+  [![Côte Pavée 街区位置示意](../../assets/toulouse/safety/cote-pavee.png){ width="640" loading=lazy }](../../assets/toulouse/safety/cote-pavee.png)
 </div>
 
 ### Guilheméry
@@ -130,7 +130,7 @@ Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）
 市中心东南侧，生活气息浓厚，临近植物园（Jardin des Plantes）。
 
 <div align="center" markdown="span">
-  [![Guilheméry 街区位置示意](/assets/toulouse/safety/guilhemery.png){ width="640" loading=lazy }](/assets/toulouse/safety/guilhemery.png)
+  [![Guilheméry 街区位置示意](../../assets/toulouse/safety/guilhemery.png){ width="640" loading=lazy }](../../assets/toulouse/safety/guilhemery.png)
 </div>
 
 ### Les Chalets
@@ -138,7 +138,7 @@ Le Mirail 片区与 Bagatelle 的参考数据（最后核验：2025 年 8 月）
 市中心北侧，以小巧的独栋住宅和静谧街巷著称。
 
 <div align="center" markdown="span">
-  [![Les Chalets 街区位置示意](/assets/toulouse/safety/chalets.png){ width="640" loading=lazy }](/assets/toulouse/safety/chalets.png)
+  [![Les Chalets 街区位置示意](../../assets/toulouse/safety/chalets.png){ width="640" loading=lazy }](../../assets/toulouse/safety/chalets.png)
 </div>
 
 ## 日常安全建议
