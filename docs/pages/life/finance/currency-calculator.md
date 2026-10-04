@@ -1,4 +1,5 @@
 ---
+description: 欧元与人民币汇率换算工具，可切换不同汇率来源并查看数据日期，方便留学生换汇和日常换算。
 hide:
   - navigation
   - toc

@@ -32,4 +32,15 @@
   <meta name="twitter:title" content="{{ share_title | e }}">
   <meta name="twitter:description" content="{{ share_description | e }}">
   <meta name="twitter:image" content="{{ share_image }}">
+  {% if page.is_homepage %}
+    {% set website_schema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": config.site_name,
+      "alternateName": ["FranChina", "法国留学 FranChina"],
+      "url": page.canonical_url,
+      "inLanguage": "zh-CN"
+    } %}
+    <script type="application/ld+json">{{ website_schema | tojson }}</script>
+  {% endif %}
 {% endblock %}

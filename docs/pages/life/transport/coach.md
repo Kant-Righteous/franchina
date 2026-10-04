@@ -1,3 +1,7 @@
+---
+description: 法国长途大巴与拼车指南：FlixBus、BlaBlaBus 的票价与行李规定，BlaBlaCar 拼车使用方法与省钱技巧。
+---
+
 # 长途大巴与拼车
 
 ## 长途大巴

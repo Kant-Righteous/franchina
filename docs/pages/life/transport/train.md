@@ -1,3 +1,7 @@
+---
+description: 法国火车出行指南：TGV INOUI、OUIGO、Intercités 与 TER 的区别，SNCF Connect 购票、青年优惠卡、行李规定、G30 晚点赔偿与省钱攻略。
+---
+
 # 高铁与城际列车 (Train SNCF)
 
 !!! abstract "速览"

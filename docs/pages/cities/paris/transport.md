@@ -1,3 +1,8 @@
+---
+title: 巴黎本地交通
+description: 巴黎及大巴黎公共交通指南：地铁、RER、Transilien、电车与公交，Navigo 交通卡、Imagine R 学生年卡与票价分区。
+---
+
 # 巴黎本地交通
 
 巴黎及大巴黎地区（Île-de-France）拥有欧洲最密集、最复杂的城市公共交通系统，主要由 RATP 和 SNCF 进行联合运营。
