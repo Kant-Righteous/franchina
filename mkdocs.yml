@@ -80,6 +80,10 @@ nav:
       - 信息通讯:
           - 办理手机卡: pages/life/communication/sim-card.md
       - 住房管理: pages/life/housing.md
+      - 实习工作与就业:
+          - 学生兼职: pages/life/work/job-etudiant.md
+          - 劳动权益与避坑: pages/life/work/labor-rights.md
+          - Stage 与 Alternance: pages/life/work/stage-alternance.md
       - 反诈提醒:
           - 租房防骗: pages/life/anti-fraud/housing.md
           - 二手交易与换汇: pages/life/anti-fraud/secondhand-exchange.md
