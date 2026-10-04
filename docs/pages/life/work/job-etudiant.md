@@ -1,6 +1,6 @@
 ---
 title: 法国学生兼职（Job étudiant）指南
-description: 面向在法留学生的学生兼职指南：兼职的价值、图卢兹常见岗位与法语门槛、Jobaviz 与 France Travail 等求职渠道、线下投递与招聘会、非欧盟学生每年 964 小时的工时上限。
+description: 在法留学生兼职指南：图卢兹常见岗位与法语门槛、Jobaviz 与 France Travail 等求职渠道、线下投递与招聘会、非欧盟学生每年 964 小时工时上限。
 ---
 
 # 学生兼职（Job étudiant）
